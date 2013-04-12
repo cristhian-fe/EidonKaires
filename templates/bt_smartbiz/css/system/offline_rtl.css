@@ -1,0 +1,92 @@
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+body#bt_offline { 
+     font-size: 13px;
+     font-weight: 400;
+     font-family: Maven Pro, sans-serif;
+     line-height: 1.6;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+#bt_offline_outer { 
+     padding-top: 100px;
+     width: 600px;
+     margin: 0px auto 0px auto;
+}
+div.offline_img { 
+     background-repeat: no-repeat;
+     width: 226px;
+     height: 173px;
+     float: right;
+     margin: 15px 0px 0px 35px;
+}
+#bt_offline_area { 
+     width: 336px;
+     float: right;
+}
+#bt_offline_form { }
+#bt_offline_form_area { }
+#bt_offline_form form div#bt_offline_form_user label, #bt_offline_form form div#bt_offline_form_pass label { 
+     font-size: 13px;
+     font-weight: bold;
+     text-align: center;
+     line-height: 37px;
+     cursor: pointer;
+     width: 92px;
+     height: 37px;
+     float: right;
+     margin: 1px 0px 0px 10px;
+}
+#bt_offline_form form div#bt_offline_form_user { 
+     float: right;
+     margin: 0px 0px 15px 0px;
+}
+#bt_offline_form form div#bt_offline_form_pass { 
+     float: right;
+     margin: 0px 0px 10px 0px;
+}
+#bt_offline_form form div#bt_offline_form_user input[type="text"], #bt_offline_form form div#bt_offline_form_pass input[type="password"] { 
+     line-height: 36px;
+     width: 195px;
+     height: 36px;
+     overflow: hidden;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 37px 0px 0px;
+}
+#bt_offline_form form div#bt_offline_form_user input { 
+     background-position: 95% center;
+     background-repeat: no-repeat;
+}
+#bt_offline_form form div#bt_offline_form_pass input { 
+     background-position: 95% center;
+     background-repeat: no-repeat;
+}
+#bt_offline_form form div#bt_offline_form_remember { 
+     float: right;
+     margin: 10px 0px 0px 0px;
+}
+#bt_offline_form form div#bt_offline_form_remember label { 
+     padding-right: 5px;
+     position: relative;
+     top: 1px;
+}
+#bt_offline_form form div#bt_offline_form_button { 
+     float: left;
+     margin: 10px 0px 0px 0px;
+}
+#bt_offline_form form div#bt_offline_form_button input.button { }
+#bt_offline_form form div#bt_offline_form_button input.button:hover { }
+#bt_offline_message { 
+     font-weight: 400;
+     margin: 0px 0px 15px 0px;
+}

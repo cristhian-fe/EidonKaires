@@ -1,0 +1,235 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package         Tabs
+ * @version         3.0.8
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2012 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+@import "../../nnframework/less/init.less";
+
+/*
+ * You can override this stylesheet by creating your own in:
+ * /templates/[YOUR TEMPLATE]/css/tabs/style.min.css
+ */
+
+div.nn_tabs_nav {
+	display: block;
+	clear: left;
+	line-height: 1em;
+	zoom: 1; // Fix for IE height issue
+
+	ul.nn_tabs_tabs {
+		margin: 0 !important;
+		padding: 0 !important;
+		list-style: none !important;
+		list-style-image: none !important;
+		background: none !important;
+		border-bottom: 1px solid #ddd;
+		.clearfix();
+	}
+	li.nn_tabs_tab {
+		float: left;
+		margin: 0 !important;
+		margin-bottom: -1px !important;
+		padding: 0 !important;
+		list-style: none !important;
+		list-style-image: none !important;
+		background: none !important;
+		// Tabs
+		a,
+		a:link,
+		a:visited,
+		a:active,
+		a:hover {
+			outline: 0;
+			line-height: 1.5em !important;
+			text-decoration: none !important;
+			.transition-duration(.2s);
+		}
+		a,
+		a:hover {
+			display: block;
+			margin-right: 2px;
+			padding: 8px 12px;
+			border: 1px solid #ddd;
+			border-bottom-color: transparent;
+			.border-radius(4px 4px 0 0);
+			color: @gray;
+		}
+
+		@bgcolor: @btnPrimaryBackground;
+		// Hover state
+		a:hover {
+			background-color: #eee;
+		}
+		// Active state
+		&.active a,
+		&.active a:hover {
+			background-color: @white;
+			cursor: default;
+		}
+	}
+}
+
+// Content area
+div.nn_tabs_content,
+div.nn_tabs_content > div,
+div.nn_tabs_content div.nn_tabs_item {
+	position: relative !important;
+	overflow: hidden !important;
+}
+div.nn_tabs_content {
+	margin-bottom: 18px;
+	border: 1px solid #ddd;
+	border-top: 0;
+	padding: 8px 12px;
+	.border-radius(0 0 4px 4px);
+}
+
+// STYLING FOR IF JAVASCRIPT FAILS
+div.nn_tabs_noscript div.nn_tabs_content {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+// Classes: Normal state + Hover state
+div.nn_tabs_nav li.nn_tabs_tab {
+	&.blue a, &.blue a:hover,
+	&.green a, &.green a:hover,
+	&.red a, &.red a:hover,
+	&.orange a, &.orange a:hover,
+	&.gray a, &.gray a:hover,
+	&.grey a, &.grey a:hover,
+	&.primary a, &.primary a:hover,
+	&.info a, &.info a:hover,
+	&.success a, &.success a:hover,
+	&.warning a, &.warning a:hover,
+	&.danger a, &.danger a:hover,
+	&.error a, &.error a:hover {
+		border-top: 5px solid #ddd;
+		padding-top: 4px;
+		.border-radius(5px 5px 0 0);
+	}
+}
+
+@media (max-width: 768px) {
+	div.nn_tabs_nav li.nn_tabs_tab:last-child a,
+	.nn_tabs > ul > .active:last-child a {
+		border-bottom: 1px solid #ddd;
+	}
+	div.nn_tabs_nav li.nn_tabs_tab {
+		&.blue a,
+		&.green a,
+		&.red a,
+		&.orange a,
+		&.gray a,
+		&.grey a,
+		&.primary a,
+		&.info a,
+		&.success a,
+		&.warning a,
+		&.danger a,
+		&.error a {
+			border-top-width: 1px;
+			.border-radius(0);
+		}
+	}
+}
+
+div.nn_tabs_nav li.nn_tabs_tab {
+	// Style: blue / primary
+	@bgcolor_blue: @btnPrimaryBackground;
+	// Normal state
+	&.blue a,
+	&.primary a {
+		border-top-color: lighten(@bgcolor_blue, 20%);
+	}
+	// Hover state + Active state
+	&.blue a:hover,
+	&.blue.active a,
+	&.primary a:hover,
+	&.primary.active a {
+		border-top-color: @bgcolor_blue;
+	}
+
+	// Style: info
+	@bgcolor_info: @btnInfoBackgroundHighlight;
+	// Normal state
+	&.info a {
+		border-top-color: lighten(@bgcolor_info, 20%);
+	}
+	// Hover state + Active state
+	&.info a:hover,
+	&.info.active a {
+		border-top-color: @bgcolor_info;
+	}
+
+	// Style: green / success
+	@bgcolor_green: @btnSuccessBackgroundHighlight;
+	// Normal state
+	&.green a,
+	&.success a {
+		border-top-color: lighten(@bgcolor_green, 20%);
+	}
+	// Hover state + Active state
+	&.green a:hover,
+	&.green.active a,
+	&.success a:hover,
+	&.success.active a {
+		border-top-color: @bgcolor_green;
+	}
+
+	// Style: orange / warning
+	@bgcolor_orange: @btnWarningBackgroundHighlight;
+	// Normal state
+	&.orange a,
+	&.warning a {
+		border-top-color: lighten(@bgcolor_orange, 20%);
+	}
+	// Hover state + Active state
+	&.orange a:hover,
+	&.orange.active a,
+	&.warning a:hover,
+	&.warning.active a {
+		border-top-color: @bgcolor_orange;
+	}
+
+	// Style: red / danger / error
+	@bgcolor_red: @btnDangerBackgroundHighlight;
+	// Normal state
+	&.red a,
+	&.danger a,
+	&.error a {
+		border-top-color: lighten(@bgcolor_red, 20%);
+	}
+	// Hover state + Active state
+	&.red a:hover,
+	&.red.active a,
+	&.danger a:hover,
+	&.danger.active a,
+	&.error a:hover,
+	&.error.active a {
+		border-top-color: @bgcolor_red;
+	}
+
+	// Style: gray / grey
+	@bgcolor_grey: #808080;
+	// Normal state
+	&.gray a,
+	&.grey a {
+		border-top-color: lighten(@bgcolor_grey, 20%);
+	}
+	// Hover state + Active state
+	&.gray a:hover,
+	&.gray.active a,
+	&.grey a:hover,
+	&.grey.active a {
+		border-top-color: @bgcolor_grey;
+	}
+}

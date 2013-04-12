@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'Sito fuori servizio per manutenzione.<br /> Riprovare più tardi.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'Eidon Kaires';
+	public $sitename = 'Eidon - Kaires S.r.l.';
 	public $editor = 'tinymce';
 	public $captcha = '0';
 	public $list_limit = '20';
@@ -18,7 +18,7 @@ class JConfig {
 	public $db = 'eidon';
 	public $dbprefix = 'jos_';
 	public $live_site = '';
-	public $secret = 'eGheY4gXmLxkNmDq';
+	public $secret = 'mOSm6S676YqYSkaR';
 	public $gzip = '0';
 	public $error_reporting = 'default';
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&amp;keyref=Help{major}{minor}:{keyref}';
@@ -31,7 +31,7 @@ class JConfig {
 	public $offset = 'UTC';
 	public $mailer = 'mail';
 	public $mailfrom = 'munoz.ict@gmail.com';
-	public $fromname = 'Eidon Kaires';
+	public $fromname = 'Eidon - Kaires S.r.l.';
 	public $sendmail = '/usr/sbin/sendmail';
 	public $smtpauth = '0';
 	public $smtpuser = '';

@@ -1,0 +1,171 @@
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+
+/* ---------- Default, Background ---------- */
+
+/* --- Background --- */
+* { 
+     font-size: 100.01%;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+* html body { 
+     height: 100%;
+}
+html { }
+body { 
+     font-size: 13px;
+     font-weight: 400;
+     font-family: Maven Pro, sans-serif;
+     line-height: 1.6;
+     width: 100%;
+     height: 100%;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+.clearfix { 
+     display: block;
+     clear: both;
+}
+* html .clearfix { 
+     height: 1%;
+}
+
+/* --- offline page --- */
+.bt_offline_image { 
+     background-position: top center;
+     background-repeat: no-repeat;
+     width: 704px;
+     height: 353px;
+     margin: 40px auto 40px auto;
+}
+
+/* --- logo --- */
+div.bt_fade_logo.bt_fade_img { 
+     background-position: right top;
+     background-repeat: no-repeat;
+     width: 242px;
+     height: 45px;
+     position: relative;
+}
+div.bt_fade_logo.bt_fade_img a { 
+     background-position: right bottom;
+     background-repeat: no-repeat;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     bottom: 0px;
+     right: 0px;
+}
+
+/* --- Popup Login (based on: http://www.queness.com/post/77/simple-jquery-modal-window-tutorial) --- */
+#bt_popup .bt_popup_links { }
+#bt_popup .bt_popup_links p { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     margin: 10px 0px 0px 0px;
+     padding: 0px 35px 0px 0px;
+}
+#bt_popup .bt_popup_links span { }
+#bt_popup .bt_login_form a:link, #bt_popup .bt_login_form a:active, #bt_popup .bt_login_form a:visited { }
+#bt_popup .bt_login_form a:hover, #bt_popup .bt_login_form a:focus { 
+     text-decoration: underline;
+}
+#bt_popup .bt_login_form ul li { }
+#bt_popup .bt_popup_links a { }
+#bt_popup .bt_popup_links a:hover { }
+#bt_popup .bt_login_sign_in, #bt_popup .bt_login_logout { }
+#bt_popup .bt_login_sign_in:hover, #bt_popup .bt_login_logout:hover { }
+#bt_popup .bt_login_register { }
+
+/* --- mod_search --- */
+div.moduletable div.search { }
+div.moduletable div.search label { 
+     display: none;
+}
+div.moduletable input#mod-search-searchword { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 35px;
+     width: 120px;
+     border-style: none none none none;
+}
+
+/* --- mod_breadcrumbs --- */
+.bt_sub_pathway { }
+.bt_sub_pathway .breadcrumbs { }
+.bt_sub_pathway .bt_breadcrumbs_img { }
+.bt_sub_pathway .bt_breadcrumbs_img a { }
+.bt_sub_pathway span.showHere { }
+.bt_sub_pathway img { 
+     position: relative;
+     top: 6px;
+}
+.bt_sub_pathway a, .bt_sub_pathway span { }
+.bt_sub_pathway a { }
+
+/* --- Social Icons --- */
+.bt_social_icons { 
+     text-align: center;
+}
+.bt_social_icon { 
+     width: 30px;
+     height: 30px;
+     display: inline-block;
+     margin: 6px 2px 0px 2px;
+}
+.bt_social_icon_bg { 
+     background-position: right top;
+}
+.bt_social_icon_bg:hover { 
+     background-position: right -30px;
+}
+#social_icon_facebook { }
+#social_icon_email { }
+#social_icon_rss { }
+#social_icon_twitter { }
+#social_icon_google { }
+
+/* --- Go Top (based on http://briancray.com/2009/10/06/scroll-to-top-link-jquery-css) --- */
+.bt_go_top_button_img a { 
+     width: 62px;
+     height: 57px;
+}
+.bt_go_top_button_img a:hover { 
+     background-position: 0 -57px;
+}
+#bt_gotop_message a { 
+     margin-top: -80px;
+     margin-right: -20px;
+     display: none;
+     z-index: 999;
+     position: fixed;
+     top: 100%;
+     right: 95%;
+}
+
+/* --- Powered by BonusThemes.com (small logo) --- */
+div.bt_powered_by_logo.bt_fade_img { 
+     background-position: right top;
+     background-repeat: no-repeat;
+     width: 27px;
+     height: 20px;
+     position: relative;
+}
+div.bt_powered_by_logo.bt_fade_img a { 
+     background-position: right bottom;
+     background-repeat: no-repeat;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+     bottom: 0px;
+     right: 0px;
+}

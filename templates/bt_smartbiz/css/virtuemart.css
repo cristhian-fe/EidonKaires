@@ -1,0 +1,1172 @@
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+
+/* -------- VM Defaults -------- */
+.body-overlayed { 
+     overflow: visible !important;
+}
+.horizontal-separator { 
+     display: none;
+}
+.spacer { 
+     margin: 1px 1px 1px 1px;
+}
+img.medium-image { 
+     width: 300px;
+}
+.browse-view h1 { 
+     font-size: 26px;
+     font-weight: bold;
+     margin: 0px 0px 15px 0px;
+     padding: 15px 0px 15px 0px;
+}
+.vmicon, .vmiconFE { 
+     background-position: top left;
+     background-repeat: no-repeat;
+}
+.vm2-shipto-icon { 
+     vertical-align: middle;
+     background-position: 0 -284px;
+     margin-right: 6px;
+     width: 24px;
+     height: 24px;
+}
+.vm2-billto-icon { 
+     vertical-align: middle;
+     background-position: 0 -138px;
+     margin-right: 6px;
+     width: 24px;
+     height: 24px;
+}
+.vm2-termsofservice-icon { 
+     vertical-align: middle;
+     background-position: 0 ;
+     margin-right: 6px;
+     width: 24px;
+     height: 24px;
+     display: inline-block;
+     border-width: 0px 0px 0px 0px;
+}
+.vm2-normalstock { 
+     background-position: 0 -1244px;
+     width: 62px;
+     height: 15px;
+     display: block;
+}
+.vm2-nostock { 
+     background-position: 0 -1179px;
+     width: 62px;
+     height: 15px;
+     display: block;
+}
+.ratingbox { 
+     background-position: 0 bottom                          !important;
+     background-repeat: repeat-x !important;
+     width: 120px;
+     height: 24px;
+     display: block;
+     position: relative;
+}
+.ratingbox span { 
+     background-position: left top !important;
+}
+.orderlistcontainer div.activeOrder { 
+     background-position: right 20%;
+     background-repeat: no-repeat;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     padding: 4px 24px 4px 12px;
+}
+.manufacturer, .manufacturer-details-view { 
+     margin: 0px 0px 0px 0px;
+}
+.email-weblink, .manufacturer-details-view .description { 
+     margin: 0px 0px 0px 0px;
+}
+.back-to-category { 
+     float: right;
+}
+.ask-a-question-view { }
+.ask-a-question { 
+     margin: 15px 0px 15px 0px;
+}
+.ask-a-question-view .product-summary div.width70 { 
+     width: 67%;
+     float: left;
+}
+.ask-a-question-view .product-summary div.width30 { 
+     float: right;
+}
+.ask-a-question-view input.counter, .ask-a-question-view input#email { 
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     position: relative;
+     top: -4px;
+     padding: 5px 10px 5px 10px;
+}
+span.custom-variant-inputbox input.custom-attribute:hover, span.quantity-box input.quantity-input:hover, input.vm-default:hover, span.quantity-box input.quantity-input:hover, .ask-a-question-view input.counter:hover, .ask-a-question-view input#email:hover, table.user-details input:hover, a.ask-a-question:hover, a.details:hover, div.details:hover, a.product-details:hover, button.default:hover { }
+.ask-a-question-view .form-field textarea.field { 
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     margin-bottom: 20px;
+}
+.ask-a-question-view .form-field textarea.field:hover { }
+.ask-a-question-view .form-field label { }
+.output-billto span.values, .output-shipto span.values, .floatleft, span.floatleft { 
+     float: left;
+}
+.ask-a-question-view, .manufacturer-details-view .spacer { 
+     overflow: hidden;
+}
+
+/* -- button -- */
+span.addtocart-button input.addtocart-button, span.addtocart-button input.notify-button, input.highlight-button, span.details-button input.details-button, .vm-button-correct, .vm-button-correct:link, .vm-button-correct:visited, button.vm-button-correct, button.vm-button-correct:link, button.vm-button-correct:visited, .control-buttons button.vm-button-correct, .control-buttons button.default, .general-bg, input.custom-attribute, input.quantity-input, .manufacturer-product-link a, a.ask-a-question, a.product-details, a.details, div.details, button.default, a.notify, .buttonBar-right button.button { 
+     font-size: 13px !important;
+     font-weight: bold;
+     text-align: center;
+     text-decoration: none;
+     letter-spacing: normal;
+     line-height: 30px;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     width: auto;
+     height: 30px;
+     display: inline-block;
+     border-style: none none none none;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 15px 0px 15px;
+}
+span.addtocart-button input.addtocart-button:hover, span.addtocart-button input.notify-button:hover, input.highlight-button:hover, span.details-button input.details-button:hover, .vm-button-correct:hover, button.vm-button-correct:hover, .control-buttons button.vm-button-correct:hover, .control-buttons button.default:hover, .general-bg:hover, input.custom-attribute:hover, input.quantity-input:hover, .manufacturer-product-link a:hover, a.ask-a-question:hover, a.product-details:hover, a.details:hover, div.details:hover, button.default:hover, a.notify:hover, .buttonBar-right button.button:hover { 
+     font-size: 13px !important;
+}
+
+/* -------- VM Front page -------- */
+
+/* -- heading -- */
+.category-view h4, .featured-view h4, .latest-view h4, .topten-view h4, .recent-view h4 { 
+     font-size: 16px;
+     font-weight: bold;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+     margin: 0px 0px 15px 0px;
+     padding: 10px 15px 10px 15px;
+}
+
+/* -- item -- */
+.category-view .row .category .spacer, .featured-view .spacer, .latest-view .spacer, .topten-view .spacer, .recent-view .spacer, .related-products-view .spacer, .browse-view .row .product .spacer, .manufacturer-view-default .row .manufacturer .spacer { 
+     text-align: center;
+     padding: 20px 10px 20px 10px;
+}
+
+/* -- title, img -- */
+.category-view .row .category .spacer h2 a, .manufacturer-view-default .row .manufacturer .spacer h2 a { 
+     font-size: 16px;
+     font-weight: bold;
+     text-align: center;
+     margin: 0px 0px 0px 0px;
+}
+.category-view .row .category .spacer h2 a img, .manufacturer-view-default .row .manufacturer .spacer h2 a img { 
+     margin: 15px 0px 0px 0px;
+}
+.featured-view .spacer h3, .latest-view .spacer h3, .topten-view .spacer h3, .recent-view .spacer h3, .related-products-view .spacer h3, .browse-view .row .product .spacer h2 { 
+     font-size: 18px;
+     font-weight: bold;
+     margin: 0px 0px 20px 0px;
+}
+.main-image img.product-image, .featured-view .spacer img, .latest-view .spacer img, .topten-view .spacer img, .recent-view .spacer img { 
+     margin: 0px 0px 10px 0px;
+}
+
+/* -- hide prices in category and frontpage layout -- */
+.browse-view .product-price .PricevariantModification, .browse-view .product-price .PricebasePriceWithTax, .browse-view .product-price .PricediscountedPriceWithoutTax, .browse-view .product-price .PricepriceWithoutTax, .browse-view .product-price .PricediscountAmount, .browse-view .product-price .PricetaxAmount, .browse-view .product-price .PriceunitPrice, .featured-view .product-price .PricevariantModification, .featured-view .product-price .PricebasePriceWithTax, .featured-view .product-price .PricediscountedPriceWithoutTax, .featured-view .product-price .PricepriceWithoutTax, .featured-view .product-price .PricediscountAmount, .featured-view .product-price .PricetaxAmount, .featured-view .product-price .PriceunitPrice, .featured-view .product-price .PricevariantModification, .featured-view .product-price .PricebasePriceWithTax, .latest-view .product-price .PricediscountedPriceWithoutTax, .latest-view .product-price .PricepriceWithoutTax, .latest-view .product-price .PricediscountAmount, .latest-view .product-price .PricetaxAmount, .latest-view .product-price .PriceunitPrice, .latest-view .product-price .PricevariantModification, .latest-view .product-price .PricebasePriceWithTax, .topten-view .product-price .PricediscountedPriceWithoutTax, .topten-view .product-price .PricepriceWithoutTax, .topten-view .product-price .PricediscountAmount, .topten-view .product-price .PricetaxAmount, .topten-view .product-price .PriceunitPrice, .topten-view .product-price .PricevariantModification, .topten-view .product-price .PricebasePriceWithTax, .recent-view .product-price .PricediscountedPriceWithoutTax, .recent-view .product-price .PricepriceWithoutTax, .recent-view .product-price .PricediscountAmount, .recent-view .product-price .PricetaxAmount, .recent-view .product-price .PriceunitPrice, .recent-view .product-price .PricebasePriceWithTax { 
+     display: none !important;
+}
+
+/* -- display only sales price -- */
+.browse-view .product-price .PricesalesPrice, .featured-view .product-price .PricesalesPrice, .latest-view .product-price .PricesalesPrice, .topten-view .product-price .PricesalesPrice, .recent-view .product-price .PricesalesPrice { 
+     text-indent: -999em;
+}
+.browse-view .product-price .PricesalesPrice span.PricesalesPrice, .featured-view .product-price .PricesalesPrice span.PricesalesPrice, .latest-view .product-price .PricesalesPrice span.PricesalesPrice, .topten-view .product-price .PricesalesPrice span.PricesalesPrice, .recent-view .product-price .PricesalesPrice span.PricesalesPrice { 
+     font-size: 30px;
+     font-weight: bold;
+     text-indent: 0px !important;
+     display: block;
+     position: relative;
+     top: -13px;
+}
+
+/* -------- VM Category -------- */
+.browse-view .row .product .spacer img, .related-products-view .row .product .spacer img { 
+     margin: 0px 0px 10px 0px;
+}
+.browse-view .row .product .spacer h2, .browse-view .row .product p, .browse-view .row .product .product-price { 
+     padding: 0px 0px 0px 25px;
+}
+.browse-view .row .product .product-price span.PricesalesPrice { 
+     font-size: 29px;
+     font-weight: bold;
+}
+.browse-view .row .product .vmicon { 
+     margin: 10px auto 10px auto;
+}
+.browse-view .vm-pagination { 
+     border-top-width: 1px;
+     border-top-style: solid;
+     clear: both;
+     overflow: hidden;
+     margin: 80px 0px 0px 0px;
+     padding: 20px 0px 0px 0px;
+}
+.browse-view .orderlistcontainer .title { 
+     font-weight: bold;
+     margin: 10px 0px 10px 0px;
+}
+.browse-view .orderby-displaynumber .display-number { 
+     font-weight: bold;
+     text-align: left !important;
+     border-bottom-style: none;
+     margin: 10px 0px 10px 0px;
+}
+.browse-view .orderby-displaynumber .display-number select { 
+     margin: 8px 0px 0px 0px;
+}
+
+/* -------- VM Product Details -------- */
+.productdetails-view { 
+     margin: 0px 0px 20px 0px;
+}
+.productdetails-view .category-view { 
+     display: none;
+}
+
+/* -- next, prev icons -- */
+.product-neighbours a.next-page { 
+     line-height: 20px;
+     background-position: right;
+     background-repeat: no-repeat;
+     padding-right: 30px;
+     float: right;
+}
+.product-neighbours a.previous-page { 
+     line-height: 20px;
+     background-position: left;
+     background-repeat: no-repeat;
+     padding-left: 30px;
+     float: left;
+}
+
+/* -- title -- */
+.productdetails-view h1 { 
+     font-size: 28px;
+     font-weight: bold;
+     margin: 0px 0px 15px 0px;
+     padding: 0px 0px 0px 0px;
+}
+.icons a { 
+     margin: 0px 10px 0px 0px;
+}
+
+/* -- images -- */
+.productdetails-view .main-image { 
+     text-align: left;
+}
+.productdetails-view .main-image img { 
+     width: 350px;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     padding: 6px 6px 6px 6px;
+}
+.productdetails-view .additional-images { 
+     margin: 10px 0px 0px 0px;
+}
+.productdetails-view .additional-images img { 
+     width: 92px;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 0px 5px 5px 0px;
+     padding: 3px 3px 3px 3px;
+}
+.productdetails-view .additional-images img:hover { }
+
+/* -- add to cart -- */
+.productdetails-view .addtocart-bar { 
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+span.quantity-box { 
+     width: auto;
+     float: left;
+     padding: 0px 0px 0px 0px;
+}
+span.quantity-controls input.quantity-plus { 
+     background-repeat: repeat-x;
+     margin: 2px 0px 4px 0px;
+}
+span.quantity-controls input.quantity-minus { 
+     background-position: 15px 0;
+     background-repeat: repeat-x;
+}
+input.quantity-input { 
+     font-weight: bold;
+     text-align: center;
+     text-decoration: none;
+     border-top-left-radius: 0px !important;
+     -webkit-border-top-left-radius: 0px !important;
+     -moz-border-radius-topleft: 0px !important;
+     border-top-right-radius: 0px !important;
+     -webkit-border-top-right-radius: 0px !important;
+     -moz-border-radius-topright: 0px !important;
+     border-bottom-right-radius: 0px !important;
+     -webkit-border-bottom-right-radius: 0px !important;
+     -moz-border-radius-bottomright: 0px !important;
+     border-bottom-left-radius: 0px !important;
+     -webkit-border-bottom-left-radius: 0px !important;
+     -moz-border-radius-bottomleft: 0px !important;
+     width: 25px;
+     height: 20px !important;
+     border-style: solid solid solid solid!important;
+     border-width: 1px 1px 1px 1px!important;
+     margin: 0px 10px 0px 0px;
+     padding: 7px 10px 7px 10px!important;
+}
+span.quantity-controls { 
+     width: auto;
+     float: left;
+     margin: 4px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+span.quantity-controls input.quantity-controls { 
+     width: 15px;
+     height: 14px;
+     display: block;
+     border-style: none none none none;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+span.addtocart-button { 
+     width: auto;
+     float: left;
+     margin: 5px 0px 0px 25px;
+}
+
+/* -- prices -- */
+.productdetails-view .product-price { 
+     margin: 25px 0px 10px 0px;
+}
+.productdetails-view .product-price .PricesalesPrice { 
+     text-indent: -999em;
+}
+.productdetails-view .product-price .PricesalesPrice span.PricesalesPrice { 
+     font-size: 30px;
+     font-weight: bold;
+     text-indent: 0px !important;
+     display: block;
+     position: relative;
+     top: -10px;
+}
+
+/* -- other titles -- */
+.productdetails-view h4, .productdetails-view span.title { 
+     font-size: 22px;
+     font-weight: bold;
+     text-shadow: 0px 1px 0px rgb(255,255,255);
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     display: block;
+     margin: 0px 0px 15px 0px;
+     padding: 0px 0px 5px 0px;
+}
+
+/* -- desc -- */
+.productdetails-view .product-description, .product-fields { 
+     margin: 20px 0px 20px 0px;
+}
+
+/* -- other -- */
+.availability { 
+     text-align: left;
+     margin: 10px 0px 5px 0px;
+}
+
+/* -- related -- */
+.product-related-products, .product-related-categories { 
+     clear: both;
+     overflow: hidden;
+     border-style: none none none none;
+     margin: 20px 0px 20px 0px;
+}
+.product-related-products .product-field, .product-related-categories .product-field { 
+     text-align: center;
+     width: 33%;
+     display: block;
+     float: left;
+     margin: 1px 1px 1px 1px;
+     padding: 20px 0px 20px 0px;
+}
+.product-related-products .product-field a, .product-related-categories .product-field a { 
+     font-size: 18px;
+     font-weight: bold;
+     text-align: center;
+     display: block;
+     margin: 0px 0px 0px 0px;
+}
+.product-field-display a img { 
+     display: inline-block;
+     margin: 0px 0px 15px 0px;
+}
+
+/* -- custom fields -- */
+.product-fields { 
+     border-top-width: 1px;
+     border-top-style: solid;
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     display: block;
+     clear: both;
+     overflow: hidden;
+     margin: 15px 0px 25px 0px;
+     padding: 10px 0px 10px 0px;
+}
+.product-fields .product-field { 
+     padding: 10px 0px 10px 0px;
+}
+.product-fields .product-field .product-fields-title-wrapper { 
+     float: left;
+}
+.product-fields .product-field span.product-fields-title { 
+     font-weight: bold;
+     float: left;
+     margin: 0px 10px 0px 0px;
+}
+.product-fields .product-field span.hasTip { 
+     float: left;
+     margin: 0px 10px 0px 0px;
+}
+.product-fields .product-field span.product-field-display { 
+     float: left;
+     margin: 0px 10px 0px 0px;
+}
+.product-fields .product-field input[type="radio"] { 
+     float: left;
+     left: 0px;
+     margin: 10px 5px 0px 0px;
+}
+.product-fields .product-field label.other-customfield { 
+     text-align: left;
+     cursor: default;
+     width: 90%;
+     float: left;
+     position: relative;
+     top: 0px;
+     left: 0px;
+     margin: 7px 10px 0px 0px;
+}
+
+/* -- reviews -- */
+.write-reviews span.step { 
+     margin: 10px 0px 5px 0px;
+}
+textarea.virtuemart, input.vm-default { 
+     text-align: left;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-style: solid solid solid solid!important;
+     border-width: 1px 1px 1px 1px!important;
+     padding: 5px 5px 5px 5px;
+}
+input.highlight-button { 
+     margin: 0px auto 20px auto!important;
+}
+.list-reviews .normal { 
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+}
+.list-reviews .highlight { 
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+}
+.list-reviews span.date { 
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+}
+
+/* -------- VM Shopping Cart -------- */
+#com-form-login-remember { 
+     clear: both;
+}
+.cart-view .billto-shipto { 
+     border-top-width: 1px;
+     border-top-style: solid;
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     margin: 20px 0px 20px 0px;
+     padding: 20px 0px 20px 0px;
+}
+.cart-view fieldset { 
+     border-style: none none none none;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+.cart-view hr { 
+     display: none;
+}
+
+/* -- table -- */
+table.cart-summary { 
+     border-spacing: 1px;
+}
+table.cart-summary tbody { }
+table.cart-summary tr th { 
+     font-weight: bold;
+     text-align: center;
+     border-style: none none none none;
+     padding: 10px 0px 20px 0px;
+}
+table.cart-summary tr td { 
+     text-align: center;
+     padding: 15px 5px 15px 5px;
+}
+
+/* -- img -- */
+span.cart-images img { 
+     width: 75px;
+     display: block;
+     float: none;
+     margin: 0px auto 10px auto;
+}
+.product-field-type-B, .product-field-type-S, .product-field-type-I { 
+     float: none;
+}
+
+/* -- icons -- */
+table.cart-summary input.inputbox { 
+     width: 20px;
+     height: 18px;
+     display: block;
+     float: left;
+     margin: 0px 0px 0px 15px;
+}
+table.cart-summary input[type="submit"].vmicon { 
+     line-height: 100%;
+     cursor: pointer;
+     background-repeat: no-repeat;
+     width: 24px;
+     height: 24px;
+     display: inline-block;
+     border-style: none none none none;
+     margin: 3px 3px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+input[type="submit"].vm2-add_quantity_cart { 
+     cursor: pointer;
+     background-position: 0 0;
+     width: 24px;
+     height: 24px;
+     border-width: 0px 0px 0px 0px;
+}
+.vm2-remove_from_cart { 
+     vertical-align: bottom;
+     cursor: pointer;
+     background-position: 0 -212px;
+     width: 24px;
+     height: 24px;
+     display: inline-block;
+     position: relative;
+     top: 2px;
+     border-style: none none none none;
+     border-width: 0px 0px 0px 0px;
+}
+
+/* -- coupon -- */
+.cart-view input.coupon { 
+     font-size: 11px;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     width: 150px;
+     height: 100%;
+     float: none;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 0px 5px 0px 0px;
+     padding: 7px 10px 7px 10px;
+}
+span.details-button input.details-button { 
+     height: 30px;
+}
+
+/* -- payment, shipment -- */
+.vmpayment_name, .vmpayment_cost, .vmshipment_name, .vmshipment_cost { 
+     font-weight: bold;
+     padding: 0px 0px 0px 0px;
+}
+.vmpayment_description, .vmshipment_description { 
+     font-size: 12px;
+     display: block;
+     margin: 10px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+
+/* -- comments & checkout button -- */
+.customer-comment { 
+     font-weight: bold;
+     border-top-width: 1px;
+     border-top-style: solid;
+     margin: 30px 0px 0px 0px;
+     padding: 20px 0px 0px 0px;
+}
+textarea.customer-comment { 
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     width: 98%;
+     height: 100px;
+     margin: 20px 0px 20px 0px;
+     padding: 6px 6px 6px 6px;
+}
+.checkout-button-top { 
+     text-align: left;
+     border-top-width: 1px;
+     border-top-style: solid;
+     margin: 10px 0px 20px 0px;
+     padding: 20px 0px 20px 0px;
+}
+a.vm-button-correct { 
+     float: right;
+     margin: 30px 0px 60px 0px!important;
+}
+.checkout-button-top input.terms-of-service { 
+     display: inline-block;
+     overflow: hidden;
+     margin: 5px 0px 0px 10px;
+}
+
+/* -- prices -- */
+.priceColor2 { }
+.cart-view .PricebillTotal { 
+     font-size: 20px;
+     min-width: 90px;
+     display: block;
+     padding: 0px 5px 0px 5px;
+}
+.cart-view .PricesalesPrice, .cart-view .PricesalesPriceShipment, .cart-view .PricesalesPricePayment { 
+     font-weight: bold;
+}
+
+/* -------- VM Billing Address Information -------- */
+.display-number { 
+     text-align: left !important;
+     margin: 0px 0px 0px 0px;
+}
+.control-buttons { 
+     text-align: left !important;
+     margin: 25px 0px 25px 0px;
+}
+.userfields_info { 
+     font-weight: bold;
+     display: block;
+     margin: 30px 0px 15px 0px;
+}
+table.user-details input.invalid, table.user-details input { 
+     font-weight: normal;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     width: 200px;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 0px 0px 0px 0px;
+     padding: 5px 5px 5px 5px;
+}
+table.user-details input[type="checkbox"], table.user-details input[type="radio"] { 
+     margin-top: 10px;
+}
+table.user-details input.invalid { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+.user-details select, #userForm select, .width80 { 
+     width: 212px;
+     padding: 5px 5px 5px 5px;
+}
+.buttonBar-right { 
+     text-align: left;
+     margin-top: 10px;
+}
+form.form-validate h1 { 
+     font-size: 15px;
+     margin: 10px 0px 15px 0px;
+     padding: 10px 0px 10px 0px;
+}
+.checkoutStep { 
+     font-weight: bold;
+     text-align: right;
+     margin: 10px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+.vmpayment_cost, .vmshipment_cost { 
+     display: block;
+     margin: 0px 0px 10px 0px;
+}
+div#com-form-order-submit { 
+     display: block;
+     float: none;
+     clear: both;
+     margin: 0px 0px 0px 0px;
+     padding: 10px 0px 0px 0px;
+}
+
+/* -------- VM Orders -------- */
+div.order-view h1, form[name="com-login"] h2 { 
+     font-size: 14px;
+     font-weight: bold;
+}
+form[name="com-login"] { 
+     border-top-width: 1px;
+     border-top-style: solid;
+     margin: 15px 0px 30px 0px;
+     padding: 20px 0px 0px 0px;
+}
+label[for="remember"] { 
+     margin: 0px 10px 0px 0px;
+}
+form#form-login { 
+     margin: 20px 0px 30px 0px;
+}
+form#form-login input.button { 
+     margin: 20px 0px 20px 0px;
+}
+table.vmorder-done { 
+     margin: 10px 0px 30px 0px;
+}
+table.vmorder-done td { 
+     vertical-align: top;
+}
+
+/* -------- VM Account Maintenance -------- */
+#ui-tabs ul#tabs { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     height: 42px;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+#ui-tabs .tabs { 
+     padding: 20px 0px 20px 0px;
+}
+#ui-tabs ul#tabs li { 
+     font-weight: normal;
+     line-height: 40px;
+     height: 40px;
+     display: inline-block;
+     padding: 0px 12px 0px 12px;
+}
+#ui-tabs ul#tabs li.current { 
+     font-weight: bold;
+}
+#ui-tabs table th { 
+     font-weight: bold;
+     text-align: center;
+     padding: 10px 10px 10px 10px!important;
+}
+#ui-tabs table td { 
+     text-align: center;
+     padding: 10px 10px 10px 10px!important;
+}
+div#editcell { 
+     margin: 0px 0px 30px 0px;
+}
+div#editcell table.adminlist { 
+     text-align: center;
+     border-spacing: 1px;
+     width: 100%;
+     border-style: none none none none;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+div#editcell table.adminlist thead { 
+     font-weight: bold;
+}
+div#editcell table.adminlist thead th { 
+     text-align: center;
+     padding: 10px 10px 10px 10px;
+}
+div#editcell table.adminlist tbody { }
+div#editcell table.adminlist tbody td { 
+     text-align: center;
+     padding: 10px 10px 10px 10px;
+}
+
+/* -- order -- */
+div.spaceStyle { 
+     margin: 10px 0px 10px 0px;
+     padding: 0px 0px 0px 0px;
+}
+div.spaceStyle table { 
+     border-spacing: 1px;
+     border-style: none none none none;
+}
+div.spaceStyle tbody { }
+div.spaceStyle td { 
+     text-align: center !important;
+     padding: 10px 10px 10px 10px;
+}
+div.spaceStyle td td { 
+     text-align: left !important;
+}
+div.spaceStyle td.orders-key { 
+     font-weight: bold;
+}
+div.spaceStyle #ui-tabs { 
+     margin: 30px 0px 0px 0px;
+}
+
+/* -------- VM Popup Add to Cart -------- */
+#facebox { 
+     text-align: left;
+     z-index: 65560;
+     position: absolute;
+}
+#facebox .popup { 
+     position: relative;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+#facebox .content { 
+     width: auto;
+     display: table;
+     margin: 0px 0px 0px 0px;
+     padding: 10px 10px 10px 10px;
+}
+#facebox .content div a.continue { 
+     position: relative;
+     top: 7px;
+}
+#facebox .content div a.continue, #facebox .content div a.showcart { 
+     padding-right: 20px !important;
+     padding-left: 20px !important;
+}
+#facebox .content div a.floatright { 
+     text-align: right;
+     float: right;
+     padding: 7px 0px 0px 0px;
+}
+#facebox .content div div { 
+     font-size: 13px;
+     font-weight: bold;
+     text-align: center;
+     border-top-width: 1px;
+     border-top-style: solid;
+     display: block;
+     margin: 15px 10px 0px 10px;
+     padding: 10px 10px 10px 10px;
+}
+#facebox .content h4 { 
+     font-size: 20px;
+     font-weight: normal;
+     text-align: center;
+     display: block;
+     position: relative;
+     right: 0px;
+     bottom: 0px;
+     left: 0px;
+     margin: 10px 0px 0px 0px;
+     padding: 15px 50px 15px 50px;
+}
+#facebox .content > p:first-child { 
+     margin-top: 0px;
+}
+#facebox .content > p:last-child { 
+     margin-bottom: 0px;
+}
+#facebox .close { 
+     background-repeat: no-repeat;
+     width: 8px;
+     height: 8px;
+     position: absolute;
+     top: 5px;
+     right: 5px;
+     padding: 2px 2px 2px 2px;
+}
+#facebox .loading { 
+     text-align: center;
+}
+#facebox .image { 
+     text-align: center;
+}
+#facebox img { 
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+#facebox_overlay { 
+     width: 100%;
+     height: 100%;
+     z-index: 65558;
+     position: fixed;
+     top: 0px;
+     left: 0px;
+}
+.facebox_hide { 
+     z-index: -100;
+}
+.facebox_overlayBG { 
+     z-index: 99;
+}
+
+/* -------- VM Manufacter -------- */
+.manufacturer-details-view h1 { 
+     margin: 20px 0px 20px 0px;
+}
+.manufacturer-details-view .spacer { 
+     padding: 25px 25px 25px 25px;
+}
+.manufacturer-description { 
+     padding: 15px 0px 15px 0px;
+}
+
+/* -------- VM Vendor -------- */
+.vendor-details-view h1 { 
+     font-size: 18px;
+     font-weight: bold;
+     margin: 10px 0px 0px 0px;
+}
+.vendor-details-view .vendor-image { 
+     margin: 15px 0px 15px 0px;
+}
+.vendor-details-view h3 { 
+     font-size: 14px;
+     font-weight: bold;
+     margin: 20px 0px 20px 0px;
+}
+.vendor-details-view form#askform label { 
+     display: inline-block;
+     margin: 5px 0px 5px 0px;
+}
+.vendor-details-view form#askform label input[type="text"] { 
+     margin-left: 10px;
+}
+.vendor-details-view form#askform label input[type="text"]#name { 
+     margin-left: 14px;
+}
+.vendor-details-view div.submit { 
+     overflow: hidden;
+     margin: 20px 0px 20px 0px;
+}
+.vendor-details-view div.submit input.highlight-button { 
+     text-align: left;
+     float: left;
+}
+.vendor-details-view div.submit div { 
+     text-align: left !important;
+     width: 100%;
+     margin: 20px 0px 0px 0px;
+}
+.vendor-details-view a { 
+     position: relative;
+     top: -25px;
+}
+.vendor-details-view input#counter { 
+     margin-left: 14px;
+}
+
+/* -------- MOD VirtueMart Currency Selector -------- */
+input#mod_virtuemart_search { 
+     text-indent: 25px;
+     background-position: 7px center;
+     background-repeat: no-repeat;
+     width: 185px !important;
+     float: left;
+     margin: 0px 10px 0px 0px;
+     padding: 8px 5px 8px 5px;
+}
+select#virtuemart_currency_id { 
+     margin: 0px 0px 10px 0px;
+}
+
+/* -------- MOD VirtueMart Manufacturers -------- */
+div.vmgroup_btmstyle1 { }
+div.vmgroup_btmstyle1 div { }
+div.vmgroup_btmstyle1 div div { }
+div.bt_vm_manufacter_mod { 
+     text-align: center;
+}
+div.bt_vm_manufacter_mod h3 { 
+     text-align: left;
+}
+div.bt_vm_manufacter_mod div { 
+     float: none !important;
+}
+div.bt_vm_manufacter_mod div div { 
+     float: none !important;
+     padding: 4px 0px 4px 0px;
+}
+div.bt_vm_manufacter_mod div div:hover { }
+
+/* -------- MOD VirtueMart Categories -------- */
+
+/* -- top level -- */
+ul.VMmenu { }
+ul.VMmenu span.VmArrowdown { 
+     background-position: left top;
+     background-repeat: no-repeat;
+     width: 11px;
+     height: 11px;
+     float: left;
+     margin: 5px 0px 0px 0px;
+     padding: 0px 6px 0px 0px;
+}
+ul.VMmenu span.VmArrowdown:hover, ul.VMmenu li.VmOpen span.VmArrowdown { 
+     background-position: left bottom;
+}
+ul.VMmenu li { }
+ul.VMmenu li div { }
+ul.VMmenu li div a { }
+
+/* -- level 1 -- */
+ul.VMmenu li.VmOpen ul.menu, ul.VMmenu li.VmOpen ul.menu { }
+ul.VMmenu li.VmOpen ul.menu li, ul.VMmenu li.VmOpen ul.menu li { }
+ul.VMmenu li.VmOpen ul.menu li div, ul.VMmenu li.VmOpen ul.menu li div { }
+ul.VMmenu li.VmOpen ul.menu li div a, ul.VMmenu li.VmOpen ul.menu li div a { }
+
+/* -- top level open -- */
+ul.VMmenu li.VmOpen { }
+ul.VMmenu li.VmOpen div { }
+ul.VMmenu li.VmOpen div a { }
+
+/* -- top level close -- */
+ul.VMmenu li.VmClose { }
+ul.VMmenu li.VmClose div { }
+ul.VMmenu li.VmClose div a { }
+ul.VMmenu li li { 
+     padding-left: 30px;
+}
+
+/* -------- MOD VirtueMart Featured Products -------- */
+div.vmgroup div.vmheader { 
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 20px 0px;
+}
+div.vmgroup div div div.spacer { 
+     margin-bottom: 25px;
+}
+div.vmgroup div div div.spacer span.PricesalesPrice { }
+div.vmgroup div div div.spacer a { 
+     font-weight: bold;
+     margin-top: 10px;
+     display: block;
+}

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site" method="upgrade">
+   <name>bt_smartbiz</name>
+   <creationDate>15 Mar 2013</creationDate>
+   <author>BonusThemes.com</author>
+   <authorEmail>support@bonusthemes.com</authorEmail>
+   <authorUrl>http://www.bonusthemes.com</authorUrl>
+   <copyright>Copyright (C) 2013 Bonusthemes.com. All rights reserved.</copyright>
+   <license>GNU/GPL</license>
+   <version>1.0.0</version>
+   <description>
+      <![CDATA[<style type="text/css" media="all">
+        <!--
+        #wrap1 {padding:0px 0px 4px 0px;text-align:left;}
+        h1 {clear:both;font-family: Arial Narrow,sans-serif;font-size:18px;margin:0px 0px 12px 0px;padding:0px 0px 1px 10px;color:#C64934;}
+        .wrap2 {background:#fff;border:1px solid #8F8F8F;padding: 10px;}
+        div.wrap2 ul {margin: 10px 0 !important;}
+        div.wrap2 ul li {list-style:inside square !important;}
+        -->
+        </style>
+        <div id="wrap1">
+        <h1>Smartbiz - Joomla! 2.5 template by BonusThemes.com</h1>
+        <div class="wrap2">
+        <img style="padding-left: 10px;float:right; background-color: #fff;border:1px solid #CFCFCF;margin:0px 20px 2px 20px;border:none;" src="../templates/bt_smartbiz/template_thumbnail.png" border="0" alt="Logo" /><p>Nowadays almost all businesses use the Internet as their main channel of communication with existing and future clients. However, only few of them manage to really stand out, turning their website into an efficient interactive marketing tool.</p>
+
+<p>The smartBiz template designed by Bonusthemes is intended to become the top vehicle for every “smart” business following a contemporary strategy in building their company image and clientele. smartBiz is ideal for companies specializing in business counseling, marketing and public relations, finance, accounting etc.
+The template design employs modern, soft lines, emphasizing the quick access to the main categories such as provided services, clients, company profile, useful articles etc. And since nothing is more important than up-to-date information, smartBiz supports the creation of database for mass newsletter sending as well as circulation of the latest company news.</p>
+
+<p>In addition, by signing up and entering their password your clients will be able to gain access to exclusive information and data or to the virtuemart online store, which may be utilized for “members only” services, online payments, service as you pay etc.</p>
+
+<p>smartBiz is available in 4 different color skins and supports the K2 content management system. Moreover, it allows you to perform a series of custom actions regarding menu, mainbody, layouts and width, so as to totally meet your needs and differentiate you from your competition.
+Discover more by using the live preview and see how smartBiz can bring your professional vision to life.</p></p>
+        <h3>Features</h3>
+        <ul>
+        <li>HTML 5, CSS 3</li>
+        <li>Full compatible with Joomla! 2.5.x</li>
+        <li>RTL (right to left) support</li>
+        <li>2 Menu types: 1) Css, 2) Drop Down (Ajax / JQuery)</li>
+        <li>200 Collapsible Module Positions</li>
+        <li>Advanced Content Typography</li>
+        <li>Disable option for mainbody appearance on front page.</li>
+        <li>Improved style of Joomla! Core system pages.</li>
+        <li>Error 404 page</li>
+        <li>Offline page</li>
+        <li>K2! compatible</li>
+        <li>Virtuemart compatible</li>
+        <li>Adjustable settings from the Template Manager</li>
+        <li>Adjustable position widths from the Template Manager</li>
+        <li>Quickstart Package included</li>
+        <li>Psd Sources included</li>
+        <li>Lightweight, modern and very fast-loading design.</li>
+        <li>Clean, Simple and Stylish look</li>
+        <li>Fully compatible IE9+, Firefox, Safari, Opera, Chrome.</li>
+        <li>W3C XHTML 1.0 Transitional, W3C CSS Valid.</li>
+        </ul>			
+        - View Smartbiz in <a href="http://www.bonusthemes.com/demo/?template=smartbiz" target="_blank">live demo</a><br>
+        - For support visit our <a href="http://www.bonusthemes.com/forum/index" target="_blank">Forum</a>.
+        </div>
+        </div>
+      ]]>
+   </description>
+
+   <files>
+      <folder>css</folder>
+      <folder>helpers</folder>
+      <folder>html</folder>
+      <folder>images</folder>
+      <filename>component.php</filename>
+      <filename>favicon.ico</filename>
+      <filename>index.html</filename>
+      <filename>index.php</filename>
+      <filename>offline.php</filename>
+      <filename>error.php</filename>
+      <filename>template_thumbnail.png</filename>
+      <filename>template_preview.png</filename>
+   </files>
+
+   <languages folder="language/en-GB">
+      <language tag="en-GB">en-GB.tpl_bt_smartbiz.ini</language>
+      <language tag="en-GB">en-GB.tpl_bt_smartbiz.sys.ini</language>
+   </languages>
+
+   <positions>
+      <position>logo</position>
+      <position>top</position>
+      <position>top1</position>
+      <position>top2</position>
+      <position>top3</position>
+      <position>top4</position>
+      <position>toolbar1</position>
+      <position>toolbar2</position>
+      <position>menu</position>
+      <position>toolbar3</position>
+      <position>toolbar4</position>
+      <position>header1</position>
+      <position>slideshow</position>
+      <position>header2</position>
+      <position>header3</position>
+      <position>header4</position>
+      <position>header5</position>
+      <position>left</position>
+      <position>newsflash</position>
+      <position>news1</position>
+      <position>news2</position>
+      <position>news3</position>
+      <position>pathway</position>
+      <position>notice1</position>
+      <position>notice2</position>
+      <position>notice3</position>
+      <position>banner</position>
+      <position>right</position>
+      <position>bottomup</position>
+      <position>bottomdown</position>
+      <position>footer1</position>
+      <position>footer2</position>
+      <position>footer3</position>
+      <position>footer4</position>
+   </positions>
+
+   <languages folder="language/en-GB">
+      <language tag="en-GB">en-GB.tpl_bt_smartbiz.ini</language>
+      <language tag="en-GB">en-GB.tpl_bt_smartbiz.sys.ini</language>
+   </languages>
+
+   <config>
+      <fields name="params">
+         <fieldset name="advanced">
+            <field type="spacer" label="TPL_BT_SKINS_HEADER" />
+            <field type="spacer" label="TPL_BT_COLOR_SKIN_HEADER" />
+            <field name="skin" type="list" default="dark_turquoise" label="TPL_BT_COLOR_SKIN_LBL" description="TPL_BT_COLOR_SKIN_DESC">
+               <option value="dark_turquoise">dark_turquoise</option>
+               <option value="monza">monza</option>
+               <option value="burlywood">burlywood</option>
+            </field>
+            <field type="spacer" label="TPL_BT_SKIN_SWITCHER_HEADER" />
+            <field name="display_skin_switcher" type="radio" class="btn-group" default="1" label="TPL_BT_SKIN_SWITCHER_LBL" description="TPL_BT_SKIN_SWITCHER_DESC">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field type="spacer" label="TPL_BT_MENU_HEADER" />
+            <field name="menu" type="list" default="drop_down" label="TPL_BT_MENU_LBL" description="TPL_BT_MENU_DESC">
+               <option value="css">CSS</option>
+               <option value="drop_down">Drop Down (Ajax / JQuery)</option>
+            </field>
+            <field type="spacer" label="TPL_BT_MAINBODY_ON_FRONTPAGE_HEADER" />
+            <field name="display_mainbody_on_frontpage" type="radio" class="btn-group" default="1" label="TPL_BT_MAINBODY_ON_FRONTPAGE_LBL" description="TPL_BT_MAINBODY_ON_FRONTPAGE_DESC">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field type="spacer" label="TPL_BT_TEMPLATE_LAYOUT_HEADER" />
+            <field name="tlayout" type="list" default="left_main" label="TPL_BT_TEMPLATE_LAYOUT_LBL" description="TPL_BT_TEMPLATE_LAYOUT_DESC">
+               <option value="left">Left + Main</option>
+               <option value="right">Main + Right</option>
+               <option value="left_main_right">Left + Main + Right</option>
+               <option value="main">Only Main (without columns)</option>
+            </field>
+            <field type="spacer" label="TPL_BT_TEMPLATE_LAYOUT_WIDTHS_HEADER" />
+            <field name="full_width" size="4" type="text" default="990" label="TPL_BT_TEMPLATE_WIDTH_LBL" description="TPL_BT_TEMPLATE_WIDTH_DESC"></field>
+            <field name="left_width" size="4" type="text" default="300" label="TPL_BT_TEMPLATE_LEFT_WIDTH_LBL" description="TPL_BT_TEMPLATE_LEFT_WIDTH_DESC"></field>
+            <field name="right_width" size="4" type="text" default="300" label="TPL_BT_TEMPLATE_RIGHT_WIDTH_LBL" description="TPL_BT_TEMPLATE_RIGHT_WIDTH_DESC"></field>
+            <field type="spacer" label="TPL_BT_MODULES_POSITIONS_WIDTHS_HEADER" />
+            <field name="logo_width" size="4" type="text" default="" label="Logo width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="top_width" size="4" type="text" default="" label="Top width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="top1_width" size="4" type="text" default="" label="Top1 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="top2_width" size="4" type="text" default="" label="Top2 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="top3_width" size="4" type="text" default="" label="Top3 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="top4_width" size="4" type="text" default="" label="Top4 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="toolbar1_width" size="4" type="text" default="" label="Toolbar1 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="toolbar2_width" size="4" type="text" default="" label="Toolbar2 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="menu_width" size="4" type="text" default="" label="Menu width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="toolbar3_width" size="4" type="text" default="" label="Toolbar3 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="toolbar4_width" size="4" type="text" default="" label="Toolbar4 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="header1_width" size="4" type="text" default="" label="Header1 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="slideshow_width" size="4" type="text" default="" label="Slideshow width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="header2_width" size="4" type="text" default="" label="Header2 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="header3_width" size="4" type="text" default="" label="Header3 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="header4_width" size="4" type="text" default="" label="Header4 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="header5_width" size="4" type="text" default="" label="Header5 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="footer1_width" size="4" type="text" default="" label="Footer1 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="footer2_width" size="4" type="text" default="" label="Footer2 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="footer3_width" size="4" type="text" default="" label="Footer3 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="footer4_width" size="4" type="text" default="" label="Footer4 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="news1_width" size="4" type="text" default="" label="News1 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="news2_width" size="4" type="text" default="" label="News2 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="news3_width" size="4" type="text" default="" label="News3 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="notice1_width" size="4" type="text" default="" label="Notice1 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="notice2_width" size="4" type="text" default="" label="Notice2 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field name="notice3_width" size="4" type="text" default="" label="Notice3 width" description="TPL_BT_MODULE_POSITION_WIDTH_DESC"></field>
+            <field type="spacer" label="TPL_BT_SLIDERS_JQUERY_EFFECTS_HEADER" />
+            <field name="display_syntax_highlighter" type="radio" class="btn-group" default="1" label="Syntax Highlighter" description="Syntax Highlighter (based on: http://alexgorbatchev.com/SyntaxHighlighter/)">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field name="display_nivo" type="radio" class="btn-group" default="1" label="jQuery Nivo Slider" description="jQuery Nivo Slider (based on: http://nivo.dev7studios.com)">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field name="display_scrollable" type="radio" class="btn-group" default="1" label="Scrollable Slider" description="Scrollable Slider (based on: http://jquerytools.org/)">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field type="spacer" label="TPL_BT_LANG_TYPE_HEADER" />
+            <field name="lang_type" type="list" default="LTR" label="TPL_BT_LANG_TYPE_LBL" description="TPL_BT_LANG_TYPE_DESC">
+               <option value="LTR">LTR (Left to Right)</option>
+               <option value="RTL">RTL (Right to Left)</option>
+            </field>
+            <field type="spacer" label="TPL_BT_TEMPLATE_TOOLS_HEADER" />
+            <field name="display_btlogo" type="radio" class="btn-group" default="1" label="TPL_BT_BONUSTHEMES_ICON_LBL" description="TPL_BT_BONUSTHEMES_ICON_DESC">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field name="display_gotop" type="radio" class="btn-group" default="1" label="TPL_BT_GO_TOP_BUTTON_LBL" description="TPL_BT_GO_TOP_BUTTON_DESC">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field name="display_gotop" type="radio" class="btn-group" default="1" label="TPL_BT_GO_TOP_BUTTON_LBL" description="TPL_BT_GO_TOP_BUTTON_DESC">
+               <option value="1">JYES</option>
+               <option value="0">JNO</option>
+            </field>
+            <field name="copyright_message" type="textarea" default="Copyright &amp;copy; 2013 Joomla! template by BonusThemes.com. All Rights Reserved.&lt;br /&gt;&lt;a href=&quot;http://www.joomla.org&quot; target=&quot;_blank&quot;&gt;Joomla!&lt;/a&gt; is Free Software released under the &lt;a href=&quot;http://www.gnu.org/licenses/gpl-2.0.html&quot; target=&quot;_blank&quot;&gt;GNU General Public License&lt;/a&gt;." label="TPL_BT_COPYRIGHT_MESSAGE_LBL" description="TPL_BT_COPYRIGHT_MESSAGE_DESC" rows="5" cols="35" filter="raw" />
+         </fieldset>
+      </fields>
+   </config>
+
+</extension>

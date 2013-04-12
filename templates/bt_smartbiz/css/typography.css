@@ -1,0 +1,365 @@
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+
+/* --- Paragraph, Headings --- */
+p { 
+     line-height: 18px;
+     margin-bottom: 18px;
+}
+h1 { 
+     font-size: 32px;
+}
+h2 { 
+     font-size: 24px;
+}
+h3 { 
+     font-size: 19px;
+}
+h4 { 
+     font-size: 16px;
+}
+h5 { 
+     font-size: 13px;
+}
+h6 { 
+     font-size: 11px;
+}
+
+/* --- Table, Links, Image --- */
+table { }
+img { }
+img.brdr { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     padding: 6px 6px 6px 6px;
+}
+a:link, a:active, a:visited { 
+     font-weight: 700;
+     text-decoration: none;
+     transition: color 0.5s ease-in;
+     -webkit-transition: color 0.5s ease-in;
+     -moz-transition: color 0.5s ease-in;
+     -o-transition: color 0.5s ease-in;
+}
+a:hover, a:focus { 
+     text-decoration: none;
+}
+a.button, a.button:visited { 
+     font-weight: bold;
+     text-decoration: none !important;
+     display: inline-block !important;
+}
+
+/* --- Forms --- */
+form { 
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+input.text, input, textarea, select, radio, checkbox, button { 
+     font-size: 14px;
+     vertical-align: middle;
+     margin: 0px 0px 0px 0px;
+}
+textarea:focus, input:focus { }
+label { 
+     cursor: pointer;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+fieldset.bt_fieldset-1, fieldset.bt_fieldset-2 { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 0px 0px 10px 0px!important;
+     padding: 10px 15px 10px 15px!important;
+}
+fieldset.bt_fieldset-1 legend, fieldset.bt_fieldset-2 legend { 
+     line-height: 22px;
+     padding-right: 10px;
+     padding-left: 10px;
+     height: 22px;
+}
+fieldset.bt_fieldset-1 p, fieldset.bt_fieldset-2 p { 
+     margin: 0px 0px 0px 0px;
+     padding: 10px 0px 10px 0px;
+}
+fieldset.bt_fieldset-1 legend { 
+     font-weight: bold;
+     border-right-style: none;
+     border-left-style: none;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 10px 0px 10px;
+}
+fieldset.bt_fieldset-2 legend { 
+     border-left-width: 3px;
+     border-left-style: solid;
+}
+input[type="text"], input[type="password"], input[type="email"] { 
+     height: 16px;
+     display: inline-block;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 5px 5px 5px 0px;
+     padding: 5px 5px 5px 5px;
+}
+input[type="text"]:hover, input[type="text"]:focus, input[type="password"]:hover, input[type="password"]:focus, input[type="email"]:hover, input[type="email"]:focus { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+textarea { 
+     overflow: hidden;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 10px 0px 5px 0px;
+     padding: 5px 5px 5px 5px;
+}
+textarea:hover, textarea:focus { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+button, input.button, .button, input[type="submit"], input[type="button"], input[type="reset"] { 
+     font-size: 13px !important;
+     font-weight: bold;
+     text-align: center;
+     text-decoration: none;
+     cursor: pointer;
+     display: block;
+     margin: 0px 0px 10px 0px;
+     padding: 9px 15px 9px 15px;
+}
+button:hover, input.button:hover, .button:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover { }
+button:active, input.button:active, .button:active, input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active { }
+
+/* --- List styles --- */
+ul { 
+     margin: 10px 0px 15px 0px;
+     padding: 0px 0px 0px 0px;
+}
+ol { 
+     margin: 10px 0px 20px 0px;
+     padding: 0px 0px 0px 0px;
+}
+ul li { 
+     list-style-type: none;
+     background-position: left 9px;
+     background-repeat: no-repeat;
+     margin: 2px 0px 2px 0px;
+     padding: 2px 0px 0px 13px;
+}
+ol li { 
+     margin: 2px 0px 2px 0px;
+     padding: 2px 0px 0px 0px;
+}
+ul.bt_ul { 
+     list-style-position: outside;
+}
+ol.bt_ol { 
+     list-style-type: decimal;
+}
+ul.bt_dl { 
+     list-style-type: none;
+}
+ul.bt_dl li { 
+     list-style-type: none;
+}
+ul.bt_arrow_list-1, ul.bt_circle_list-1, ul.bt_quad_list-1, ul.bt_check_list-1 { 
+     margin: 0px 0px 15px 0px;
+     padding: 0px 0px 0px 0px;
+}
+ul.bt_arrow_list-1 li { 
+     list-style-type: none;
+     background-position: left 10px;
+     background-repeat: no-repeat;
+     margin: 2px 0px 2px 0px;
+     padding: 4px 0px 0px 16px;
+}
+ul.bt_circle_list-1 li { 
+     line-height: 22px;
+     list-style-type: none;
+     background-position: left 7px;
+     background-repeat: no-repeat;
+     margin: 2px 0px 2px 0px;
+     padding: 0px 0px 0px 16px;
+}
+ul.bt_quad_list-1 li { 
+     list-style-type: none;
+     background-position: left 9px;
+     background-repeat: no-repeat;
+     margin: 2px 0px 2px 0px;
+     padding: 2px 0px 0px 13px;
+}
+ul.bt_check_list-1 li { 
+     line-height: 22px;
+     list-style-type: none;
+     background-position: left 7px;
+     background-repeat: no-repeat;
+     margin: 2px 0px 2px 0px;
+     padding: 0px 0px 0px 20px;
+}
+
+/* --- Tables --- */
+table.bt_typo_table { 
+     text-align: center;
+}
+table.bt_typo_table thead th { 
+     font-size: 16px;
+     font-weight: bold;
+     border-bottom-width: 2px;
+     border-bottom-style: solid;
+     padding: 10px 0px 10px 0px;
+}
+table.bt_typo_table td { 
+     font-size: 13px;
+     font-weight: bold;
+     vertical-align: middle;
+     line-height: 40px;
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+table.bt_typo_table td.bt_dark_td { 
+     border-right-width: 1px;
+     border-right-style: solid;
+}
+table.bt_typo_table td:hover { }
+table.bt_typo_table td.bt_dark_td:hover { }
+
+/* --- Block Numbers --- */
+div.bt_block_number span { 
+     font-size: 18px;
+     font-weight: bold;
+     text-align: center;
+     line-height: 30px;
+     border-top-left-radius: 50%;
+     -webkit-border-top-left-radius: 50%;
+     -moz-border-radius-topleft: 50%;
+     border-top-right-radius: 50%;
+     -webkit-border-top-right-radius: 50%;
+     -moz-border-radius-topright: 50%;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-bottom-left-radius: 50%;
+     -webkit-border-bottom-left-radius: 50%;
+     -moz-border-radius-bottomleft: 50%;
+     width: 30px;
+     height: 30px;
+     float: left;
+     margin: 5px 10px 10px 0px;
+}
+
+/* --- Blockquote --- */
+blockquote { 
+     font-size: 12px;
+     font-style: normal;
+     font-family: Georgia, serif;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+blockquote p { 
+     font-size: 13px !important;
+     font-family: Open Sans, sans-serif !important;
+}
+blockquote.bt_blockquote-1 p.bt_blockquote_left { 
+     font-size: 16px;
+     font-style: italic;
+     font-family: Georgia, serif      !important;
+     line-height: 22px !important;
+     background-position: left 5px;
+     background-repeat: no-repeat;
+     width: 40%;
+     float: left;
+     margin: 0px 15px 0px 0px;
+     padding: 0px 0px 10px 45px;
+}
+blockquote.bt_blockquote-1 p.bt_blockquote_right { 
+     font-size: 18px !important;
+     font-style: italic;
+     font-family: Georgia, serif    !important;
+     line-height: 22px !important;
+     background-position: left 5px;
+     background-repeat: no-repeat;
+     width: 40%;
+     float: right;
+     margin: 0px 0px 0px 15px;
+     padding: 0px 0px 10px 45px;
+}
+blockquote.bt_blockquote-2 { 
+     background-position: left 16px;
+     background-repeat: no-repeat;
+     padding: 0px 0px 0px 45px;
+}
+blockquote.bt_blockquote-2 p { 
+     font-size: 18px !important;
+     font-style: italic;
+     font-family: Georgia, serif    !important;
+     line-height: 22px !important;
+     background-position: right 95%;
+     background-repeat: no-repeat;
+     display: inline-block;
+     padding: 0px 45px 0px 0px;
+}
+
+/* --- Dropcaps --- */
+div.bt_dropcap-2 span { 
+     font-size: 40px;
+     font-weight: bold;
+     text-transform: uppercase;
+     line-height: 40px;
+     border-bottom-width: 4px;
+     border-bottom-style: solid;
+     display: block;
+     float: left;
+     margin: 0px 15px 5px 0px;
+     padding: 0px 0px 5px 0px;
+}
+div.bt_dropcap-2 p { 
+     font-size: 13px;
+}
+
+/* --- Highlights --- */
+p.bt_highlight { 
+     padding: 0px 0px 5px 0px;
+}
+span.bt_highlight-1, span.bt_highlight-2, span.bt_highlight-3 { 
+     margin: 3px 4px 3px 4px;
+     padding: 3px 7px 3px 7px;
+}
+span.bt_highlight-1 { }
+span.bt_highlight-2 { }
+span.bt_highlight-3 { }
+
+/* --- Codes --- */
+div.bt_code-1 { 
+     font-size: 12px;
+     font-family: Courier New, Courier, monospace;
+     line-height: 18px;
+     border-left-width: 6px;
+     border-left-style: solid;
+     margin: 0px 0px 10px 0px;
+     padding: 10px 17px 10px 17px;
+}
+
+/* --- Typography Page (only for demo & quickstart) --- */
+.bt_typo_title { 
+     font-size: 22px;
+     font-weight: bold;
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     overflow: hidden;
+     margin: 5px 0px 10px 0px;
+     padding: 5px 0px 10px 0px;
+}
+.bt_typo_title span.bt_title { 
+     display: inline;
+     float: left;
+}
+.bt_typo_lbl { 
+     font-weight: bold;
+}

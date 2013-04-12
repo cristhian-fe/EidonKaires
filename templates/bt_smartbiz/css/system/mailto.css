@@ -1,0 +1,53 @@
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+body.bt_mailto_body { 
+     font-family: Maven Pro, sans-serif;
+     overflow: hidden;
+}
+.bt_mailto { 
+     padding: 10px 10px 10px 10px;
+}
+.bt_mailto #mailto-window form { 
+     position: relative;
+     top: -20px;
+     padding: 12px 2px 12px 2px;
+}
+.bt_mailto #mailto-window h2 { 
+     font-size: 20px !important;
+     padding: 0px 0px 12px 0px!important;
+}
+.bt_mailto #mailto-window .mailto-close { 
+     display: block;
+     float: right;
+     position: relative;
+     top: -30px;
+     right: 12px;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+.bt_mailto a { 
+     font-size: 10px;
+     text-decoration: none;
+     text-transform: uppercase;
+}
+.bt_mailto a:hover, .bt_mailto a:active, .bt_mailto a:focus { 
+     text-decoration: underline;
+}
+.bt_mailto form div label { 
+     width: 90px;
+     display: block;
+     margin: 3px 0px 0px 0px;
+}
+.bt_mailto form div input { }
+.bt_mailto #mailtoForm p button { 
+     float: left;
+     margin: 0px 5px 0px 0px;
+}

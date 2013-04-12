@@ -1,0 +1,602 @@
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+
+/* -------- Common Elements -------- */
+div#k2Container { }
+
+/* ---------- Common Elements ---------- */
+.even { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     padding: 10px 10px 10px 10px;
+}
+.odd { 
+     border-bottom-style: none;
+     padding: 10px 10px 10px 10px;
+}
+div.k2FeedIcon a, div.k2FeedIcon a:hover { 
+     background-repeat: no-repeat;
+}
+div.itemRatingForm .formLogLoading { }
+.itemRatingList, .itemRatingList a:hover, .itemRatingList .itemCurrentRating { }
+.itemRatingList li { }
+.itemRatingList a, .itemRatingList .itemCurrentRating { }
+.recaptchatable .recaptcha_image_cell, #recaptcha_table { }
+#recaptcha_table { }
+#recaptcha_response_field { }
+.lastItem { }
+.k2Avatar img { 
+     margin: 0px 0px 5px 10px;
+}
+div.k2Pagination { }
+div.itemIsFeatured, div.catItemIsFeatured, div.userItemIsFeatured { 
+     background-position: left 0;
+     background-repeat: no-repeat;
+}
+
+/* ---------- Component: Item view ---------- */
+a.itemPrintThisPage { }
+a.itemPrintThisPage:hover { }
+div.itemView { }
+span.itemEditLink a { }
+span.itemEditLink a:hover { }
+div.itemHeader span.itemDateCreated { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-left: 20px;
+     padding-right: 20px;
+}
+div.itemHeader h2.itemTitle { 
+     font-weight: 500;
+     font-family: Maven Pro, sans-serif;
+}
+div.itemHeader h2.itemTitle span sup { 
+     display: none;
+}
+div.itemHeader span.itemAuthor { 
+     text-align: right;
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-left: 20px;
+     padding-right: 20px;
+     display: inline-block;
+}
+div.itemHeader span.itemAuthor a { }
+div.itemHeader span.itemAuthor a:hover { }
+div.itemToolbar { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+     padding: 5px 5px 5px 5px;
+}
+div.itemToolbar ul li { }
+div.itemToolbar ul > li:first-child { }
+div.itemToolbar ul li a#fontDecrease img { }
+div.itemToolbar ul li a#fontIncrease img { }
+div.itemRatingBlock span { }
+div.itemImageBlock { 
+     margin-left: 10px !important;
+     float: right;
+}
+span.itemImage img { 
+     border-bottom-width: 5px;
+     width: 300px !important;
+     border-style: none none solid none;
+     padding: 0px 0px 0px 0px;
+}
+span.itemImageCaption { 
+     font-weight: 700;
+}
+span.itemImageCredits { }
+div.itemIntroText { }
+div.itemExtraFields { }
+div.itemContentFooter { 
+     border-bottom-width: 1px !important;
+     border-bottom-style: solid !important;
+}
+div.itemCategory { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.itemCategory span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.itemTagsBlock { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     margin-top: 0px;
+}
+div.itemTagsBlock span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+     position: relative;
+     top: 10px;
+}
+div.itemTagsBlock ul.itemTags { }
+div.itemTagsBlock ul.itemTags li, div.catItemTagsBlock ul.catItemTags li, div.userItemTagsBlock ul.userItemTags li, div.latestItemTagsBlock ul.latestItemTags li { 
+     background-position: 100% 5px;
+     background-repeat: no-repeat;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-top-left-radius: 3px;
+     -webkit-border-top-left-radius: 3px;
+     -moz-border-radius-topleft: 3px;
+     border-bottom-left-radius: 3px;
+     -webkit-border-bottom-left-radius: 3px;
+     -moz-border-radius-bottomleft: 3px;
+     border-bottom-right-radius: 3px;
+     -webkit-border-bottom-right-radius: 3px;
+     -moz-border-radius-bottomright: 3px;
+     display: inline-block;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+     margin: 5px 5px 5px 5px;
+     padding: 5px 20px 5px 7px;
+}
+div.itemTagsBlock ul.itemTags li a, div.catItemTagsBlock ul.catItemTags li a, div.userItemTagsBlock ul.userItemTags li a, div.latestItemTagsBlock ul.latestItemTags li a { 
+     border-style: none none none none;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+div.itemTagsBlock ul.itemTags li a:hover { 
+     text-decoration: underline;
+     border-style: none none none none;
+}
+div.itemAttachmentsBlock { }
+div.itemAttachmentsBlock span { }
+div.itemAttachmentsBlock ul.itemAttachments li span { }
+div.itemAuthorBlock { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+}
+div.itemAuthorBlock img.itemAuthorAvatar { 
+     border-bottom-width: 5px;
+     border-style: none none solid none!important;
+     padding: 0px 0px 0px 0px !important;
+}
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorUrl { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.itemAuthorBlock div.itemAuthorDetails span.itemAuthorEmail { }
+div.itemAuthorLatest { }
+div.itemAuthorLatest h3 { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.itemAuthorLatest ul { }
+div.itemAuthorLatest ul li { }
+div.itemAuthorLatest ul li a { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.itemAuthorLatest ul li a:hover { }
+div.itemRelated { }
+div.itemRelated h3 { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.itemRelated ul { }
+div.itemRelated ul li { }
+div.itemRelated ul li.k2ScrollerElement { }
+div.itemRelated ul li.k2ScrollerElement { }
+div.itemRelated ul li.clr { }
+a.itemRelTitle { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.itemRelCat { }
+div.itemRelCat a { }
+div.itemRelAuthor { }
+div.itemRelAuthor a { }
+img.itemRelImg { }
+div.itemRelIntrotext { }
+div.itemRelFulltext { }
+div.itemRelMedia { }
+div.itemRelImageGallery { }
+div.itemVideoBlock { }
+div.itemVideoBlock span.itemVideoCaption { }
+div.itemVideoBlock span.itemVideoCredits { }
+div.itemNavigation { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+}
+div.itemNavigation span.itemNavigationTitle { 
+     font-weight: 700;
+}
+div.itemComments { 
+     background-position: bottom left;
+     background-repeat: no-repeat;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+}
+div.itemComments ul.itemCommentsList li { 
+     border-bottom-width: 0px;
+     padding: 10px 10px 10px 10px;
+}
+div.itemComments ul.itemCommentsList li.authorResponse { }
+div.itemComments ul.itemCommentsList li.unpublishedComment { }
+div.itemComments ul.itemCommentsList li img { 
+     border-bottom-width: 5px;
+     border-bottom-style: solid;
+     margin-left: 10px;
+     padding: 0px 0px 0px 0px;
+}
+div.itemComments ul.itemCommentsList li span.commentDate { }
+div.itemComments ul.itemCommentsList li span.commentLink a { }
+div.itemComments ul.itemCommentsList li span.commentLink a:hover { }
+div.itemComments ul.itemCommentsList li span.commentToolbar a { }
+div.itemComments ul.itemCommentsList li span.commentToolbar a:hover { }
+div.itemComments ul.itemCommentsList li span.commentToolbarLoading { }
+div.itemComments ul.itemCommentsList li.even { 
+     border-style: none none none none;
+}
+div.itemComments ul.itemCommentsList li.odd { }
+div.itemCommentsForm p.itemCommentsFormNotes { 
+     border-top-width: 1px;
+     border-top-style: solid;
+     padding-top: 5px;
+}
+div.itemCommentsForm form input#submitCommentButton { 
+     border-bottom-style: solid;
+     border-right-style: solid;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     border-width: 1px 1px 1px 1px;
+}
+div.itemCommentsForm form input#submitCommentButton:hover { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+div.itemCommentsForm form span#formLog { 
+     display: block;
+     margin: 0px 0px 0px 0px;
+     padding: 20px 0px 0px 0px;
+}
+div.itemCommentsForm form .formLogLoading { }
+div.k2ReportCommentFormContainer blockquote { }
+div.k2ReportCommentFormContainer blockquote span.quoteIconLeft { }
+div.k2ReportCommentFormContainer blockquote span.quoteIconRight { }
+div.k2ReportCommentFormContainer blockquote span.theComment { }
+div.k2ReportCommentFormContainer form input, div.k2ReportCommentFormContainer form textarea { }
+div.k2ReportCommentFormContainer form span#formLog { }
+div.k2ReportCommentFormContainer form .formLogLoading { }
+
+/* ---------- Component: Itemlist view (category) ---------- */
+div.itemListCategory { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+     padding: 15px 15px 15px 15px;
+}
+span.catItemAddLink { }
+span.catItemAddLink a { }
+span.catItemAddLink a:hover { }
+div.itemListCategory img { 
+     border-bottom-width: 5px;
+     border-style: none none solid none;
+     margin: 0px 0px 5px 15px;
+     padding: 0px 0px 0px 0px;
+}
+div.itemListSubCategories { 
+     margin-top: 25px;
+     margin-bottom: 25px;
+}
+div.subCategory { 
+     height: auto;
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+     padding: 15px 15px 15px 15px;
+}
+div.subCategory a.subCategoryImage img, div.subCategory a.subCategoryImage:hover img { 
+     border-bottom-width: 5px;
+     float: right;
+     border-style: none none solid none;
+     margin: 0px 0px 5px 15px;
+     padding: 0px 0px 0px 0px;
+}
+div#itemListLinks { }
+div.catItemView { 
+     margin-bottom: 35px;
+}
+span.catItemEditLink a { }
+span.catItemEditLink a:hover { }
+div.catItemHeader span.catItemDateCreated { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.catItemHeader h3.catItemTitle span sup { }
+div.catItemHeader span.catItemAuthor { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.catItemHeader span.catItemAuthor a { }
+div.catItemHeader span.catItemAuthor a:hover { }
+div.catItemRatingBlock span { }
+span.catItemImage img { 
+     border-bottom-width: 5px;
+     border-style: none none solid none;
+     padding: 0px 0px 0px 0px;
+}
+div.catItemExtraFields, div.genericItemExtraFields { }
+div.catItemHitsBlock { }
+div.catItemCategory { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.catItemCategory span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.catItemTagsBlock { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.catItemTagsBlock span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.catItemAttachmentsBlock { }
+div.catItemAttachmentsBlock span { }
+div.catItemAttachmentsBlock ul.catItemAttachments li span { }
+div.catItemVideoBlock { }
+div.catItemCommentsLink { }
+span.catItemDateModified { }
+
+/* ---------- Component: Itemlist view (user) ---------- */
+div.userBlock { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+}
+span.userItemAddLink { }
+span.userItemAddLink a { }
+span.userItemAddLink a:hover { }
+div.userBlock img { 
+     border-bottom-width: 5px;
+     border-style: none none solid none;
+     padding: 0px 0px 0px 0px;
+}
+span.userURL { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+span.userEmail { }
+div.userItemView { 
+     margin-bottom: 35px;
+}
+div.userItemViewUnpublished { }
+span.userItemEditLink a { }
+span.userItemEditLink a:hover { }
+div.userItemHeader span.userItemDateCreated { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.userItemHeader h3.userItemTitle span sup { }
+div.userItemImageBlock { }
+span.userItemImage img { 
+     border-bottom-width: 5px;
+     border-style: none none solid none;
+     padding: 0px 0px 0px 0px;
+}
+div.userItemCategory { 
+     border-top-width: 1px;
+     border-top-style: solid;
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.userItemCategory span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.userItemTagsBlock { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.userItemTagsBlock span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+     position: relative;
+     top: 10px;
+}
+div.userItemCommentsLink { }
+
+/* ---------- Component: Itemlist view (tag) ---------- */
+div.tagItemView { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.tagItemHeader span.tagItemDateCreated { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+span.tagItemImage img { 
+     border-bottom-width: 5px;
+     border-style: none none solid none;
+     padding: 0px 0px 0px 0px;
+}
+div.tagItemCategory { }
+div.tagItemCategory span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+
+/* ---------- Component: Itemlist view (generic) ---------- */
+div.genericItemView { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.genericItemHeader span.genericItemDateCreated { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+span.genericItemImage img { 
+     border-bottom-width: 5px;
+     border-bottom-style: solid;
+     padding: 0px 0px 0px 0px;
+}
+div.genericItemCategory { }
+div.genericItemCategory span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+
+/* ---------- Component: Latest view ---------- */
+div.latestItemsCategory { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 5px 1px;
+     margin: 0px 0px 20px 8px;
+     padding: 8px 15px 8px 15px;
+}
+div.latestItemsCategoryImage img { 
+     border-bottom-width: 5px;
+     float: right;
+     border-style: none none solid none;
+     margin: 0px 0px 5px 15px;
+     padding: 0px 0px 0px 0px;
+}
+div.latestItemsUser { }
+div.latestItemsUser img { }
+span.latestItemsUserURL { }
+span.latestItemsUserEmail { }
+div.latestItemView { 
+     margin-bottom: 20px;
+}
+span.latestItemDateCreated { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+span.latestItemImage img { 
+     border-bottom-width: 5px;
+     border-style: none none solid none;
+     padding: 0px 0px 0px 0px;
+}
+div.latestItemCategory { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.latestItemCategory span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+}
+div.latestItemTagsBlock { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+div.latestItemTagsBlock span { 
+     background-position: right center;
+     background-repeat: no-repeat;
+     padding-right: 20px;
+     position: relative;
+     top: 10px;
+}
+div.latestItemVideoBlock { }
+div.latestItemCommentsLink { }
+h2.latestItemTitleList { }
+
+/* ---------- Component: Register and profile page views (register.php and profile.php) ---------- */
+img.k2AccountPageImage { }
+.k2AccountPage div.k2AccountPageUpdate { }
+.k2AccountPage th.k2ProfileHeading { }
+.k2AccountPage table.admintable td.key, .k2AccountPage table.admintable td.paramlist_key { }
+
+/* ---------- Modules: mod_k2_comments ---------- */
+div.k2LatestCommentsBlock ul li a.lcAvatar img { 
+     border-bottom-style: solid;
+     border-width: 0px 0px 5px 0px;
+     padding: 0px 0px 0px 0px;
+}
+div.k2LatestCommentsBlock ul li span.lcCommentDate { }
+div.k2TopCommentersBlock ul li span.tcLatestCommentDate { }
+
+/* ---------- Modules: mod_k2_content ---------- */
+div.k2ItemsBlock ul li a.moduleItemAuthorAvatar img { 
+     border-bottom-style: solid;
+     border-width: 0px 0px 5px 0px;
+     padding: 0px 0px 0px 0px;
+}
+div.k2ItemsBlock ul li div.moduleItemIntrotext { }
+div.k2ItemsBlock ul li div.moduleItemIntrotext a.moduleItemImage img { }
+div.k2ItemsBlock ul li a.moduleItemComments { }
+div.k2ItemsBlock ul li span.moduleItemHits { }
+
+/* ---------- Modules: mod_k2_user (mod_k2_login will be removed in v2.6) ---------- */
+div.k2UserBlock p.ubGreeting { }
+
+/* ---------- Modules: mod_k2_tools ---------- */
+div.k2BreadcrumbsBlock span.bcTitle { }
+div.k2CalendarLoader { }
+table.calendar { 
+     border-bottom-width: 4px;
+     border-bottom-style: solid;
+     width: 100%;
+}
+table.calendar tr td { }
+table.calendar tr td.calendarNavMonthPrev { }
+table.calendar tr td.calendarCurrentMonth { }
+table.calendar tr td.calendarNavMonthNext { }
+table.calendar tr td.calendarDayName { }
+table.calendar tr td.calendarDateEmpty { }
+table.calendar tr td.calendarDateLinked a { }
+table.calendar tr td.calendarDateLinked a:hover { }
+table.calendar tr td.calendarToday { }
+table.calendar tr td.calendarTodayLinked { }
+table.calendar tr td.calendarTodayLinked a { }
+table.calendar tr td.calendarTodayLinked a:hover { }
+div.k2SearchBlock form input.k2SearchLoading { }
+div.k2SearchBlock div.k2LiveSearchResults { }
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a { }
+div.k2SearchBlock div.k2LiveSearchResults ul.liveSearchResults li a:hover { }
+div.k2TagCloudBlock a:hover { }
+
+/* ---------- Modules: mod_k2_users ---------- */
+div.k2UsersBlock ul li a.ubUserAvatar img { 
+     border-bottom-style: solid;
+     border-width: 0px 0px 5px 0px;
+     padding: 0px 0px 0px 0px;
+}
+a.ubUserFeedIcon, a.ubUserFeedIcon:hover { 
+     background-repeat: no-repeat;
+}
+a.ubUserURL,a.ubUserURL:hover { 
+     background-repeat: no-repeat;
+}
+span.ubUserEmail { }

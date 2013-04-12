@@ -1,0 +1,267 @@
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+
+/* ------- Son of Suckerfish Dropdowns, Originally developed by Patrick Griffiths and Dan Webb (http://www.htmldog.com/articles/suckerfish/dropdowns/) ------- */
+ul#bt_nav_menu, ul#bt_nav_menu ul { 
+     list-style-type: none;
+     width: 100%;
+     display: block;
+     z-index: 1000 !important;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+ul#bt_nav_menu a, ul#bt_nav_menu span.separator { 
+     font-size: 15px !important;
+     font-weight: 700;
+     text-decoration: none !important;
+     display: block;
+}
+ul#bt_nav_menu li li a, ul#bt_nav_menu li li span.separator { 
+     display: block;
+}
+ul#bt_nav_menu li { 
+     list-style-type: none;
+     background-position: left center;
+     background-repeat: no-repeat;
+     display: table-cell;
+     float: right;
+     margin: 0px 0px 0px 0px !important;
+     padding: 0px 0px 0px 0px !important;
+}
+ul#bt_nav_menu li ul { 
+     width: 220px;
+     z-index: 2;
+     position: absolute;
+     right: -999px;
+     margin: 0px 0px 0px 0px;
+     padding: 0px 0px 0px 0px;
+}
+ul#bt_nav_menu li ul ul { 
+     margin: -32px 220px 0px 0px;
+     padding: 0px 0px 0px 0px !important;
+}
+ul#bt_nav_menu li:hover ul ul { 
+     right: -999px;
+}
+ul#bt_nav_menu li:hover ul, ul#bt_nav_menu li li:hover ul { 
+     right: auto;
+}
+div.bt_sub_menu { 
+     display: table;
+     margin: 0px 0px 0px 0px;
+}
+
+/* ------- 4 levels ------- */
+ul#bt_nav_menu li:hover ul ul, ul#bt_nav_menu li:hover ul ul ul, ul#bt_nav_menu li:hover ul ul ul ul { 
+     right: -999em;
+}
+ul#bt_nav_menu li:hover ul, ul#bt_nav_menu li li:hover ul, ul#bt_nav_menu li li li:hover ul, ul#bt_nav_menu li li li li:hover ul { 
+     right: auto;
+}
+
+/* ------- Defaults for ALL Levels ------- */
+ul#bt_nav_menu li img { 
+     margin: 5px 0px 0px 10px;
+}
+ul#bt_nav_menu li a { 
+     text-decoration: none;
+     transition: none;
+     -webkit-transition: none;
+     -moz-transition: none;
+     -o-transition: none;
+}
+
+/* ------- TOP Level ------- */
+ul#bt_nav_menu li.yt_top_last { }
+
+/* -- no childs -- */
+ul#bt_nav_menu li a, ul#bt_nav_menu li span.separator { 
+     font-size: 14px;
+     cursor: pointer;
+     padding: 10px 25px 10px 25px !important;
+}
+ul#bt_nav_menu li:hover a, ul#bt_nav_menu li:hover span.separator { 
+     border-top-right-radius: 5px;
+     -webkit-border-top-right-radius: 5px;
+     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     -webkit-border-top-left-radius: 5px;
+     -moz-border-radius-topleft: 5px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+}
+
+/* -- no childs & active -- */
+ul#bt_nav_menu li.active a, ul#bt_nav_menu li.active span.separator { 
+     font-weight: 700;
+     border-top-right-radius: 5px;
+     -webkit-border-top-right-radius: 5px;
+     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     -webkit-border-top-left-radius: 5px;
+     -moz-border-radius-topleft: 5px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+}
+
+/* -- no childs & active & hover -- */
+ul#bt_nav_menu li.active a:hover, ul#bt_nav_menu li.active span.separator:hover { 
+     border-top-right-radius: 5px;
+     -webkit-border-top-right-radius: 5px;
+     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     -webkit-border-top-left-radius: 5px;
+     -moz-border-radius-topleft: 5px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+}
+
+/* -- has childs -- */
+ul#bt_nav_menu li.parent a, ul#bt_nav_menu li.parent span.separator { 
+     background-position: 5% center;
+     background-repeat: no-repeat;
+     padding: 10px 10px 10px 40px !important;
+}
+ul#bt_nav_menu li.parent:hover a, ul#bt_nav_menu li.parent:hover span.separator { 
+     background-position: 5% center;
+     background-repeat: no-repeat;
+     border-top-right-radius: 5px;
+     -webkit-border-top-right-radius: 5px;
+     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     -webkit-border-top-left-radius: 5px;
+     -moz-border-radius-topleft: 5px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+}
+
+/* -- has childs & active -- */
+ul#bt_nav_menu li.parent.active a, ul#bt_nav_menu li.parent.active span.separator { 
+     background-position: 5% center;
+     background-repeat: no-repeat;
+}
+
+/* -- has childs & active & hover -- */
+ul#bt_nav_menu li.parent.active a:hover, ul#bt_nav_menu li.parent.active span.separator:hover { 
+     background-position: 5% center;
+     background-repeat: no-repeat;
+}
+
+/* ------- SUB Levels ------- */
+ul#bt_nav_menu li ul li { 
+     width: 220px;
+     margin: 0px 0px 0px 0px !important;
+     padding: 0px 0px 0px 0px !important;
+}
+ul#bt_nav_menu li.parent ul { 
+     padding: 0px 0px 0px 0px;
+}
+
+/* -- no childs -- */
+ul#bt_nav_menu li.parent ul li a, ul#bt_nav_menu li.parent ul li span.separator, ul#bt_nav_menu li.parent ul li.parent ul li a, ul#bt_nav_menu li.parent ul li.parent ul li span.separator, ul#bt_nav_menu li.parent ul li.parent.active ul li a, ul#bt_nav_menu li.parent ul li.parent.active ul li span.separator { 
+     font-size: 12px !important;
+     margin: 0px 0px 0px 0px !important;
+     padding: 6px 15px 6px 16px !important;
+}
+
+/* -- separator -- */
+ul#bt_nav_menu li.parent ul li.yt_sub_default_item a, ul#bt_nav_menu li.parent ul li.yt_sub_default_item span.separator { 
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+}
+ul#bt_nav_menu li li.yt_sub_default_item a, ul#bt_nav_menu li li.yt_sub_default_item span.separator { 
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+}
+ul#bt_nav_menu li li.yt_sub_last_item a, ul#bt_nav_menu li li.yt_sub_last_item span.separator { }
+ul#bt_nav_menu li.parent ul li.yt_sub_last_item a, ul#bt_nav_menu li.parent ul li.yt_sub_last_item span.separator { }
+ul#bt_nav_menu li.parent ul li:hover a, ul#bt_nav_menu li.parent ul li:hover span.separator, ul#bt_nav_menu li.parent ul li.parent ul li:hover a, ul#bt_nav_menu li.parent ul li.parent ul li:hover span.separator, ul#bt_nav_menu li.parent ul li.parent.active ul li:hover a, ul#bt_nav_menu li.parent ul li.parent.active ul li:hover span.separator { }
+
+/* -- no childs & active -- */
+ul#bt_nav_menu li.parent ul li.active a, ul#bt_nav_menu li.parent ul li.active span.separator, ul#bt_nav_menu li.parent ul li.parent ul li.active a, ul#bt_nav_menu li.parent ul li.parent ul li.active span.separator { 
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+}
+ul#bt_nav_menu li.parent ul li.active a:hover, ul#bt_nav_menu li.parent ul li.active span.separator:hover, ul#bt_nav_menu li.parent ul li.parent ul li.active a:hover, ul#bt_nav_menu li.parent ul li.parent ul li.active span.separator:hover { }
+
+/* -- has childs -- */
+ul#bt_nav_menu li.parent ul li.parent a, ul#bt_nav_menu li.parent ul li.parent span.separator { 
+     background-position: 5% center                             !important;
+     background-repeat: no-repeat !important;
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+     padding: 6px 15px 6px 38px !important;
+}
+ul#bt_nav_menu li.parent ul li.parent a:hover, ul#bt_nav_menu li.parent ul li.parent span.separator:hover { }
+
+/* -- has childs & active -- */
+ul#bt_nav_menu li.parent ul li.parent.active a, ul#bt_nav_menu li.parent ul li.parent.active span.separator { 
+     border-top-right-radius: 0px;
+     -webkit-border-top-right-radius: 0px;
+     -moz-border-radius-topright: 0px;
+     border-top-left-radius: 0px;
+     -webkit-border-top-left-radius: 0px;
+     -moz-border-radius-topleft: 0px;
+     border-bottom-left-radius: 0px;
+     -webkit-border-bottom-left-radius: 0px;
+     -moz-border-radius-bottomleft: 0px;
+     border-bottom-right-radius: 0px;
+     -webkit-border-bottom-right-radius: 0px;
+     -moz-border-radius-bottomright: 0px;
+}
+ul#bt_nav_menu li.parent ul li.parent.active a:hover, ul#bt_nav_menu li.parent ul li.parent.active span.separator:hover { }
+ul#bt_nav_menu li.parent ul li.parent.active li a, ul#bt_nav_menu li.parent ul li.parent.active li span.separator { }

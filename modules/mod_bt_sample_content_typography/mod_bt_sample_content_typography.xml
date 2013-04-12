@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+<name>BT Sample Content Typography</name>
+<author>BonusThemes.com</author>
+<version>2.0.0</version>
+<description>Sample Content Typography Module for Joomla 2.5.x</description>
+<creationDate>29 February 2012</creationDate>
+<copyright>Copyright (C) 2012 Bonusthemes.com. All rights reserved.</copyright>
+<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+<authorEmail>support@bonusthemes.com</authorEmail>
+<authorUrl>http://www.bonusthemes.com/</authorUrl>
+
+<files>
+	<folder module="mod_bt_sample_content_typography">images</folder>
+	<filename module="mod_bt_sample_content_typography">mod_bt_sample_content_typography.php</filename>
+	<filename module="mod_bt_sample_content_typography">sample_content_typography.class.php</filename>
+	<filename module="mod_bt_sample_content_typography">index.html</filename>
+</files>
+
+<languages>
+	<language tag="en-GB">en-GB.mod_bt_sample_content_typography.ini</language>
+</languages>
+	
+<config>
+	<fields name="params">
+		<fieldset name="basic">
+
+			<!-- Module Settings -->
+			<field type="spacer" name="spacer0" label="BT_DEFAULT_MODULE_SETTINGS" />
+			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="" />
+	
+			<!-- Types -->
+			<field type="spacer" name="spacer1" label="BT_TYPES" />
+
+
+<!-- Type #bt1 -->
+<field type="spacer" name="spacer2" label="BT_TYPE_1" />
+<field name="type_bt1" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt1" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt1" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt1" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt1" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt1" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt1" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt1" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt1" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt1" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt1" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt1" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt2 -->
+<field type="spacer" name="spacer3" label="BT_TYPE_2" />
+<field name="type_bt2" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt2" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt2" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt2" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt2" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt2" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt2" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt2" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt2" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt2" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt2" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt2" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt3 -->
+<field type="spacer" name="spacer4" label="BT_TYPE_3" />
+<field name="type_bt3" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt3" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt3" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt3" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt3" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt3" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt3" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt3" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt3" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt3" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt3" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt3" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt4 -->
+<field type="spacer" name="spacer5" label="BT_TYPE_4" />
+<field name="type_bt4" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt4" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt4" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt4" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt4" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt4" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt4" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt4" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt4" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt4" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt4" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt4" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt5 -->
+<field type="spacer" name="spacer6" label="BT_TYPE_5" />
+<field name="type_bt5" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt5" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt5" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt5" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt5" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt5" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt5" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt5" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt5" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt5" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt5" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt5" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt6 -->
+<field type="spacer" name="spacer7" label="BT_TYPE_6" />
+<field name="type_bt6" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt6" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt6" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt6" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt6" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt6" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt6" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt6" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt6" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt6" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt6" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt6" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt7 -->
+<field type="spacer" name="spacer8" label="BT_TYPE_7" />
+<field name="type_bt7" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt7" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt7" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt7" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt7" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt7" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt7" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt7" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt7" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt7" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt7" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt7" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt8 -->
+<field type="spacer" name="spacer9" label="BT_TYPE_8" />
+<field name="type_bt8" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt8" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt8" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt8" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt8" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt8" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt8" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt8" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt8" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt8" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt8" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt8" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt9 -->
+<field type="spacer" name="spacer10" label="BT_TYPE_9" />
+<field name="type_bt9" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt9" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt9" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt9" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt9" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt9" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt9" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt9" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt9" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt9" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt9" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt9" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+<!-- Type #bt10 -->
+<field type="spacer" name="spacer11" label="BT_TYPE_10" />
+<field name="type_bt10" type="list" default="" label="Type" description="">
+	<option value="">- None Selected -</option>
+	<option value="h1">H1</option>
+	<option value="h2">H2</option>
+	<option value="h3">H3</option>
+	<option value="h4">H4</option>
+	<option value="h5">H5</option>
+	<option value="h6">H6</option>
+	<option value="ol">LIST: Ordered List</option>
+	<option value="ul">LIST: Undefined List</option>
+	<option value="image">Image</option>
+	<option value="paragraph">Paragraph</option>
+	<option value="table">Table</option>
+	<option value="custom">Custom HTML</option>
+	<option value="label">FORM: Label</option>
+	<option value="input_text">FORM: Input text</option>
+	<option value="input_pass">FORM: Input password</option>
+	<option value="checkbox">FORM: Checkbox</option>
+	<option value="radio">FORM: Radio</option>
+	<option value="textarea">FORM: Textarea</option>
+	<option value="submit">FORM: Submit</option>
+	<option value="button">FORM: Button</option>
+	<option value="reset">FORM: Reset button</option>
+	<option value="blocknumber">TYPO: Blocknumber</option>
+	<option value="code">TYPO: Codes</option>
+	<option value="suffix">Module Suffix Info</option>
+</field>
+
+<field name="image_bt10" type="imagelist" default="" label="Image" description="The images are on the folder: \modules\mod_bt_sample_content_typography\images" directory="\modules\mod_bt_sample_content_typography\images" exclude="" stripext="" hide_default="1" />
+<field name="image_float_bt10" type="list" default="" label="Image Float" description="">
+	<option value="">- None Selected -</option>
+	<option value="center">Center</option>
+	<option value="left">Left</option>
+	<option value="right">Right</option>
+</field>
+
+<field name="count_bt10" type="text" default="1" label="Count" description="" />
+<field name="count_of_chars_bt10" type="text" default="150" label="Count of Chars" description="" />
+<field name="count_of_bullets_bt10" type="text" default="3" label="Count of Bullets" description="" />
+<field name="css_class_bt10" type="text" label="CSS Class" description="" />
+
+<field name="rows_bt10" type="text" default="" label="Rows (table)" description="" />
+<field name="cols_bt10" type="text" default="" label="Cols (table)" description="" />
+
+<field name="readmore_bt10" type="list" default="" label="Read More" description="">
+	<option value="">- None Selected -</option>
+	<option value="text_link">Text link</option>
+	<option value="button">Button</option>
+</field>
+
+<field name="suffix_info_bt10" type="text" label="Module Suffix Info" description="Ex: _btmstyle4a" />
+
+<field name="textarea_bt10" type="textarea" default="" label="Text area (HTML)" description="" rows="15" cols="40" filter="raw" />
+
+
+		
+		</fieldset>
+		
+		<fieldset name="advanced">
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+	</fields>	
+</config>
+</extension>

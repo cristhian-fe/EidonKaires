@@ -1,0 +1,17 @@
+/**
+ * Editor Button stylesheet
+ *
+ * @package         Snippets
+ * @version         3.0.4
+ *
+ * @author          Peter van Westen <peter@nonumber.nl>
+ * @link            http://www.nonumber.nl
+ * @copyright       Copyright © 2012 NoNumber All Rights Reserved
+ * @license         http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+.button2-left div.snippets {
+  background: transparent url(../images/button_right.png) no-repeat 100% 0;
+}
+.button2-left .blank.blank_snippets a {
+  padding: 0 6px;
+}
