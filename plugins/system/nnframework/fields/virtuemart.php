@@ -4,7 +4,7 @@
  * Displays a multiselectbox of available VirtueMart categories / products
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -79,8 +79,8 @@ class JFormFieldNN_VirtueMart extends JFormField
 
 		$show_ignore = $this->def('show_ignore');
 
-		$query = $this->db->getQuery(true);
-		$query->select('c.virtuemart_category_id as id, cc.category_parent_id AS parent_id, l.category_name AS title, c.published')
+		$query->clear()
+			->select('c.virtuemart_category_id as id, cc.category_parent_id AS parent_id, l.category_name AS title, c.published')
 			->from('#__virtuemart_categories_' . $this->lang . ' AS l')
 			->join('', '#__virtuemart_categories AS c using (virtuemart_category_id)')
 			->join('LEFT', '#__virtuemart_category_categories AS cc ON l.virtuemart_category_id = cc.category_child_id')
@@ -136,8 +136,8 @@ class JFormFieldNN_VirtueMart extends JFormField
 			return -1;
 		}
 
-		$query = $this->db->getQuery(true);
-		$query->select('p.virtuemart_product_id as id, l.product_name AS name, p.product_sku as sku, cl.category_name AS cat, p.published')
+		$query->clear()
+			->select('p.virtuemart_product_id as id, l.product_name AS name, p.product_sku as sku, cl.category_name AS cat, p.published')
 			->from('#__virtuemart_products AS p')
 			->join('LEFT', '#__virtuemart_products_' . $this->lang . ' AS l ON l.virtuemart_product_id = p.virtuemart_product_id')
 			->join('LEFT', '#__virtuemart_product_categories AS x ON x.virtuemart_product_id = p.virtuemart_product_id')

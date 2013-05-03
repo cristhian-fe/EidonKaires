@@ -2,8 +2,8 @@
 <extension version="2.5" type="plugin" group="system" method="upgrade">
 	<name>PLG_SYSTEM_TOOLTIPS</name>
 	<description>PLG_SYSTEM_TOOLTIPS_DESC</description>
-	<version>3.0.2FREE</version>
-	<creationDate>March 2013</creationDate>
+	<version>3.1.1FREE</version>
+	<creationDate>April 2013</creationDate>
 	<author>NoNumber (Peter van Westen)</author>
 	<authorEmail>peter@nonumber.nl</authorEmail>
 	<authorUrl>http://www.nonumber.nl</authorUrl>
@@ -88,6 +88,14 @@
 				<field name="@block_tag_a" type="nn_block" start="1" label="NN_TAG_SYNTAX" />
 				<field name="tag" type="text" size="20" default="tip" label="TT_TAG" description="TT_TAG_DESC" />
 				<field name="@block_tag_b" type="nn_block" end="1" />
+				<field name="enable_admin" type="radio" class="btn-group" default="0" label="NN_ENABLE_IN_ADMIN" description="NN_ENABLE_IN_ADMIN_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="load_mootools" type="radio" class="btn-group" default="1" label="NN_LOAD_MOOTOOLS" description="NN_LOAD_MOOTOOLS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
 			</fieldset>
 
 			<fieldset name="NN_SETTINGS_EDITOR_BUTTON">

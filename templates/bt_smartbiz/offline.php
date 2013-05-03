@@ -43,9 +43,9 @@ echo $bt->getGoogleFonts();
 
     <div id="bt_offline_outer">
 
-		<div class="bt_offline_message"><jdoc:include type="message" /></div>
+    <div class="bt_offline_message"><jdoc:include type="message" /></div>
 
-		<div class="offline_img"></div> 
+    <div class="offline_img"></div> 
 
         <div id="bt_offline_area">
 
@@ -82,7 +82,7 @@ echo $bt->getGoogleFonts();
                         <input type="hidden" name="task" value="user.login" />
                         <input type="hidden" name="return" value="<?php echo base64_encode(JURI::base()) ?>" />
                         
-						<?php echo JHTML::_( 'form.token' ); ?>
+            <?php echo JHTML::_( 'form.token' ); ?>
                     
                     </form>
                     

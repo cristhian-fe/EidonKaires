@@ -4,7 +4,7 @@
  * Display a menuitem field with a button
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -42,8 +42,8 @@ class JFormFieldNN_MenuItems extends JFormField
 		$menuTypes = $db->loadObjectList();
 
 		// load the list of menu items
-		$query = $db->getQuery(true);
-		$query->select('m.id, m.parent_id, m.title, m.alias, m.menutype, m.type, m.published, m.home')
+		$query->clear()
+			->select('m.id, m.parent_id, m.title, m.alias, m.menutype, m.type, m.published, m.home')
 			->select('m.title AS name')
 			->from('#__menu AS m')
 			->where('m.published != -2')

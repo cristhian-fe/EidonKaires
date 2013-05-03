@@ -4,7 +4,7 @@
  * Does all the magic!
  *
  * @package         Modalizer
- * @version         3.3.0
+ * @version         3.3.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -71,7 +71,7 @@ class plgSystemModalizer extends JPlugin
 			if (NNProtect::isAdmin()) {
 				return;
 			}
-		} else if ($app->isAdmin()) {
+		} else if (JFactory::getApplication()->isAdmin()) {
 			return;
 		}
 

@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: K2
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -51,11 +51,11 @@ class NNFrameworkAssignmentsK2
 					break;
 				case 'item':
 				default:
-					$query = $parent->db->getQuery(true);
-					$query->select('i.catid')
+					$parent->q->clear()
+						->select('i.catid')
 						->from('#__k2_items AS i')
 						->where('i.id = ' . (int) $parent->params->id);
-					$parent->db->setQuery($query);
+					$parent->db->setQuery($parent->q);
 					$cats = $parent->db->loadResult();
 					break;
 			}
@@ -95,13 +95,13 @@ class NNFrameworkAssignmentsK2
 		if ($params->inc_tags && $tag != '') {
 			$tags = array(trim(JFactory::getApplication()->input->getString('tag', '')));
 		} else {
-			$query = $parent->db->getQuery(true);
-			$query->select('t.name')
+			$parent->q->clear()
+				->select('t.name')
 				->from('#__k2_tags_xref AS x')
 				->join('LEFT', '#__k2_tags AS t ON t.id = x.tagID')
 				->where('x.itemID = ' . (int) $parent->params->id)
 				->where('t.published = 1');
-			$parent->db->setQuery($query);
+			$parent->db->setQuery($parent->q);
 			$tags = $parent->db->loadColumn();
 		}
 

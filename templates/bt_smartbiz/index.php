@@ -124,6 +124,7 @@ endif;
 echo $bt->getGoogleFonts();
 ?>
 
+  
 </head>
 
 <body>
@@ -133,15 +134,15 @@ echo $bt->getGoogleFonts();
             if ($bt->display_logo || $bt->display_top) {
                echo $bt->getPosition("logo_top", array("logo"=>$bt->logo_width,"top"=>$bt->top_width), $bt->full_width, "horizontal", "0", "0", "0", "0", "15", "15", "15", "0");
             }
-				?>
+        ?>
             </div>
-				
+        
             <div id="top_b_area">
             <?php
             if ($bt->display_top1 || $bt->display_top2 || $bt->display_top3 || $bt->display_top4) { 
                echo $bt->getPosition("top1_top2_top3_top4", array("top1"=>$bt->top1_width,"top2"=>$bt->top2_width,"top3"=>$bt->top3_width,"top4"=>$bt->top4_width), $bt->full_width, "horizontal", "0", "0", "0", "0", "5", "15", "0", "15");
             }
-				?>
+        ?>
             </div>
 <div class="clearfix"></div>
             <div id="toolbar_area">
@@ -149,7 +150,7 @@ echo $bt->getGoogleFonts();
             if ($bt->display_toolbar1 || $bt->display_toolbar2 || $bt->display_menu || $bt->display_toolbar3 || $bt->display_toolbar4) { 
                echo $bt->getPosition("toolbar1_toolbar2_menu_toolbar3_toolbar4", array("toolbar1"=>$bt->toolbar1_width,"toolbar2"=>$bt->toolbar2_width,"menu"=>$bt->menu_width,"toolbar3"=>$bt->toolbar3_width,"toolbar4"=>$bt->toolbar4_width), $bt->full_width, "horizontal", "0", "0", "0", "0", "0", "0", "0", "0");
             }
-				?>
+        ?>
             </div>
 
             <div id="header_a_area">
@@ -157,7 +158,7 @@ echo $bt->getGoogleFonts();
             if ($bt->display_header1 || $bt->display_slideshow || $bt->display_header2) { 
                echo $bt->getPosition("header1_slideshow_header2", array("header1"=>$bt->header1_width,"slideshow"=>$bt->slideshow_width,"header2"=>$bt->header2_width), $bt->full_width, "horizontal", "0", "0", "0", "0", "5", "5", "5", "5");
             }
-				?>
+        ?>
             </div>
 
             <div id="header_b_area">
@@ -165,7 +166,7 @@ echo $bt->getGoogleFonts();
             if ($bt->display_header3 || $bt->display_header4 || $bt->display_header5) { 
                echo $bt->getPosition("header3_header4_header5", array("header3"=>$bt->header3_width,"header4"=>$bt->header4_width,"header5"=>$bt->header5_width), $bt->full_width, "horizontal", "0", "0", "0", "0", "15", "15", "15", "15");
             }
-				?>
+        ?>
             </div>
 
             <div class="main_area">

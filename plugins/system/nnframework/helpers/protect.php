@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Protect
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -96,7 +96,7 @@ class NNProtect
 
 	/* protect complete adminForm (to prevent articles from being created when editing articles and such)
 	*/
-	public static function protectForm(&$string, $tags = array(), $protected = array())
+	public static function protectForm(&$str, $tags = array(), $protected = array())
 	{
 		if (!self::isEditPage()) {
 			return;
@@ -113,38 +113,38 @@ class NNProtect
 			}
 		}
 
-		$string = preg_replace(self::getFormRegex(1), '<!-- TMP_START_EDITOR -->\1', $string);
-		$string = explode('<!-- TMP_START_EDITOR -->', $string);
+		$str = preg_replace(self::getFormRegex(1), '<!-- TMP_START_EDITOR -->\1', $str);
+		$str = explode('<!-- TMP_START_EDITOR -->', $str);
 
-		foreach ($string as $i => $str) {
-			if (!empty($str) != '' && fmod($i, 2)) {
+		foreach ($str as $i => $s) {
+			if (!empty($s) != '' && fmod($i, 2)) {
 				$pass = 0;
 				foreach ($tags as $tag) {
-					if (!(strpos($str, $tag) === false)) {
+					if (!(strpos($s, $tag) === false)) {
 						$pass = 1;
 						break;
 					}
 				}
 				if ($pass) {
-					$str = explode('</form>', $str, 2);
+					$s = explode('</form>', $s, 2);
 					// protect tags only inside form fields
-					if (preg_match_all('#(<textarea[^>]*>.*?<\/textarea>|<input[^>]*>)#si', $str['0'], $matches, PREG_SET_ORDER) > 0) {
+					if (preg_match_all('#(<textarea[^>]*>.*?<\/textarea>|<input[^>]*>)#si', $s['0'], $matches, PREG_SET_ORDER) > 0) {
 						foreach ($matches as $match) {
 							$field = str_replace($tags, $protected, $match['0']);
-							$str['0'] = str_replace($match['0'], $field, $str['0']);
+							$s['0'] = str_replace($match['0'], $field, $s['0']);
 						}
 					}
-					$string[$i] = implode('</form>', $str);
+					$str[$i] = implode('</form>', $s);
 				}
 			}
 		}
 
-		$string = implode('', $string);
+		$str = implode('', $str);
 	}
 
 	/* replace any protected tags to original
 	*/
-	public static function unprotectForm(&$string, $tags = array(), $protected = array())
+	public static function unprotectForm(&$str, $tags = array(), $protected = array())
 	{
 		if (!is_array($tags)) {
 			$tags = array($tags);
@@ -157,6 +157,13 @@ class NNProtect
 			}
 		}
 
-		$string = str_replace($protected, $tags, $string);
+		$str = str_replace($protected, $tags, $str);
+	}
+
+	/* rremove inline comments in scrips and styles
+	*/
+	public static function removeInlineComments(&$str, $name)
+	{
+		$str = preg_replace('#/\* (START|END): ' . $name . ' [a-z]* \*/#s', '', $str);
 	}
 }

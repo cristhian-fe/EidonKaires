@@ -3,7 +3,7 @@
  * Plugin Helper File
  *
  * @package         Tooltips
- * @version         3.0.2
+ * @version         3.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -54,7 +54,9 @@ class plgSystemTooltipsHelper
 
 		// do not load scripts/styles on print page
 		if (JFactory::getDocument()->getType() !== 'feed' && !JFactory::getApplication()->input->getInt('print', 0) && !JFactory::getApplication()->input->getInt('noscript', 0)) {
-			JHtml::_('behavior.mootools');
+			if ($this->params->load_mootools) {
+				JHtml::_('behavior.mootools');
+			}
 
 			JFactory::getDocument()->addScriptDeclaration('/* START: Tooltips scripts */');
 			$script = '

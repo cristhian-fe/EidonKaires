@@ -2,8 +2,8 @@
 <extension version="2.5" type="module" method="upgrade">
 	<name>MOD_BETTERPREVIEW</name>
 	<description>MOD_BETTERPREVIEW_DESC</description>
-	<version>2.2.2FREE</version>
-	<creationDate>January 2013</creationDate>
+	<version>2.2.3FREE</version>
+	<creationDate>April 2013</creationDate>
 	<author>NoNumber (Peter van Westen)</author>
 	<authorEmail>peter@nonumber.nl</authorEmail>
 	<authorUrl>http://www.nonumber.nl</authorUrl>

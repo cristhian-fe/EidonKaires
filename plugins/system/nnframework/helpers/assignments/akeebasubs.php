@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: AkeebaSubs
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -23,11 +23,11 @@ class NNFrameworkAssignmentsAkeebaSubs
 		if (!$parent->params->id && $parent->params->view == 'level') {
 			$slug = JFactory::getApplication()->input->getString('slug', '');
 			if ($slug) {
-				$query = $parent->db->getQuery(true);
-				$query->select('l.akeebasubs_level_id')
+				$parent->q->clear()
+					->select('l.akeebasubs_level_id')
 					->from('#__akeebasubs_levels AS l')
 					->where('l.slug = ' . $parent->db->quote($slug));
-				$parent->db->setQuery($query);
+				$parent->db->setQuery($parent->q);
 				$parent->params->id = $parent->db->loadResult();
 			}
 		}

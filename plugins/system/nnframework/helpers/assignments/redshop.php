@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: RedShop
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -51,11 +51,11 @@ class NNFrameworkAssignmentsRedShop
 		if ($parent->params->category_id) {
 			$cats = $parent->params->category_id;
 		} else if ($parent->params->item_id) {
-			$query = $parent->db->getQuery(true);
-			$query->select('x.category_id')
+			$parent->q->clear()
+				->select('x.category_id')
 				->from('#__redshop_product_category_xref AS x')
 				->where('x.product_id = ' . (int) $parent->params->item_id);
-			$parent->db->setQuery($query);
+			$parent->db->setQuery($parent->q);
 			$cats = $parent->db->loadColumn();
 		}
 

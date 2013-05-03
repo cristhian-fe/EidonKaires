@@ -1,7 +1,7 @@
 <?php
 /**
  * @package          NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author           Peter van Westen <peter@nonumber.nl>
  * @link             http://www.nonumber.nl

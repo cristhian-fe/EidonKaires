@@ -3,7 +3,7 @@
  * Module Helper File
  *
  * @package         Better Preview
- * @version         2.2.2
+ * @version         2.2.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -40,7 +40,7 @@ class modBetterPreview
 		JHtml::_('behavior.mootools');
 
 		JHtml::stylesheet('nnframework/status.min.css', false, true);
-		JHtml::stylesheet('betterpreview/style.css', false, true);
+		JHtml::stylesheet('betterpreview/style.min.css', false, true);
 
 		$script = "
 			window.addEvent( 'domready', function() {
@@ -195,9 +195,9 @@ class modBetterPreview
 
 		$db = JFactory::getDBO();
 		$query = $db->getQuery(true);
-		$query->select('m.id, m.link, m.title as name, m.menutype');
-		$query->from('#__menu AS m');
-		$query->where('m.id = ' . (int) $id);
+		$query->select('m.id, m.link, m.title as name, m.menutype')
+			->from('#__menu AS m')
+			->where('m.id = ' . (int) $id);
 		$db->setQuery($query);
 		$menuitem = $db->loadObject();
 
@@ -255,10 +255,10 @@ class modBetterPreview
 		// Check if content is published
 		if ($view == 'article') {
 			$query = $db->getQuery(true);
-			$query->select('a.*, cc.title as cattitle, cc.published as catpub');
-			$query->from('#__content AS a');
-			$query->join('LEFT', '#__categories AS cc ON cc.id = a.catid');
-			$query->where('a.id = ' . (int) $id);
+			$query->select('a.*, cc.title as cattitle, cc.published as catpub')
+				->from('#__content AS a')
+				->join('LEFT', '#__categories AS cc ON cc.id = a.catid')
+				->where('a.id = ' . (int) $id);
 			$db->setQuery($query);
 			$article = $db->loadObject();
 
@@ -287,9 +287,9 @@ class modBetterPreview
 			}
 		} else if ($view == 'category') {
 			$query = $db->getQuery(true);
-			$query->select('cc.*');
-			$query->from('#__categories as cc');
-			$query->where('cc.id = ' . (int) $id);
+			$query->select('cc.*')
+				->from('#__categories as cc')
+				->where('cc.id = ' . (int) $id);
 			$db->setQuery($query);
 			$category = $db->loadObject();
 
@@ -304,16 +304,16 @@ class modBetterPreview
 		}
 
 		$query = $db->getQuery(true);
-		$query->select('m.id, m.link, m.title as name, m.menutype');
-		$query->from('#__menu AS m');
-		$query->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]option=com_content[^[:alnum:]]"');
+		$query->select('m.id, m.link, m.title as name, m.menutype')
+			->from('#__menu AS m')
+			->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]option=com_content[^[:alnum:]]"');
 		if ($view == 'category') {
 			$query->where('(CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]view=category[^[:alnum:]]" OR CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]view=categories[^[:alnum:]]")');
 		} else {
 			$query->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]view=article[^[:alnum:]]"');
 		}
-		$query->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]id=' . (int) $id . '[^[:digit:]]"');
-		$query->where('m.published = 1');
+		$query->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]id=' . (int) $id . '[^[:digit:]]"')
+			->where('m.published = 1');
 		$db->setQuery($query);
 		$menuitem = $db->loadObject();
 
@@ -333,20 +333,20 @@ class modBetterPreview
 				$catid = $article->catid;
 			} else {
 				$query = $db->getQuery(true);
-				$query->select('cc.parent_id');
-				$query->from('#__categories as cc');
-				$query->where('cc.id = ' . (int) $article->catid);
+				$query->select('cc.parent_id')
+					->from('#__categories as cc')
+					->where('cc.id = ' . (int) $id);
 				$db->setQuery($query);
-				$catid = $db->loadObject();
+				$catid = $db->loadResult();
 			}
 			if ($catid) {
 				$query = $db->getQuery(true);
-				$query->select('m.id, m.link, m.title as name, m.menutype');
-				$query->from('#__menu AS m');
-				$query->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]option=com_content[^[:alnum:]]"');
-				$query->where('(CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]view=category[^[:alnum:]]" OR CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]view=categories[^[:alnum:]]")');
-				$query->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]id=' . (int) $catid . '[^[:digit:]]"');
-				$query->where('m.published = 1');
+				$query->select('m.id, m.link, m.title as name, m.menutype')
+					->from('#__menu AS m')
+					->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]option=com_content[^[:alnum:]]"')
+					->where('(CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]view=category[^[:alnum:]]" OR CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]view=categories[^[:alnum:]]")')
+					->where('CONCAT( m.link, "&" ) REGEXP "[^[:alnum:]]id=' . (int) $catid . '[^[:digit:]]"')
+					->where('m.published = 1');
 				$db->setQuery($query);
 				$menuitem = $db->loadObject();
 			}
@@ -384,9 +384,9 @@ class modBetterPreview
 
 		while ($sql_item->parent != 0) {
 			$query = $db->getQuery(true);
-			$query->select('c.*');
-			$query->from('#__js_res_category AS c');
-			$query->where('c.id = ' . (int) $sql_item->parent);
+			$query->select('c.*')
+				->from('#__js_res_category AS c')
+				->where('c.id = ' . (int) $sql_item->parent);
 			$db->setQuery($query);
 			$sql_item = $db->loadObject();
 			unset($sql_item->params);
@@ -410,20 +410,20 @@ class modBetterPreview
 		if (in_array($component, $components)) {
 			$db = JFactory::getDBO();
 			$query = $db->getQuery(true);
-			$query->select('m.id, m.link, m.title as name, m.menutype');
-			$query->from('#__menu AS m');
-			$query->where('m.link LIKE ' . $db->q('%option=' . $component . '%'));
-			$query->where('m.published = 1');
-			$query->where('m.`client_id` = 0');
+			$query->select('m.id, m.link, m.title as name, m.menutype')
+				->from('#__menu AS m')
+				->where('m.link LIKE ' . $db->quote('%option=' . $component . '%'))
+				->where('m.published = 1')
+				->where('m.`client_id` = 0');
 			$db->setQuery($query);
 			$menuitem = $db->loadObject();
 
 			if (isset($menuitem->id)) {
 				$query = $db->getQuery(true);
-				$query->select('e.name');
-				$query->from('#__extensions AS e');
-				$query->where('e.type = ' . $db->q('component'));
-				$query->where('( e.element = ' . $db->q($component) . ' OR e.element = ' . $db->q('com_' . $component) . ' )');
+				$query->select('e.name')
+					->from('#__extensions AS e')
+					->where('e.type = ' . $db->quote('component'))
+					->where('( e.element = ' . $db->quote($component) . ' OR e.element = ' . $db->quote('com_' . $component) . ' )');
 				$db->setQuery($query);
 				$comp = $db->loadResult();
 				$link->title = $comp;
@@ -444,17 +444,17 @@ class modBetterPreview
 		$db = JFactory::getDBO();
 
 		$from = '#__extensions AS e';
-		$where = 'e.type = ' . $db->q('component') . ' AND e.enabled = 1';
+		$where = 'e.type = ' . $db->quote('component') . ' AND e.enabled = 1';
 		$select_id = 'e.extension_id';
 		$select_option = 'e.element';
 
 		if (!$frontend && !$admin) {
 			$query = $db->getQuery(true);
-			$query->select($select_option . ' AS ' . $db->qn('option') . ', e.name');
-			$query->from($from);
-			$query->where($where);
+			$query->select($select_option . ' AS ' . $db->quoteName('option') . ', e.name')
+				->from($from)
+				->where($where);
 			if (!$show_content) {
-				$query->where($select_option . ' != ' . $db->q('com_content'));
+				$query->where($select_option . ' != ' . $db->quote('com_content'));
 			}
 			$query->order('e.name');
 			$db->setQuery($query);
@@ -463,10 +463,10 @@ class modBetterPreview
 			if ($frontend) {
 				if (!$admin) {
 					$query = $db->getQuery(true);
-					$query->select($select_option . ' AS ' . $db->qn('id') . ', e.name, e.element');
-					$query->from($from);
-					$query->where($where);
-					$query->order('e.ordering, e.name');
+					$query->select($select_option . ' AS ' . $db->quoteName('id') . ', e.name, e.element')
+						->from($from)
+						->where($where)
+						->order('e.ordering, e.name');
 					$db->setQuery($query);
 					$component_ids = $db->loadObjectList('id');
 
@@ -510,9 +510,9 @@ class modBetterPreview
 
 			if ($admin) {
 				$query = $db->getQuery(true);
-				$query->select($select_id . ' AS ' . $db->qn('id'));
-				$query->from($from);
-				$query->where($where);
+				$query->select($select_id . ' AS ' . $db->quoteName('id'))
+					->from($from)
+					->where($where);
 				$db->setQuery($query);
 				if ($frontend && isset($component_ids)) {
 					$component_ids = array_merge($component_ids, $db->loadColumn());
@@ -523,14 +523,14 @@ class modBetterPreview
 
 			$component_ids = array_unique($component_ids);
 			$query = $db->getQuery(true);
-			$query->select($select_option . ' AS ' . $db->qn('option') . ', e.name');
-			$query->from($from);
-			$query->where($where);
+			$query->select($select_option . ' AS ' . $db->quoteName('option') . ', e.name')
+				->from($from)
+				->where($where);
 			if (!empty($component_ids)) {
 				$query->where($select_id . ' IN ( ' . implode(',', $component_ids) . ' )');
 			}
 			if (!$show_content) {
-				$query->where($select_option . ' != ' . $db->q('com_content'));
+				$query->where($select_option . ' != ' . $db->quote('com_content'));
 			}
 			$query->order('e.name');
 			$db->setQuery($query);

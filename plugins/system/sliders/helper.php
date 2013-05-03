@@ -3,7 +3,7 @@
  * Plugin Helper File
  *
  * @package         Sliders
- * @version         3.0.7
+ * @version         3.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -26,7 +26,7 @@ class plgSystemSlidersHelper
 	function __construct(&$params)
 	{
 		$this->params = $params;
-		$this->params->hasitems = 0;
+		$this->hasitems = 0;
 
 		$this->name = 'Sliders';
 		$this->alias = 'sliders';
@@ -42,29 +42,29 @@ class plgSystemSlidersHelper
 		$this->params->tag_open = preg_replace('#[^a-z0-9-_]#si', '', $this->params->tag_open);
 		$this->params->tag_close = preg_replace('#[^a-z0-9-_]#si', '', $this->params->tag_close);
 		$this->params->tag_link = preg_replace('#[^a-z0-9-_]#si', '', $this->params->tag_link);
-		$this->params->tag_delimiter = ($this->params->tag_delimiter == 'space') ? ' ' : '=';
+		$this->params->tag_delimiter = ($this->params->tag_delimiter == 'space') ? '(?: |&nbsp;)' : '=';
 
 		$this->params->regex = '#'
 			. $bts
-			. '\{(' . preg_quote($this->params->tag_open, '#') . 's?'
-			. '((?:-[a-zA-Z0-9-_]*)?)'
-			. preg_quote($this->params->tag_delimiter, '#')
-			. '((?:[^\}]*?\{[^\}]*?\})*[^\}]*?)|/' . preg_quote($this->params->tag_close, '#')
+			. '\{(' . $this->params->tag_open . 's?'
+			. '((?:-[a-zA-Z0-9-_]+)?)'
+			. $this->params->tag_delimiter
+			. '((?:[^\}]*?\{[^\}]*?\})*[^\}]*?)|/' . $this->params->tag_close
 			. '(?:-[a-z0-9-_]*)?)\}'
 			. $bte
 			. '#s';
 		$this->params->regex_end = '#'
 			. $bts
-			. '\{/' . preg_quote($this->params->tag_close, '#')
-			. '(?:-[a-z0-9-_]*)?\}'
+			. '\{/' . $this->params->tag_close
+			. '(?:-[a-z0-9-_]+)?\}'
 			. $bte
 			. '#s';
 		$this->params->regex_link = '#'
-			. '\{' . preg_quote($this->params->tag_link, '#')
-			. '(?:-[a-z0-9-_]*)?' . preg_quote($this->params->tag_delimiter, '#')
+			. '\{' . $this->params->tag_link
+			. '(?:-[a-z0-9-_]+)?' . $this->params->tag_delimiter
 			. '([^\}]*)\}'
 			. '(.*?)'
-			. '\{/' . preg_quote($this->params->tag_link, '#') . '\}'
+			. '\{/' . $this->params->tag_link . '\}'
 			. '#s';
 
 		$this->allitems = array();
@@ -179,10 +179,10 @@ class plgSystemSlidersHelper
 		}
 
 		if (strpos($html, '{' . $this->params->tag_open) === false) {
-			if (!$this->params->hasitems) {
+			if (!$this->hasitems) {
 				// remove style and script if no items are found
-				$html = preg_replace('#\s*<' . 'link [^>]*href="[^"]*/media/' . $this->alias . '/css/[^"]*\.css[^"]*"[^>]* />#s', '', $html);
-				$html = preg_replace('#\s*<' . 'script [^>]*src="[^"]*/media/' . $this->alias . '/js/[^"]*\.js[^"]*"[^>]*></script>#s', '', $html);
+				$html = preg_replace('#\s*<' . 'link [^>]*href="[^"]*/(' . $this->alias . '/css|css/' . $this->alias . ')/[^"]*\.css[^"]*"[^>]* />#s', '', $html);
+				$html = preg_replace('#\s*<' . 'script [^>]*src="[^"]*/(' . $this->alias . '/js|js/' . $this->alias . ')/[^"]*\.js[^"]*"[^>]*></script>#s', '', $html);
 				$html = preg_replace('#/\* START: ' . $this->name . ' .*?/\* END: ' . $this->name . ' [a-z]* \*/\s*#s', '', $html);
 			}
 		} else {
@@ -193,16 +193,16 @@ class plgSystemSlidersHelper
 				// only do stuff in body
 				$this->protect($body_split['0']);
 				$this->replaceTags($body_split['0']);
-				$this->unprotect($body_split['0']);
 
 				$html_split['1'] = implode('</body>', $body_split);
 				$html = implode('<body', $html_split);
 			} else {
 				$this->protect($html);
 				$this->replaceTags($html);
-				$this->unprotect($html);
 			}
+			$this->unprotect($html);
 		}
+		$this->cleanLeftoverJunk($html);
 
 		JResponse::setBody($html);
 	}
@@ -210,16 +210,16 @@ class plgSystemSlidersHelper
 	////////////////////////////////////////////////////////////////////
 	// FUNCTIONS
 	////////////////////////////////////////////////////////////////////
-	function replaceTags(&$str, $shownav = 1)
+	function replaceTags(&$str, $print = 1)
 	{
 		if (!is_string($str) || $str == '') {
 			return;
 		}
 
 		$url = JURI::getInstance();
-		$shownav = $shownav ? (!JFactory::getApplication()->input->getInt('print', 0)) : 0;
+		$print = $print ? (!JFactory::getApplication()->input->getInt('print', 0)) : 0;
 
-		if (!$shownav || (strpos($str, '{/' . $this->params->tag_close) === false && strpos($str, 'class="' . $this->id . '_container') === false)) {
+		if (!$print || (strpos($str, '{/' . $this->params->tag_close) === false && strpos($str, 'class="' . $this->id . '_container') === false)) {
 			// Replace syntax with general html on print pages
 			if (preg_match_all($this->params->regex, $str, $matches, PREG_SET_ORDER) > 0) {
 				foreach ($matches as $match) {
@@ -229,6 +229,7 @@ class plgSystemSlidersHelper
 					}
 					$title = trim($title);
 					$name = NNText::cleanTitle($title, 1);
+					$title = preg_replace('#<\?h[0-9](\s[^>]* )?>#', '', $title);
 					$replace = '<a name="' . $name . '"></a><' . $this->params->title_tag . ' class="' . $this->id . '_title">' . $title . '</' . $this->params->title_tag . '>';
 					$str = str_replace($match['0'], $replace, $str);
 				}
@@ -252,7 +253,7 @@ class plgSystemSlidersHelper
 		$setids = array();
 
 		if (preg_match_all($this->params->regex, $str, $matches, PREG_SET_ORDER) > 0) {
-			$this->params->hasitems = 1;
+			$this->hasitems = 1;
 			foreach ($matches as $match) {
 				if ($match['2']['0'] == '/') {
 					array_pop($setids);
@@ -416,7 +417,7 @@ class plgSystemSlidersHelper
 						$html[] = '<div class="' . trim($this->id . '_content_wrapper ' . $this->id . '_count_' . $item->count . ' ' . trim($item->class)) . ' ' . $this->id . '_content_' . ($item->active ? '' : 'in') . 'active" id="' . $this->id . '_content_' . $item->id . '">';
 						$html[] = '<div class="' . trim($this->id . '_content ' . trim($item->class)) . '">';
 						$html[] = '<div class="' . $this->id . '_item" id="' . $this->id . '_item_' . $item->id . '">';
-						$html[] = '<a name="' . $item->id . '"></a><' . $this->params->title_tag . ' class="' . $this->id . '_title">' . $item->title_full . '</' . $this->params->title_tag . '>';
+						$html[] = '<a name="' . $item->id . '"></a><' . $this->params->title_tag . ' class="' . $this->id . '_title">' . preg_replace('#<\?h[0-9](\s[^>]* )?>#', '', $item->title_full) . '</' . $this->params->title_tag . '>';
 
 						if ($i == $last) {
 							$html[] = '<script type="text/javascript">'
@@ -458,7 +459,6 @@ class plgSystemSlidersHelper
 		// link tag
 		if (preg_match_all($this->params->regex_link, $str, $matches, PREG_SET_ORDER) > 0) {
 			foreach ($matches as $match) {
-				$link = $match['2'];
 				$linkitem = 0;
 				$names = $this->createMatches(array($match['1']));
 				foreach ($names as $name) {
@@ -485,10 +485,10 @@ class plgSystemSlidersHelper
 					$url->setFragment($linkitem->id);
 					$link = '<a href="' . JRoute::_($url->toString()) . '"'
 						. ' class="' . $this->id . '_link ' . $this->id . '_link_' . $linkitem->alias . '"'
-						. ' rel="' . $linkitem->id . '">' . $link . '</a>';
+						. ' rel="' . $linkitem->id . '">' . $match['2'] . '</a>';
 				} else {
 					$url->setFragment($name);
-					$link = '<a href="' . JRoute::_($url->toString()) . '">' . $link . '</a>';
+					$link = '<a href="' . JRoute::_($url->toString()) . '">' . $match['2'] . '</a>';
 				}
 				$str = str_replace($match['0'], $link, $str);
 			}
@@ -513,6 +513,14 @@ class plgSystemSlidersHelper
 	function unprotect(&$str)
 	{
 		NNProtect::unprotectForm($str, array('{' . $this->params->tag_open, '{/' . $this->params->tag_close, '{' . $this->params->tag_link));
+	}
+
+	/**
+	 * Just in case you can't figure the method name out: this cleans the left-over junk
+	 */
+	function cleanLeftoverJunk(&$str)
+	{
+		NNProtect::removeInlineComments($str, $this->name);
 	}
 
 	/* Based on stringURLUnicodeSlug method from the unicode slug plugin by infograf768 */

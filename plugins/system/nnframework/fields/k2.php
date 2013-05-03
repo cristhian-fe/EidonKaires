@@ -4,7 +4,7 @@
  * Displays a multiselectbox of available K2 categories / tags / items
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -66,8 +66,8 @@ class JFormFieldNN_K2 extends JFormField
 		$get_categories = $this->def('getcategories', 1);
 		$show_ignore = $this->def('show_ignore');
 
-		$query = $this->db->getQuery(true);
-		$query->select('c.id, c.parent AS parent_id, c.name AS title, c.published')
+		$query->clear()
+			->select('c.id, c.parent AS parent_id, c.name AS title, c.published')
 			->from('#__k2_categories AS c')
 			->where('c.published > -1');
 		if (!$get_categories) {
@@ -143,8 +143,8 @@ class JFormFieldNN_K2 extends JFormField
 			return -1;
 		}
 
-		$query = $this->db->getQuery(true);
-		$query->select('i.id, i.title as name, c.name as cat, i.published')
+		$query->clear()
+			->select('i.id, i.title as name, c.name as cat, i.published')
 			->from('#__k2_items AS i')
 			->join('LEFT', '#__k2_categories AS c ON c.id = i.catid')
 			->where('i.published > -1')

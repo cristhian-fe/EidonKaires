@@ -4,7 +4,7 @@
  * Displays a multiselectbox of available HikaShop categories / products
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -64,8 +64,8 @@ class JFormFieldNN_HikaShop extends JFormField
 
 		$show_ignore = $this->def('show_ignore');
 
-		$query = $this->db->getQuery(true);
-		$query->select('c.category_id')
+		$query->clear()
+			->select('c.category_id')
 			->from('#__hikashop_category AS c')
 			->where('c.category_type = ' . $this->db->quote('root'));
 		$this->db->setQuery($query);
@@ -74,8 +74,8 @@ class JFormFieldNN_HikaShop extends JFormField
 		$query = $this->db->getQuery(true);
 		$query->select('c.category_id as id, c.category_parent_id AS parent_id, c.category_name AS title, c.category_published as published')
 			->from('#__hikashop_category AS c')
-			->where('c.category_published > -1')
 			->where('c.category_type = ' . $this->db->quote('product'))
+			->where('c.category_published > -1')
 			->order('c.category_ordering, c.category_name');
 		$this->db->setQuery($query);
 		$items = $this->db->loadObjectList();
@@ -125,8 +125,8 @@ class JFormFieldNN_HikaShop extends JFormField
 			return -1;
 		}
 
-		$query = $this->db->getQuery(true);
-		$query->select('p.product_id as id, p.product_name AS name, c.category_name AS cat, p.product_published AS published')
+		$query->clear()
+			->select('p.product_id as id, p.product_name AS name, c.category_name AS cat, p.product_published AS published')
 			->from('#__hikashop_product AS p')
 			->join('LEFT', '#__hikashop_product_category AS x ON x.product_id = p.product_id')
 			->join('LEFT', '#__hikashop_category AS c ON c.category_id = x.category_id')

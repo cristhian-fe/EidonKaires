@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Text
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -145,5 +145,11 @@ class NNText
 		}
 
 		return $pre . $name;
+	}
+
+	public static function strReplaceOnce($s, $r, $str)
+	{
+		$r = str_replace(array('\\', '$'), array('\\\\', '\\$'), $r);
+		return preg_replace('#' . preg_quote($s, '#') . '#', $r, $str, 1);
 	}
 }

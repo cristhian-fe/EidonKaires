@@ -4,7 +4,7 @@
  * Displays a multiselectbox of available RedShop categories / products
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -64,8 +64,8 @@ class JFormFieldNN_RedShop extends JFormField
 
 		$show_ignore = $this->def('show_ignore');
 
-		$query = $this->db->getQuery(true);
-		$query->select('c.category_id as id, x.category_parent_id AS parent_id, c.category_name AS title, c.published')
+		$query->clear()
+			->select('c.category_id as id, x.category_parent_id AS parent_id, c.category_name AS title, c.published')
 			->from('#__redshop_category AS c')
 			->join('LEFT', '#__redshop_category_xref AS x ON x.category_child_id = c.category_id')
 			->where('c.published > -1')
@@ -120,8 +120,8 @@ class JFormFieldNN_RedShop extends JFormField
 			return -1;
 		}
 
-		$query = $this->db->getQuery(true);
-		$query->select('p.product_id as id, p.product_name AS name, p.product_number as number, c.category_name AS cat, p.published')
+		$query->clear()
+			->select('p.product_id as id, p.product_name AS name, p.product_number as number, c.category_name AS cat, p.published')
 			->from('#__redshop_product AS p')
 			->join('LEFT', '#__redshop_product_category_xref AS x ON x.product_id = p.product_id')
 			->join('LEFT', '#__redshop_category AS c ON c.category_id = x.category_id')

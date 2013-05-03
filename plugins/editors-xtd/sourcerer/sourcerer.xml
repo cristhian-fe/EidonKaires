@@ -2,8 +2,8 @@
 <extension version="2.5" type="plugin" group="editors-xtd" method="upgrade">
 	<name>Button - Sourcerer</name>
 	<description>PLG_EDITORS-XTD_SOURCERER_DESC</description>
-	<version>4.1.4FREE</version>
-	<creationDate>March 2013</creationDate>
+	<version>4.1.6FREE</version>
+	<creationDate>April 2013</creationDate>
 	<author>NoNumber (Peter van Westen)</author>
 	<authorEmail>peter@nonumber.nl</authorEmail>
 	<authorUrl>http://www.nonumber.nl</authorUrl>

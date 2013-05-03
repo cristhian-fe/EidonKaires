@@ -4,7 +4,7 @@
  * Does all the magic!
  *
  * @package         Better Preview
- * @version         2.2.2
+ * @version         2.2.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -51,8 +51,8 @@ class plgSystemBetterPreview extends JPlugin
 		// return if NoNumber Framework plugin is not installed
 		if (!JFile::exists(JPATH_PLUGINS . '/system/nnframework/nnframework.php')) {
 			if (JFactory::getApplication()->isAdmin() && JFactory::getApplication()->input->get('option') != 'com_login') {
-				$msg = JText::_('BP_NONUMBER_FRAMEWORK_NOT_INSTALLED');
-				$msg .= ' ' . JText::sprintf('BP_EXTENSION_CAN_NOT_FUNCTION', JText::_('BETTER_PREVIEW'));
+				$msg = JText::_('BP_NONUMBER_FRAMEWORK_NOT_INSTALLED')
+					. ' ' . JText::sprintf('BP_EXTENSION_CAN_NOT_FUNCTION', JText::_('BETTER_PREVIEW'));
 				$mq = JFactory::getApplication()->getMessageQueue();
 				foreach ($mq as $m) {
 					if ($m['message'] == $msg) {

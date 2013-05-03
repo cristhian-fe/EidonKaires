@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -32,6 +32,7 @@ class NNFrameworkAssignmentsHelper
 	function __construct()
 	{
 		$this->db = JFactory::getDBO();
+		$this->q = $this->db->getQuery(true);
 
 		$this->date = JFactory::getDate();
 		$tz = new DateTimeZone(JFactory::getApplication()->getCfg('offset'));
@@ -324,11 +325,11 @@ class NNFrameworkAssignmentsHelper
 
 	function getMenuItemParams($id = 0)
 	{
-		$query = $this->db->getQuery(true);
-		$query->select('m.params')
+		$this->q->clear()
+			->select('m.params')
 			->from('#__menu AS m')
 			->where('m.id = ' . (int) $id);
-		$this->db->setQuery($query);
+		$this->db->setQuery($this->q);
 		$params = $this->db->loadResult();
 
 		$parameters = NNParameters::getInstance();
@@ -344,11 +345,11 @@ class NNFrameworkAssignmentsHelper
 		}
 
 		while ($id) {
-			$query = $this->db->getQuery(true);
-			$query->select('t.' . $parent)
+			$this->q->clear()
+				->select('t.' . $parent)
 				->from('#__' . $table . ' as t')
 				->where('t.' . $child . ' = ' . (int) $id);
-			$this->db->setQuery($query);
+			$this->db->setQuery($this->q);
 			$id = $this->db->loadResult();
 			if ($id) {
 				$parent_ids[] = $id;

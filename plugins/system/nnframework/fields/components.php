@@ -4,7 +4,7 @@
  * Displays a list of components with check boxes
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -52,9 +52,9 @@ class JFormFieldNN_Components extends JFormField
 		$query = $db->getQuery(true);
 		$query->select('e.name, e.element')
 			->from('#__extensions AS e')
+			->where('e.type = ' . $db->quote('component'))
 			->where('e.name != ""')
 			->where('e.element != ""')
-			->where('e.type = ' . $db->quote('component'))
 			->group('e.element')
 			->order('e.element, e.name');
 		$db->setQuery($query);

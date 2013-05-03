@@ -15,8 +15,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 <?php defined( '_JEXEC' ) or die( 'Restricted access' );
 if (!isset($this->error)) {
-	$this->error = JError::raiseWarning( 403, JText::_('ALERTNOTAUTH') );
-	$this->debug = false;
+  $this->error = JError::raiseWarning( 403, JText::_('ALERTNOTAUTH') );
+  $this->debug = false;
 }
 // BT Template Helper
 $bt_helper = JPATH_BASE.DS.'templates'.DS.$this->template.DS.'helpers'.DS.'bt_helper.php';
@@ -69,7 +69,7 @@ echo $bt->getGoogleFonts();
                     <li><a href="<?php echo $this->baseurl; ?>/index.php?option=com_search" title="<?php echo JText::_('JERROR_LAYOUT_SEARCH_PAGE'); ?>"><?php echo JText::_('JERROR_LAYOUT_SEARCH_PAGE'); ?></a></li>
                 </ul>
             
-            	<p><?php echo JText::_('If difficulties persist, please contact the system administrator of this site.'); ?></p>
+              <p><?php echo JText::_('If difficulties persist, please contact the system administrator of this site.'); ?></p>
             
             </div>
         

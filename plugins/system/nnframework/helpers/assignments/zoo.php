@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: ZOO
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -80,11 +80,11 @@ class NNFrameworkAssignmentsZOO
 						}
 					}
 					if ($cats['0']) {
-						$query = $parent->db->getQuery(true);
-						$query->select('c.application_id')
+						$parent->q->clear()
+							->select('c.application_id')
 							->from('#__zoo_category AS c')
 							->where('c.id = ' . (int) $cats['0']);
-						$parent->db->setQuery($query);
+						$parent->db->setQuery($parent->q);
 						if ($parent->db->loadResult()) {
 							$cats[] = 'app' . $parent->db->loadResult();
 						}
@@ -97,19 +97,19 @@ class NNFrameworkAssignmentsZOO
 						$id = isset($menuparams->item_id) ? $menuparams->item_id : '';
 					}
 					if ($id) {
-						$query = $parent->db->getQuery(true);
-						$query->select('c.category_id')
+						$parent->q->clear()
+							->select('c.category_id')
 							->from('#__zoo_category_item AS c')
 							->where('c.item_id = ' . (int) $id)
 							->where('c.category_id != 0');
-						$parent->db->setQuery($query);
+						$parent->db->setQuery($parent->q);
 						$cats = $parent->db->loadColumn();
 
-						$query = $parent->db->getQuery(true);
-						$query->select('i.application_id')
+						$parent->q->clear()
+							->select('i.application_id')
 							->from('#__zoo_item AS i')
 							->where('i.id = ' . (int) $id);
-						$parent->db->setQuery($query);
+						$parent->db->setQuery($parent->q);
 						$cats[] = 'app' . $parent->db->loadResult();
 					}
 					break;
@@ -156,20 +156,20 @@ class NNFrameworkAssignmentsZOO
 				$parent_ids[] = $id;
 				break;
 			} else {
-				$query = $parent->db->getQuery(true);
-				$query->select('c.parent')
+				$parent->q->clear()
+					->select('c.parent')
 					->from('#__zoo_category AS c')
 					->where('c.id = ' . (int) $id);
-				$parent->db->setQuery($query);
+				$parent->db->setQuery($parent->q);
 				$pid = $parent->db->loadResult();
 				if ($pid) {
 					$parent_ids[] = $pid;
 				} else {
-					$query = $parent->db->getQuery(true);
-					$query->select('c.application_id')
+					$parent->q->clear()
+						->select('c.application_id')
 						->from('#__zoo_category AS c')
 						->where('c.id = ' . (int) $id);
-					$parent->db->setQuery($query);
+					$parent->db->setQuery($parent->q);
 					$app = $parent->db->loadResult();
 					if ($app) {
 						$parent_ids[] = 'app' . $app;

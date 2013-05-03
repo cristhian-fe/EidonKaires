@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: VirtueMart
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -45,20 +45,20 @@ class NNFrameworkAssignmentsVirtueMart
 
 		$cats = array();
 		if ($parent->params->view == 'productdetails' && $parent->params->item_id) {
-			$query = $parent->db->getQuery(true);
-			$query->select('x.virtuemart_category_id')
+			$parent->q->clear()
+				->select('x.virtuemart_category_id')
 				->from('#__virtuemart_product_categories AS x')
 				->where('x.virtuemart_product_id = ' . (int) $parent->params->item_id);
-			$parent->db->setQuery($query);
+			$parent->db->setQuery($parent->q);
 			$cats = $parent->db->loadColumn();
 		} else if ($parent->params->category_id) {
 			$cats = $parent->params->category_id;
 			if (!is_numeric($cats)) {
-				$query = $parent->db->getQuery(true);
-				$query->select('config')
+				$parent->q->clear()
+					->select('config')
 					->from('#__virtuemart_configs')
 					->where('virtuemart_config_id = 1');
-				$parent->db->setQuery($query);
+				$parent->db->setQuery($parent->q);
 				$config = $parent->db->loadResult();
 				$lang = substr($config, strpos($config, 'vmlang='));
 				$lang = substr($lang, 0, strpos($lang, '|'));
@@ -68,11 +68,11 @@ class NNFrameworkAssignmentsVirtueMart
 					$lang = 'en_gb';
 				}
 
-				$query = $parent->db->getQuery(true);
-				$query->select('l.virtuemart_category_id')
+				$parent->q->clear()
+					->select('l.virtuemart_category_id')
 					->from('#__virtuemart_categories_' . $lang . ' AS l')
 					->where('l.slug = ' . $parent->db->quote($cats));
-				$parent->db->setQuery($query);
+				$parent->db->setQuery($parent->q);
 				$cats = $parent->db->loadResult();
 			}
 		}

@@ -4,7 +4,7 @@
  * Displays a multiselectbox of available Akeeba Subsriptons levels
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -63,8 +63,8 @@ class JFormFieldNN_AkeebaSubs extends JFormField
 			return -1;
 		}
 
-		$query = $this->db->getQuery(true);
-		$query->select('l.akeebasubs_level_id as id, l.title AS name, l.enabled as published')
+		$query->clear()
+			->select('l.akeebasubs_level_id as id, l.title AS name, l.enabled as published')
 			->from('#__akeebasubs_levels AS l')
 			->where('l.enabled > -1')
 			->order('l.title, l.akeebasubs_level_id');

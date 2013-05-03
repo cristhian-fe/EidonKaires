@@ -4,7 +4,7 @@
  * Does all the magic!
  *
  * @package         Tabs
- * @version         3.0.8
+ * @version         3.1.1
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -65,22 +65,24 @@ class plgSystemTabs extends JPlugin
 			return;
 		}
 
-		if (JFile::exists(JPATH_PLUGINS . '/system/nnframework/helpers/protect.php')) {
-			require_once JPATH_PLUGINS . '/system/nnframework/helpers/protect.php';
-			// return if current page is an admin page
-			if (NNProtect::isAdmin()) {
-				return;
-			}
-		} else if (JFactory::getApplication()->isAdmin()) {
-			return;
-		}
-
-		$this->_pass = 1;
-
 		// Load plugin parameters
 		require_once JPATH_PLUGINS . '/system/nnframework/helpers/parameters.php';
 		$parameters = NNParameters::getInstance();
 		$params = $parameters->getPluginParams($this->_name, $this->_type, $this->params);
+
+		if (!$params->enable_admin || JFactory::getApplication()->input->get('option') == 'com_plugins') {
+			if (JFile::exists(JPATH_PLUGINS . '/system/nnframework/helpers/protect.php')) {
+				require_once JPATH_PLUGINS . '/system/nnframework/helpers/protect.php';
+				// return if current page is an admin page
+				if (NNProtect::isAdmin()) {
+					return;
+				}
+			} else if (JFactory::getApplication()->isAdmin()) {
+				return;
+			}
+		}
+
+		$this->_pass = 1;
 
 		// Include the Helper
 		require_once JPATH_PLUGINS . '/' . $this->_type . '/' . $this->_name . '/helper.php';

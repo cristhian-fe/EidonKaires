@@ -3,7 +3,7 @@
  * Plugin Helper File
  *
  * @package         Sourcerer
- * @version         4.1.4
+ * @version         4.1.6
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl

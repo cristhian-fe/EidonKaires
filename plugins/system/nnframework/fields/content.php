@@ -4,7 +4,7 @@
  * Displays a multiselectbox of available categories / items
  *
  * @package         NoNumber Framework
- * @version         13.4.3
+ * @version         13.4.8
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -45,9 +45,9 @@ class JFormFieldNN_Content extends JFormField
 		$query = $this->db->getQuery(true);
 		$query->select('COUNT(*)')
 			->from('#__categories AS c')
+			->where('c.extension = ' . $this->db->quote('com_content'))
 			->where('c.parent_id > 0')
-			->where('c.published > -1')
-			->where('c.extension = ' . $this->db->quote('com_content'));
+			->where('c.published > -1');
 		$this->db->setQuery($query);
 		$total = $this->db->loadResult();
 
@@ -67,12 +67,12 @@ class JFormFieldNN_Content extends JFormField
 			$options[] = JHtml::_('select.option', '-', '&nbsp;', 'value', 'text', 1);
 		}
 
-		$query = $this->db->getQuery(true);
-		$query->select('c.id, c.title, c.level, c.published')
+		$query->clear()
+			->select('c.id, c.title, c.level, c.published')
 			->from('#__categories AS c')
+			->where('c.extension = ' . $this->db->quote('com_content'))
 			->where('c.parent_id > 0')
 			->where('c.published > -1')
-			->where('c.extension = ' . $this->db->quote('com_content'))
 			->order('c.lft');
 
 		$this->db->setQuery($query);
@@ -101,8 +101,8 @@ class JFormFieldNN_Content extends JFormField
 			return -1;
 		}
 
-		$query = $this->db->getQuery(true);
-		$query->select('i.id, i.title as name, c.title as cat, i.access as published')
+		$query->clear()
+			->select('i.id, i.title as name, c.title as cat, i.access as published')
 			->from('#__content AS i')
 			->join('LEFT', '#__categories AS c ON c.id = i.catid')
 			->where('i.access > -1')
