@@ -4,7 +4,7 @@ class JConfig {
 	public $offline_message = 'Sito fuori servizio per manutenzione.<br /> Riprovare più tardi.';
 	public $display_offline_message = '1';
 	public $offline_image = '';
-	public $sitename = 'Eidon - Kaires S.r.l.';
+	public $sitename = 'Eidon-Kaires S.r.l.';
 	public $editor = 'tinymce';
 	public $captcha = '0';
 	public $list_limit = '20';
@@ -48,14 +48,14 @@ class JConfig {
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
 	public $robots = '';
-	public $sef = '1';
+	public $sef = '0';
 	public $sef_rewrite = '0';
-	public $sef_suffix = '1';
+	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
 	public $log_path = 'C:\\xampp\\htdocs\\eidon/logs';
 	public $tmp_path = 'C:\\xampp\\htdocs\\eidon/tmp';
-	public $lifetime = '15';
+	public $lifetime = '90';
 	public $session_handler = 'database';
 	public $MetaRights = '';
 	public $sitename_pagetitles = '0';

@@ -3,7 +3,7 @@
  * Plugin Helper File
  *
  * @package         Tabs
- * @version         3.1.1
+ * @version         3.1.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -165,13 +165,11 @@ class plgSystemTabsHelper
 			}
 		}
 
-		if (strpos($buffer, '{' . $this->params->tag_open) === false) {
+		if (strpos($buffer, '{' . $this->params->tag_open) === false && strpos($buffer, '{' . $this->params->tag_link) === false) {
 			return;
 		}
 
-		$this->protect($buffer);
 		$this->replaceTags($buffer);
-		$this->unprotect($buffer);
 
 		JFactory::getDocument()->setBuffer($buffer, 'component');
 	}
@@ -204,35 +202,34 @@ class plgSystemTabsHelper
 				$body_split = explode('</body>', $html_split['1'], 2);
 
 				// only do stuff in body
-				$this->protect($body_split['0']);
 				$this->replaceTags($body_split['0']);
 
 				$html_split['1'] = implode('</body>', $body_split);
 				$html = implode('<body', $html_split);
 			} else {
-				$this->protect($html);
 				$this->replaceTags($html);
 			}
-			$this->unprotect($html);
 		}
 		$this->cleanLeftoverJunk($html);
 
-		JResponse::setBody($html);
+		JResponse::setBody($html, 1, 1);
 	}
 
 	////////////////////////////////////////////////////////////////////
 	// FUNCTIONS
 	////////////////////////////////////////////////////////////////////
-	function replaceTags(&$str, $print = 1)
+	function replaceTags(&$str, $checkprint = 1, $last = 0)
 	{
 		if (!is_string($str) || $str == '') {
 			return;
 		}
 
-		$url = JURI::getInstance();
-		$print = $print ? (!JFactory::getApplication()->input->getInt('print', 0)) : 0;
+		$this->protect($str);
 
-		if (!$print || (strpos($str, '{/' . $this->params->tag_close) === false && strpos($str, 'class="' . $this->id . '_container') === false)) {
+		$url = JURI::getInstance();
+		$print = $checkprint ? (!JFactory::getApplication()->input->getInt('print', 0)) : 0;
+
+		if (!$print || ($last && strpos($str, '{/' . $this->params->tag_close) === false && strpos($str, 'class="' . $this->id . '_container') === false)) {
 			// Replace syntax with general html on print pages
 			if (preg_match_all($this->params->regex, $str, $matches, PREG_SET_ORDER) > 0) {
 				foreach ($matches as $match) {
@@ -259,6 +256,7 @@ class plgSystemTabsHelper
 					$str = str_replace($match['0'], $link, $str);
 				}
 			}
+			$this->unprotect($str);
 			return;
 		}
 
@@ -384,11 +382,13 @@ class plgSystemTabsHelper
 						$html[] = $item->pre;
 						if ($i == $first) {
 							if (!$script_set) {
-								$html[] = '<script type="text/javascript">document.write( '
+								// Hides the titles asap, before the entire script is loaded
+								$html[] = '<div id="script_'.$this->id.'" style="display:none;"></div>';
+								$html[] = '<script type="text/javascript">document.getElementById(\'script_'.$this->id.'\').innerHTML = '
 									. 'String.fromCharCode(60)+\'style type="text/css">'
 									. '.' . $this->id . '_title { display: none !important; }'
 									. '\'+String.fromCharCode(60)+\'/style>'
-									. '\' );</script>';
+									. '\';</script>';
 								$script_set = 1;
 							}
 							$html[] = '<div class="' . trim($this->id . '_container ' . $this->id . '_container_' . $item->setname . ' ' . $this->id . '_noscript ') . '" id="' . $this->id . '_container_' . $item->set . '">';
@@ -472,13 +472,15 @@ class plgSystemTabsHelper
 					$link = '<a href="' . JRoute::_($url->toString()) . '"'
 						. ' class="' . $this->id . '_link ' . $this->id . '_link_' . $linkitem->alias . '"'
 						. ' rel="' . $linkitem->id . '">' . $link . '</a>';
-				} else {
+					$str = str_replace($match['0'], $link, $str);
+				} else if($last) {
 					$url->setFragment($name);
 					$link = '<a href="' . JRoute::_($url->toString()) . '">' . $link . '</a>';
+					$str = str_replace($match['0'], $link, $str);
 				}
-				$str = str_replace($match['0'], $link, $str);
 			}
 		}
+		$this->unprotect($str);
 	}
 
 	function getNav(&$items)

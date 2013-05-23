@@ -1,13 +1,8 @@
 <?php
 /*---------------------------------------------------------
-# BT Smartbiz - Joomla! Template
+# Eidon Kaires - Template
 # ---------------------------------------------------------
 # For Joomla! 2.5
-# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
-# @license Copyrighted Commercial Software
-# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
-# Website: http://www.bonusthemes.com
-# Support: support@bonusthemes.com
 ----------------------------------------------------------- */
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
 
@@ -124,6 +119,7 @@ endif;
 echo $bt->getGoogleFonts();
 ?>
 
+  <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: it_IT</script>
   
 </head>
 
@@ -265,11 +261,15 @@ echo $bt->getGoogleFonts();
                <?php endif; ?>
                 
                <?php if ($bt->display_skin_switcher) : ?>
-                  <div id="bt_skin_switcher">
-                     <a class="change_skin_icon" id="change-skin-dark_turquoise" href="">dark_turquoise</a> 
-                     <a class="change_skin_icon" id="change-skin-monza" href="">monza</a> 
-                     <a class="change_skin_icon" id="change-skin-burlywood" href="">burlywood</a> 
-                  </div>
+                  
+                 <div class="bt_social_icons">
+                  
+<script type="IN/FollowCompany" data-id="1337" data-counter="none"></script>
+
+
+
+                  
+                 </div>
                <?php endif; ?>
                
                </div>

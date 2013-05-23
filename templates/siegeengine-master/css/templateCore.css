@@ -1,0 +1,267 @@
+/*Foundation Overrides */
+
+.row {
+	width:1440px;	
+}
+@media only screen and (max-width: 767px) {
+	.row {
+		width:auto;	
+	}
+}
+
+
+/*article stuff  ---------------------- */
+article header {
+	overflow:hidden;	
+}
+.actions {
+
+}
+
+.leading-articles, .intro-articles .article {
+	border-bottom:1px solid #999;	
+}
+.actions ul, ul.actions {
+	list-style:none;
+	width:200px;	
+	display:inline-block;
+	clear:both;
+}
+.actions ul li, ul.actions li {
+	display:inline-block;
+}
+.article-meta {
+	width:200px;
+	color:#222;
+	clear:both;
+	display:inline-block;
+}
+.article-footer ul {
+	list-style:none;
+}
+dl.article-info {
+
+}
+.details {
+	padding:9.5px 35px !important
+}
+.article-details {
+	padding:5px;	
+}
+.detailsDrop li{
+	color:#111 !important;
+	text-size:12px;
+	padding:5px 3px !important;	
+}
+.article-details ul {
+ list-style:none;
+ display:inline-block;
+ margin-bottom:0;
+ margin-top:0;
+ line-height:0.5em;	
+}
+.article-info dt {
+	font-weight:bold;
+	font-size:1.6rem;
+	border-bottom:1px solid #666;
+	margin-bottom:4px;
+}
+.article-info dd {
+	margin-bottom:3px;
+}
+ul.category {
+	list-style:none;	
+}
+.pagenav {
+	list-style:none;	
+}
+.pagenav li a{
+	border:1px #333 solid;
+	padding:5px;	
+}
+.pagenav-next {
+text-align:right;
+}
+.filters select {
+	width:50px;	
+}
+#year, #month {
+	width:80px;	
+}
+.registration {
+	margin-bottom:25px;	
+}
+.button.dropdown ul.no-hover.show-dropdown {
+	top:28px;	
+}
+ul.pagenav, ul.pagenav li {
+    margin: 0;
+    padding: 0;
+}
+ul.pagenav li {
+    display: inline-block;
+    list-style-type: none;
+}
+li.pagenav-prev {
+    float: left;
+}
+li.pagenav-next {
+    float: right;
+}
+.pagenav li a {
+display: inline-block;
+    font-family: sans-serif;
+    margin: 1em 0;
+    max-width: 400px;
+    padding: 0.5em 0.75em;
+    position: relative;
+    text-align: center;
+}
+.article-footer {
+	overflow:hidden;	
+}
+/* Pagination ---------------------- */
+.pagination ul { display: block; height: 24px; margin-left: -5px;}
+.pagination ul li { float: left; display: block; height: 24px; color: #999; font-size: 14px; margin-left: 5px; }
+.pagination ul li a { display: block; padding: 1px 7px 1px; color: #555; }
+.pagination ul li:hover a, ul li a:focus { background: #e6e6e6; }
+.pagination ul li.unavailable a { cursor: default; color: #999; }
+.pagination ul li.unavailable:hover a, ul li.unavailable a:focus { background: transparent; }
+.pagination ul li.current a { background: #2ba6cb; color: white; font-weight: bold; cursor: default; }
+.pagination ul li.current a:hover { background: #2ba6cb; }
+
+/* Form Stuff ---------------------- */
+.registration input, .login input {
+	width:300px;	
+}
+
+/*Login Module  ---------------------- */
+
+fieldset {
+	border:none;
+	margin-bottom:25px;	
+}
+fieldset.userdata {
+	margin-bottom:10px;	
+}
+/* Login toggle stuff (inc related mod_login override stuff) */
+#form-login-password {
+}
+#form-login-remember {
+	width:200px;
+}
+.toggleLabel {
+margin-bottom: 5px;
+}
+.padded {
+	margin-bottom:10px;	
+}
+.forgot {
+	line-height:1.7em;
+}
+input.button[type="submit"], input.medium.button[type="submit"] {
+    padding: 6px 20px 9px;
+}
+fieldset .dropdown {
+	margin-top:10px;
+}	
+
+    .toggle-switch {
+    height: 33px;
+    overflow: hidden;
+    padding: 3px;
+    width: 78px;
+    -webkit-transform:translateZ(0); /* eliminates flickering */
+    }
+     
+    .toggle-switch .bg {
+    width:73px;
+    height:28px;
+    margin-bottom:-27px;
+    -webkit-border-radius:14px; -moz-border-radius:14px; border-radius:14px;
+    background-image:-webkit-gradient(linear,0 0, 100% 0, from(#08c), color-stop(50%, #08c), color-stop(51%, #fefefe), to(#eee));
+    background-image:-moz-linear-gradient(0deg, #08c 0, #08c 50%, #fefefe 51%, #eee 100%);
+    background-image:-linear-gradient(#08c, #08c 50%, #fefefe 51%, #eee);
+    -webkit-background-size:200%; -moz-background-size:200%; background-size:200%;
+    -webkit-transition:background-position 0.16s linear;
+    -moz-transition:background-position 0.2s linear;
+    transition:background-position 0.2s linear;
+    background-position:85%;
+    -webkit-box-shadow:inset 0 0 4px rgba(0,0,0,0.7), inset 0 14px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow:inset 0 0 4px rgba(0,0,0,0.7), inset 0 14px 0 rgba(0,0,0,0.1);
+    box-shadow:inset 0 0 4px rgba(0,0,0,0.7), inset 0 14px 0 rgba(0,0,0,0.1);
+    }
+     
+    .toggle-switch label { display:block; display:-webkit-box; display:-moz-box; display:box; width:78px; height:28px; position:relative; z-index:1;
+    -webkit-box-align:center; -moz-box-align:center; box-align:center;
+    -webkit-box-orient:horizontal; -moz-box-orient:horizontal; box-orient:horizontal;
+    -webkit-transform:translateX(-47px); -moz-transform:translateX(-47px); transform:translateX(-50%);
+    -webkit-transition:-webkit-transform 0.19s linear; -moz-transition:-moz-transform 0.2s linear; transition:transform 0.2s linear;
+    -webkit-tap-highlight-color:transparent;
+    }
+     
+    .toggle-switch input:checked ~ .bg { background-position-x:20%; background-position:20% 50%; }
+    .toggle-switch input:checked ~ label { -webkit-transform:translateX(0); -moz-transform:translateX(0); transform:translateX(0);}
+    .toggle-switch input:checked ~ label span:last-child { -webkit-opacity:0; opacity:0; -webkit-transition-delay:0s; -moz-transition-delay:0s; transition-delay:0s; }
+     
+    .toggle-switch input { display:none; }
+     
+    .toggle-switch label span {
+    display:block; width:50%; padding:0 15px; font-size:14px; font-weight:bold; line-height:26px;
+    -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
+    }
+     
+    .toggle-switch label span:first-child { position:relative; color:#fff; padding-right:0; width:46px; }
+     
+    .toggle-switch label span:last-child {
+    padding-left:33px;
+    padding-right:0;
+    color:#666;
+    text-shadow:1px 1px 0 #fff;
+    -webkit-opacity:0.7; -moz-opacity:0.7; opacity:0.7;
+    -webkit-transition:-webkit-opacity 0.2s 0.1s linear; -moz-transition:-moz-opacity 0.2s linear; transition:opacity 0.2s 0.1s linear;
+    }
+     
+    .toggle-switch label span:first-child::after {
+    position:absolute;
+    right:-28px;
+    top:-2px;
+    display:inline-block;
+    width:28px;
+    height:28px;
+    border:1px solid #666;
+    -webkit-border-radius:14px; -moz-border-radius:14px; border-radius:14px;
+    background-color:#ccc;
+    -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
+    content:"";
+    -webkit-box-shadow:0 0 2px rgba(0,0,0,0.7), inset 0 0 3px 1px rgba(255,255,255,1);
+    -moz-box-shadow:0 0 2px rgba(0,0,0,0.7), inset 0 0 3px 1px rgba(255,255,255,1);
+    box-shadow:0 0 2px rgba(0,0,0,0.7), inset 0 0 3px 1px rgba(255,255,255,1);
+    background-image:url("../images/dial.png");
+	background-repeat:no-repeat;
+    }
+
+/*Latest News module */
+ul.latestnews {
+	list-style:none;	
+}
+.latestnews li {
+	overflow:hidden;
+	border-bottom:1px dashed #333;
+	padding-top:5px;	
+}
+
+.dateReadon {
+	width:20%;
+	float:right;
+}
+.date {
+	width:100%;
+	padding:10px 10px 10px 10px;
+}
+.lnTitle {
+	width:100%;
+	overflow:hidden;	
+}
+.lnTitle a {
+}

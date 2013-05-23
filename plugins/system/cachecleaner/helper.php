@@ -3,7 +3,7 @@
  * Plugin Helper File
  *
  * @package         Cache Cleaner
- * @version         3.1.4
+ * @version         3.1.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl

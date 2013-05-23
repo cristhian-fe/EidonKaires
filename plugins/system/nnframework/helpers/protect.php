@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Protect
  *
  * @package         NoNumber Framework
- * @version         13.4.8
+ * @version         13.5.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -72,6 +72,7 @@ class NNProtect
 			$view = explode('.', $view);
 			$view = array_pop($view);
 		}
+
 		return (
 			in_array($task, array('edit', 'form', 'submission'))
 				|| in_array($view, array('edit', 'form'))
@@ -85,7 +86,7 @@ class NNProtect
 	*/
 	public static function getFormRegex($regex_format = 0)
 	{
-		$regex = '(<' . 'form [^>]*(id|name)="(adminForm|postform|submissionForm|default_action_user)")';
+		$regex = '(<' . 'form\s[^>]*(id|name)="(adminForm|postform|submissionForm|default_action_user)")';
 
 		if ($regex_format) {
 			$regex = '#' . $regex . '#si';
@@ -160,10 +161,10 @@ class NNProtect
 		$str = str_replace($protected, $tags, $str);
 	}
 
-	/* rremove inline comments in scrips and styles
+	/* remove inline comments in scrips and styles
 	*/
 	public static function removeInlineComments(&$str, $name)
 	{
-		$str = preg_replace('#/\* (START|END): ' . $name . ' [a-z]* \*/#s', '', $str);
+		$str = preg_replace('#\s*/\* (START|END): ' . $name . ' [a-z]* \*/\s*#s', "\n", $str);
 	}
 }

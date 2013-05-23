@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+	<name>SiegeEngine</name>
+	<creationDate>July, 2012</creationDate>
+	<author>Antony Doyle</author>
+	<authorEmail>antony@siege21.com</authorEmail>
+	<authorUrl>http://www.antonydoyle.co.uk</authorUrl>
+	<copyright>Copyright (C) 2012 Antony Doyle | Siege21.com | Siegeworks. All rights Reserved</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<version>1.5</version>	
+	<description>TPL_SIEGEENGINE_DESCRIPTION</description>
+		
+	<files>
+        <filename>index.php</filename>
+		<filename>framework.php</filename>
+        <filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>layouts</folder>
+		<folder>language</folder>
+		<folder>js</folder>
+	</files>
+	
+	<positions>
+		<position>menu</position>
+		<position>slideshow</position>
+		<position>orbit</position>
+		<position>breadcrumbs</position>
+		<position>logo</position>
+		<position>top1</position>
+		<position>top2</position>
+		<position>top3</position>
+		<position>above1</position>
+		<position>above2</position>
+		<position>above3</position>
+		<position>right</position>
+		<position>below1</position>
+		<position>below2</position>
+		<position>below3</position>
+		<position>bottom1</position>		
+		<position>bottom2</position>
+		<position>bottom3</position>
+		<position>footer1</position>		
+		<position>footer2</position>
+		<position>footer3</position>
+		<position>footerTop1</position>		
+		<position>footerTop2</position>
+		<position>footerTop3</position>
+		<position>footerTop4</position>
+		<position>offCanvasSideMenu</position>		
+		<position>offCanvasSideModule</position>
+		<position>offCanvasTopMenu</position>
+		<position>offCanvasTopModule</position>
+		<position>debug</position>
+	</positions>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_siegeengine.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_siegeengine.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="TPL_SETTINGS_HEADER_ONE_TITLE" label="TPL_SETTINGS_HEADER_ONE_DESC" addfieldpath="/templates/siegeengine/" >
+				<field name="loadMoo" type="radio" default="0" label="TPL_SETTINGS_LOAD_MOO_LABEL" description="TPL_SETTINGS_LOAD_MOO_DESC">
+					<option value="1">TPL_SETTINGS_LOAD_MOO_YES</option>
+					<option value="0">TPL_SETTINGS_LOAD_MOO_NO</option>
+				</field>
+<field name="jQuery" type="radio" default="1" label="TPL_SETTINGS_LOAD_JQUERY_LABEL" description="TPL_SETTINGS_LOAD_JQUERY_DESC">
+					<option value="1">TPL_SETTINGS_LOAD_JQUERY_YES</option>
+					<option value="0">TPL_SETTINGS_LOAD_JQUERY_NO</option>
+				</field>
+				<field type="spacer" default=" " />	
+				<field type="spacer" default=" " />
+					<field name="setWidth" type="text" default="1440" label="TPL_SETTINGS_SETWIDTH_LABEL" description="TPL_SETTINGS_SETWIDTH_DESC" size="15" />
+					<field name="setGeneratorTag" type="text" default="" label="TPL_SETTINGS_GENERATOR_LABEL" description="TPL_SETTINGS_GENERATOR_DESC" size="85" />
+					<field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_SETTINGS_ANALYTICS_LABEL" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" />
+					<field name="menuModTitle" type="text" default="MenuModule" label="TPL_SETTINGS_MENUMODULE_LABEL" description="TPL_SETTINGS_MENUMODULE_DESC" size="15" />
+					<field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/siegeengine/css/" filter="" exclude="foundation\.css|templateCore\.css|index\.html" stripext="" />
+					<field name="layout" type="filelist" default="default.php" label="TPL_SETTINGS_LAYOUT_LABEL" description="TPL_SETTINGS_LAYOUT_DESC" directory="templates/siegeengine/layouts/" filter="" exclude="index\.html" stripext="" />
+					<field name="logoUp" type="radio" default="1" label="TPL_SETTINGS_LOGO_SELECT_LABEL" description="TPL_SETTINGS_LOGO_SELECT_DESC">
+					<option value="1">TPL_SETTINGS_LOGO_SELECT_UP</option>
+					<option value="0">TPL_SETTINGS_LOGO_SELECT_MOD</option>
+				</field>
+					<field name="custLogo" label="TPL_SETTINGS_LOGO_CUS_LABEL" description="TPL_SETTINGS_LOGO_CUS_DESC" type="media" directory="stories" />
+					
+					<field name="offCanvas" type="radio" default="1" label="TPL_SETTINGS_OFFCANVAS_LABEL" description="TPL_SETTINGS_TPL_SETTINGS_OFFCANVAS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+					</field>
+					
+					<field name="topButton" type="text" default="Top" label="TPL_SETTINGS_TOPBUT_LABEL" description="TPL_SETTINGS_TOPBUT_DESC" size="15" />
+					<field name="sideButton" type="text" default="Side" label="TPL_SETTINGS_SIDEBUT_LABEL" description="TPL_SETTINGS_SIDEBUT_DESC" size="15" />
+
+			</fieldset>	
+			
+			<fieldset name="Foundation Options" label="TPL_SETTINGS_FOUNDATION_OPTIONS_LABEL" addfieldpath="/templates/siegeengine/" >
+							<field type="spacer" default=" " label="TPL_SETTINGS_FOUNDATION_OPTIONS_NOTE"/>
+<field type="spacer" default=" " />
+				<field name="unOrbit" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_ORBIT_LABEL" description="TPL_SETTINGS_FOUNDATION_ORBIT_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+
+				<field name="unReveal" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_REVEAL_LABEL" description="TPL_SETTINGS_FOUNDATION_REVEAL_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+				<field name="unNav" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_NAV_LABEL" description="TPL_SETTINGS_FOUNDATION_NAV_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>			
+				<field name="unButt" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_BUTT_LABEL" description="TPL_SETTINGS_FOUNDATION_BUTT_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+								<field name="unTabs" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_TABS_LABEL" description="TPL_SETTINGS_FOUNDATION_TABS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+								<field name="unForms" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_FORMS_LABEL" description="TPL_SETTINGS_FOUNDATION_FORMS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+								<field name="unTooltips" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_TOOL_LABEL" description="TPL_SETTINGS_FOUNDATION_TOOL_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+								<field name="unAccord" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_ACCORD_LABEL" description="TPL_SETTINGS_FOUNDATION_ACCORD_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+								<field name="unPlaceholder" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_PLACEHOLDER_LABEL" description="TPL_SETTINGS_FOUNDATION_PLACEHOLDER_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+								<field name="unAlerts" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_ALERTS_LABEL" description="TPL_SETTINGS_FOUNDATION_ALERTS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>
+					<field name="minFound" type="radio" default="0" label="TPL_SETTINGS_FOUNDATION_MINFOUND_LABEL" description="TPL_SETTINGS_FOUNDATION_MINFOUND_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+				</field>	
+<field name="myintegeralue" type="integer" default="Some integer" label="Choose an integer" description="" first="1" last="10" step="1" />
+
+			</fieldset>					
+		</fields>
+	</config>
+</extension>

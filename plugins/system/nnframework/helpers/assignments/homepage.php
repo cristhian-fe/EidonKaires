@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: HomePage
  *
  * @package         NoNumber Framework
- * @version         13.4.8
+ * @version         13.5.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -106,6 +106,8 @@ class NNFrameworkAssignmentsHomePage
 		$root = preg_replace('#^.*?://#', '', $root);
 		// remove the www.
 		$root = preg_replace('#^www\.#', '', $root);
+		//remove the port
+		$root = preg_replace('#:[0-9]+#', '', $root);
 		// so also passes on urls with trailing /, ?, &, /?, etc...
 		$root = preg_replace('#(Itemid=[0-9]*).*^#', '\1', $root);
 		// remove trailing /

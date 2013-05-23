@@ -361,17 +361,23 @@ div.newsfeed ol li {
 }
 div.newsfeed ol li a { }
 div.newsfeed ol li div.feed-item-description { }
+
 /* --- com_search --- */
 div.search fieldset.word { }
 div.search fieldset.word label { }
 div.search fieldset.word button { }
 div.search fieldset.word button, div.search .button, form#mod-finder-searchform button.finder, div#search-form .button { 
-     background-color: transparent;
+   
+     
+	 background-color: transparent;
+	 
      background-image: url("../../images/burlywood/joomla/search_button.png");
 }
 div.search fieldset.word button:hover, div.search .button:hover, form#mod-finder-searchform button.finder:hover, div#search-form .button:hover { }
 div.search fieldset.word button, div.search .button, form#mod-finder-searchform button, div#search-form .button { 
+    
      background-color: transparent;
+	 
      background-image: url("../../images/burlywood/joomla/search_button.png");
 }
 div.search fieldset.word button:hover, div.search .button:hover, form#mod-finder-searchform button:hover, div#search-form .button:hover { }
@@ -414,7 +420,8 @@ div.finder div#search-results dl.search-results dd.result-url { }
 div.finder div#search-results div.search-pages-counter { }
 div.finder #finder-filter-window { }
 div.finder #finder-filter-window .calendar { 
-     color: transparent;
+    
+	 color: transparent;
 }
 .calendar .button { }
 div.finder ul#finder-filter-select-dates { }
@@ -1517,11 +1524,13 @@ ul#bt_nav_menu li a, ul#bt_nav_menu li span.separator { }
 ul#bt_nav_menu li:hover a, ul#bt_nav_menu li:hover span.separator { 
      color: #000;
      background-color: #70625c;
+	 opacity: 0.9;
 }
 /* -- no childs & active -- */
 ul#bt_nav_menu li.active a, ul#bt_nav_menu li.active span.separator { 
-     color: #000!important;
+     color: #777373!important;
      background-color: #fff;
+	
 }
 /* -- no childs & active & hover -- */
 ul#bt_nav_menu li.active a:hover, ul#bt_nav_menu li.active span.separator:hover { 
@@ -1531,10 +1540,12 @@ ul#bt_nav_menu li.active a:hover, ul#bt_nav_menu li.active span.separator:hover 
 /* -- has childs -- */
 ul#bt_nav_menu li.parent a, ul#bt_nav_menu li.parent span.separator { 
      background-image: url("../../images/burlywood/menu/top_level_parent.png");
+	 
 }
 ul#bt_nav_menu li.parent:hover a, ul#bt_nav_menu li.parent:hover span.separator { 
-     color: #FFF;
+     color: #9d9595;
      background-color: #70625c;
+	 
      background-image: url("../../images/burlywood/menu/top_level_parent.png");
 }
 /* -- has childs & active -- */
@@ -1544,7 +1555,8 @@ ul#bt_nav_menu li.parent.active a, ul#bt_nav_menu li.parent.active span.separato
 }
 /* -- has childs & active & hover -- */
 ul#bt_nav_menu li.parent.active a:hover, ul#bt_nav_menu li.parent.active span.separator:hover { 
-     color: #FFF;
+     color: #9d9595;
+	 opacity: 0.8;
      background-color: #70625c;
      background-image: url("../../images/burlywood/menu/top_level_parent_hover.png");
 }
@@ -1553,7 +1565,7 @@ ul#bt_nav_menu li ul li {
      background-image: none;
 }
 ul#bt_nav_menu li.parent ul { 
-     background-color: #272727;
+     background-color: #777373;
 }
 /* -- no childs -- */
 ul#bt_nav_menu li.parent ul li a, ul#bt_nav_menu li.parent ul li span.separator, ul#bt_nav_menu li.parent ul li.parent ul li a, ul#bt_nav_menu li.parent ul li.parent ul li span.separator, ul#bt_nav_menu li.parent ul li.parent.active ul li a, ul#bt_nav_menu li.parent ul li.parent.active ul li span.separator { 
@@ -1580,23 +1592,23 @@ ul#bt_nav_menu li.parent ul li.active a, ul#bt_nav_menu li.parent ul li.active s
      background-color: #28b1d9!important;
 }
 ul#bt_nav_menu li.parent ul li.active a:hover, ul#bt_nav_menu li.parent ul li.active span.separator:hover, ul#bt_nav_menu li.parent ul li.parent ul li.active a:hover, ul#bt_nav_menu li.parent ul li.parent ul li.active span.separator:hover { 
-     background-color: #313131!important;
+     background-color: #9d9595!important;
 }
 /* -- has childs -- */
 ul#bt_nav_menu li.parent ul li.parent a, ul#bt_nav_menu li.parent ul li.parent span.separator { 
-     color: #FFF!important;
+     color: #fff!important;
      background-color: #272727;
      background-image: url("../../images/burlywood/menu/sub_level_parent.png") !important;
 }
 ul#bt_nav_menu li.parent ul li.parent a:hover, ul#bt_nav_menu li.parent ul li.parent span.separator:hover { 
-     background-color: #313131!important;
+     background-color: #9d9595!important;
 }
 /* -- has childs & active -- */
 ul#bt_nav_menu li.parent ul li.parent.active a, ul#bt_nav_menu li.parent ul li.parent.active span.separator { 
      background-color: #28b1d9!important;
 }
 ul#bt_nav_menu li.parent ul li.parent.active a:hover, ul#bt_nav_menu li.parent ul li.parent.active span.separator:hover { 
-     background-color: #313131!important;
+     background-color: #9d9595!important;
 }
 ul#bt_nav_menu li.parent ul li.parent.active li a, ul#bt_nav_menu li.parent ul li.parent.active li span.separator { 
      color: #FFF!important;
@@ -2152,6 +2164,8 @@ div.moduletable div.search { }
 div.moduletable div.search label { }
 div.moduletable input#mod-search-searchword { 
      color: #FFF;
+	 border-right-color: #fff;
+     border-bottom-color: #fff;
      background-color: transparent;
      background-image: url("../../images/burlywood/template/search_icon.png");
 }
@@ -2345,13 +2359,13 @@ div.bt_powered_by_logo.bt_fade_img a {
      
 }
 #toolbar_area { 
-     background-color: #73ae1c;
+     background-color: #7bbc1a;
      border-top-color: #fff;
-     background-image: -o-linear-gradient(bottom, #73ae1c 0%, #73ae1c 99.19%, #73ae1c 100%);
-     background-image: -moz-linear-gradient(bottom, #73ae1c 0%, #73ae1c 99.19%, #73ae1c 100%);
-     background-image: -webkit-linear-gradient(bottom, #73ae1c 0%, #73ae1c 99.19%, #73ae1c 100%);
-     background-image: -ms-linear-gradient(bottom, #73ae1c 0%, #73ae1c 99.19%, #73ae1c 100%);
-     background-image: linear-gradient(bottom, #73ae1c 0%, #73ae1c 99.19%, #73ae1c 100%);
+     background-image: -o-linear-gradient(bottom, #7bbc1a 0%, #73ae1c 99.19%, #73ae1c 100%);
+     background-image: -moz-linear-gradient(bottom, #7bbc1a 0%, #73ae1c 99.19%, #73ae1c 100%);
+     background-image: -webkit-linear-gradient(bottom, #7bbc1a 0%, #73ae1c 99.19%, #73ae1c 100%);
+     background-image: -ms-linear-gradient(bottom, #7bbc1a 0%, #73ae1c 99.19%, #73ae1c 100%);
+     background-image: linear-gradient(bottom, #7bbc1a 0%, #73ae1c 99.19%, #73ae1c 100%);
 }
 #header_a_area { 
      background-color: #7bbc1a;
@@ -2373,7 +2387,8 @@ div.bt_powered_by_logo.bt_fade_img a {
      background-color: #73ae1d;
 }
 #footer_a_area { 
-     background-color: #7bbc1a;
+      background-color: #7bbc1a;
+     border-bottom-color: #FFF;
 }
 #footer_b_area { 
      background-color: #7bbc1a;

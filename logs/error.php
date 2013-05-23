@@ -12,3 +12,9 @@
 2013-04-19	14:08:49	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
 2013-04-22	08:22:41	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
 2013-04-22	08:25:07	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
+2013-05-03	09:26:16	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
+2013-05-03	09:26:27	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
+2013-05-03	10:20:00	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
+2013-05-07	12:37:10	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
+2013-05-16	14:31:50	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.
+2013-05-22	08:17:58	INFO	::1	Joomla FAILURE: 	Nome utente e password non corretti o non hai ancora un account.

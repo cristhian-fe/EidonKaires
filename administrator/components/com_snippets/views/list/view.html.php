@@ -3,7 +3,7 @@
  * List View
  *
  * @package         Snippets
- * @version         3.0.4
+ * @version         3.0.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -64,7 +64,7 @@ class SnippetsViewList extends JView
 		$viewLayout = JFactory::getApplication()->input->get('layout', 'default');
 
 		JHtml::stylesheet('nnframework/style.min.css', false, true);
-		JHtml::stylesheet('com_snippets/style.min.css', false, true);
+		JHtml::stylesheet('snippets/style.min.css', false, true);
 
 		if ($viewLayout == 'import') {
 			// Set document title

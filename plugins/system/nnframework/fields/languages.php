@@ -4,7 +4,7 @@
  * Displays a select box of languages
  *
  * @package         NoNumber Framework
- * @version         13.4.8
+ * @version         13.5.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl

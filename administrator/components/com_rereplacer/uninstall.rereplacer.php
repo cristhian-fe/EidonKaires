@@ -4,7 +4,7 @@
  * Performs some extra tasks when uninstalling the component
  *
  * @package         ReReplacer
- * @version         5.4.3
+ * @version         5.4.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl

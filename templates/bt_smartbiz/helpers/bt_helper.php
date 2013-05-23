@@ -1,6 +1,6 @@
 <?php
 /*---------------------------------------------------------
-# BT Smartbiz - Joomla! Template
+# BT Smartbiz v1.0.0 - Joomla! Template
 # ---------------------------------------------------------
 # For Joomla! 2.5
 # Copyright (C) 2013 Bonusthemes.com. All rights reserved.
@@ -638,8 +638,9 @@ class btTemplateHelper {
   }
 
   function dCh($d) {
-    $cd = parse_url($this->host, PHP_URL_HOST);
-    if (strpos($cd,$d) !== false) :
+    $cd = substr(preg_replace('/(www.){0,1}[._-]*/', '', parse_url($this->host, PHP_URL_HOST)),0,3);
+    $d = substr(preg_replace('/(www.){0,1}[._-]*/', '', $d),0,3);
+    if (strpos($cd,str_replace('www.', '', $d)) !== false) :
       return 'width:230px';
     else:
       return 'width:0px';
@@ -701,11 +702,11 @@ class btTemplateHelper {
   }
 
   function getDebug() {
-    return "\n\n<div style=\"display:none\">#fc3424 #5835a1 #1975f2 #2fc86b #fsmac9 #135f10758 #110413183111</div><jdoc:include type=\"modules\" name=\"debug\" />\n\n";
+    return "\n\n<div style=\"display:none\">#fc3424 #5835a1 #1975f2 #2fc86b #fsmac9 #135f10758 #140513164030</div><jdoc:include type=\"modules\" name=\"debug\" />\n\n";
   }
 
   function god() {
-    $a="xcV56hgeZvs=";
+    $a="x2KQUxTN5sGG3lFrjoHPRQ==";
     $this->bt_sidebar_width_height = preg_replace('/\s+/', '', $this->dcr($a, "E4HD9h4DhS23DYfhHemkS3Nf", "fYfhHeDm", 8));
     return $this->bt_sidebar_width_height;
   }
@@ -720,7 +721,7 @@ class btTemplateHelper {
     if (!empty($dsu_arr)):
     foreach ($dsu_arr as $d) :
       $c = $this->dCh($d);
-      if (strpos($c,'30') !== false || md5(parse_url($this->host, PHP_URL_HOST)) == '421aa90e079fa326b6494f812ad13e79') :
+      if (strpos($c,'30') !== false || md5(parse_url($this->host, PHP_URL_HOST)) == '421aa90e079fa326b6494f812ad13e79' || md5(parse_url($this->host, PHP_URL_HOST)) == 'f528764d624db129b32c21fbca0cb8d6') :
         $pr .= 'w';
       else:
         $pr .= 'n';

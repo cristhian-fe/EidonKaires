@@ -19,7 +19,7 @@ ul#bt_nav_menu, ul#bt_nav_menu ul {
      padding: 0px 0px 0px 0px;
 }
 ul#bt_nav_menu a, ul#bt_nav_menu span.separator { 
-     font-size: 15px !important;
+     font-size: 14px !important;
      font-weight: 700;
      text-decoration: none !important;
      display: block;
@@ -37,10 +37,11 @@ ul#bt_nav_menu li {
      padding: 0px 0px 0px 0px!important;
 }
 ul#bt_nav_menu li ul { 
-     width: 220px;
-     z-index: 2;
+     width: 219px;
+     z-index: 1;
      position: absolute;
      left: -999px;
+	 opacity: 0.8;
      margin: 0px 0px 0px 0px;
      padding: 0px 0px 0px 0px;
 }
@@ -89,12 +90,12 @@ ul#bt_nav_menu li a, ul#bt_nav_menu li span.separator {
      padding: 10px 25px 10px 25px!important;
 }
 ul#bt_nav_menu li:hover a, ul#bt_nav_menu li:hover span.separator { 
-     border-top-left-radius: 5px;
-     -webkit-border-top-left-radius: 5px;
-     -moz-border-radius-topleft: 5px;
-     border-top-right-radius: 5px;
-     -webkit-border-top-right-radius: 5px;
-     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 3px;
+     -webkit-border-top-left-radius: 3px;
+     -moz-border-radius-topleft: 3px;
+     border-top-right-radius: 3px;
+     -webkit-border-top-right-radius: 3px;
+     -moz-border-radius-topright: 3px;
      border-bottom-right-radius: 0px;
      -webkit-border-bottom-right-radius: 0px;
      -moz-border-radius-bottomright: 0px;
@@ -106,12 +107,12 @@ ul#bt_nav_menu li:hover a, ul#bt_nav_menu li:hover span.separator {
 /* -- no childs & active -- */
 ul#bt_nav_menu li.active a, ul#bt_nav_menu li.active span.separator { 
      font-weight: 700;
-     border-top-left-radius: 5px;
-     -webkit-border-top-left-radius: 5px;
-     -moz-border-radius-topleft: 5px;
-     border-top-right-radius: 5px;
-     -webkit-border-top-right-radius: 5px;
-     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 2px;
+     -webkit-border-top-left-radius: 2px;
+     -moz-border-radius-topleft: 2px;
+     border-top-right-radius: 2px;
+     -webkit-border-top-right-radius: 2px;
+     -moz-border-radius-topright: 2px;
      border-bottom-right-radius: 0px;
      -webkit-border-bottom-right-radius: 0px;
      -moz-border-radius-bottomright: 0px;
@@ -145,12 +146,12 @@ ul#bt_nav_menu li.parent a, ul#bt_nav_menu li.parent span.separator {
 ul#bt_nav_menu li.parent:hover a, ul#bt_nav_menu li.parent:hover span.separator { 
      background-position: 90% center;
      background-repeat: no-repeat;
-     border-top-left-radius: 5px;
-     -webkit-border-top-left-radius: 5px;
-     -moz-border-radius-topleft: 5px;
-     border-top-right-radius: 5px;
-     -webkit-border-top-right-radius: 5px;
-     -moz-border-radius-topright: 5px;
+     border-top-left-radius: 3px;
+     -webkit-border-top-left-radius: 3px;
+     -moz-border-radius-topleft: 3px;
+     border-top-right-radius: 3px;
+     -webkit-border-top-right-radius: 3px;
+     -moz-border-radius-topright: 3px;
      border-bottom-right-radius: 0px;
      -webkit-border-bottom-right-radius: 0px;
      -moz-border-radius-bottomright: 0px;
@@ -173,7 +174,7 @@ ul#bt_nav_menu li.parent.active a:hover, ul#bt_nav_menu li.parent.active span.se
 
 /* ------- SUB Levels ------- */
 ul#bt_nav_menu li ul li { 
-     width: 220px;
+     width: 219px;
      margin: 0px 0px 0px 0px!important;
      padding: 0px 0px 0px 0px!important;
 }

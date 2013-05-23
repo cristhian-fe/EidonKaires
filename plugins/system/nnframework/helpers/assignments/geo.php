@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: Geo
  *
  * @package         NoNumber Framework
- * @version         13.4.8
+ * @version         13.5.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -28,6 +28,9 @@ class NNFrameworkAssignmentsGeo
 		$selection = $parent->makeArray($selection);
 
 		$geo = self::getGeo();
+		if (!$geo) {
+			return $parent->pass(0, $assignment);
+		}
 		$continent = $geo->geoplugin_continentCode;
 
 		return $parent->passSimple($continent, $selection, $assignment);
@@ -41,6 +44,9 @@ class NNFrameworkAssignmentsGeo
 		$selection = $parent->makeArray($selection);
 
 		$geo = self::getGeo();
+		if (!$geo) {
+			return $parent->pass(0, $assignment);
+		}
 		$country = $geo->geoplugin_countryCode;
 
 		return $parent->passSimple($country, $selection, $assignment);
@@ -54,6 +60,9 @@ class NNFrameworkAssignmentsGeo
 		$selection = $parent->makeArray($selection);
 
 		$geo = self::getGeo();
+		if (!$geo) {
+			return $parent->pass(0, $assignment);
+		}
 		$region = $geo->geoplugin_countryCode . '-' . $geo->geoplugin_regionCode;
 
 		return $parent->passSimple($region, $selection, $assignment);

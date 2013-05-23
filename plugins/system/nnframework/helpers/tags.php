@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Tags
  *
  * @package         NoNumber Framework
- * @version         13.4.8
+ * @version         13.5.3
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -51,9 +51,9 @@ class NNTags
 		// loop through splits
 		foreach ($vals as $i => $keyval) {
 			// spit part into key and val by equal sign
-			$keyval = explode($e, trim($keyval), 2);
+			$keyval = explode($e, $keyval, 2);
 			if (isset($keyval['1'])) {
-				$keyval['1'] = str_replace(array($s, $e), array($separator, $equal), trim($keyval['1']));
+				$keyval['1'] = str_replace(array($s, $e), array($separator, $equal), $keyval['1']);
 			}
 
 			// unprotect tags in key and val
@@ -62,12 +62,12 @@ class NNTags
 					foreach ($matches as $match) {
 						$v = str_replace($match['0'], base64_decode($match['1']), $v);
 					}
-					$keyval[trim($k)] = trim($v);
+					$keyval[trim($k)] = $v;
 				}
 			}
 
 			if (isset($keys[$i])) {
-				$key = $keys[$i];
+				$key = trim($keys[$i]);
 				// if value is in the keys array add as defined in keys array
 				// ignore equal sign
 				$val = implode($equal, $keyval);
