@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Protect
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -28,11 +28,11 @@ class NNProtect
 		// return if current page is a JoomFish or Josetta page
 		return (
 			($ext && JFactory::getApplication()->input->get('disable_' . $ext))
-				|| JFactory::getApplication()->input->get('format') == 'raw'
-				|| ($hastags
+			|| JFactory::getApplication()->input->get('format') == 'raw'
+			|| ($hastags
 				&& (
 					JFactory::getApplication()->input->getInt('nn_qp', 0)
-						|| in_array(JFactory::getApplication()->input->get('option'), array('com_joomfishplus', 'com_josetta'))
+					|| in_array(JFactory::getApplication()->input->get('option'), array('com_joomfishplus', 'com_josetta'))
 				))
 		);
 	}
@@ -47,8 +47,8 @@ class NNProtect
 		}
 		return (
 			JFactory::getApplication()->isAdmin()
-				&& !in_array(JFactory::getApplication()->input->get('option'), $options)
-				&& JFactory::getApplication()->input->get('task') != 'preview'
+			&& !in_array(JFactory::getApplication()->input->get('option'), $options)
+			&& JFactory::getApplication()->input->get('task') != 'preview'
 		);
 	}
 
@@ -58,7 +58,7 @@ class NNProtect
 	{
 		$option = JFactory::getApplication()->input->get('option');
 		// always return false for these components
-		if(in_array($option, array('com_rsevents','com_rseventspro')) ) {
+		if (in_array($option, array('com_rsevents', 'com_rseventspro'))) {
 			return 0;
 		}
 
@@ -75,10 +75,11 @@ class NNProtect
 
 		return (
 			in_array($task, array('edit', 'form', 'submission'))
-				|| in_array($view, array('edit', 'form'))
-				|| in_array(JFactory::getApplication()->input->get('do'), array('edit', 'form'))
-				|| in_array(JFactory::getApplication()->input->get('layout'), array('edit', 'form', 'write'))
-				|| in_array(JFactory::getApplication()->input->get('option'), array('com_contentsubmit', 'com_cckjseblod'))
+			|| in_array($view, array('edit', 'form'))
+			|| in_array(JFactory::getApplication()->input->get('do'), array('edit', 'form'))
+			|| in_array(JFactory::getApplication()->input->get('layout'), array('edit', 'form', 'write'))
+			|| in_array(JFactory::getApplication()->input->get('option'), array('com_contentsubmit', 'com_cckjseblod'))
+			|| NNProtect::isAdmin()
 		);
 	}
 

@@ -3,7 +3,7 @@
  * Plugin Helper File
  *
  * @package         Modules Anywhere
- * @version         3.2.3
+ * @version         3.2.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -61,18 +61,20 @@ class plgSystemModulesAnywhereHelper
 	{
 		$message = '';
 
+		$area = isset($article->created_by) ? 'articles' : 'other';
+
 
 		if (isset($article->text)) {
-			$this->processModules($article->text, 'articles', $message);
+			$this->processModules($article->text, $area, $message);
 		}
 		if (isset($article->description)) {
-			$this->processModules($article->description, 'articles', $message);
+			$this->processModules($article->description, $area, $message);
 		}
 		if (isset($article->title)) {
-			$this->processModules($article->title, 'articles', $message);
+			$this->processModules($article->title, $area, $message);
 		}
 		if (isset($article->created_by_alias)) {
-			$this->processModules($article->created_by_alias, 'articles', $message);
+			$this->processModules($article->created_by_alias, $area, $message);
 		}
 	}
 
@@ -248,8 +250,8 @@ class plgSystemModulesAnywhereHelper
 		$protects = array();
 		while ($count++ < 10 && preg_match('#\{' . $this->params->tags . '#', $string) && preg_match_all($regex, $string, $matches, PREG_SET_ORDER) > 0) {
 			foreach ($matches as $match) {
-				if( !$this->processMatch($string, $match, $area, $message)) {
-					$protected = $this->params->protect_start.base64_encode($match['0']).$this->params->protect_end;
+				if (!$this->processMatch($string, $match, $area, $message)) {
+					$protected = $this->params->protect_start . base64_encode($match['0']) . $this->params->protect_end;
 					$string = str_replace($match['0'], $protected, $string);
 					$protects[] = array($match['0'], $protected);
 				}
@@ -259,7 +261,6 @@ class plgSystemModulesAnywhereHelper
 		foreach ($protects as $protect) {
 			$string = str_replace($protect['1'], $protect['0'], $string);
 		}
-
 	}
 
 	function processMatch(&$string, &$match, $area = 'articles', $message = '')

@@ -4,7 +4,7 @@
  * Displays Assignment Selection radio options
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl

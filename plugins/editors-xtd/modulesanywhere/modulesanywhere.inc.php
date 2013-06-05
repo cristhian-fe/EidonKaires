@@ -4,7 +4,7 @@
  * Displays a list with modules
  *
  * @package         Modules Anywhere
- * @version         3.2.3
+ * @version         3.2.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -153,9 +153,9 @@ class plgButtonModulesAnywherePopup
 			$extension = $type->value;
 			$source = JPATH_SITE . '/modules/' . $extension;
 			$lang->load($extension . '.sys', JPATH_SITE, null, false, false)
-				|| $lang->load($extension . '.sys', $source, null, false, false)
-				|| $lang->load($extension . '.sys', JPATH_SITE, $lang->getDefault(), false, false)
-				|| $lang->load($extension . '.sys', $source, $lang->getDefault(), false, false);
+			|| $lang->load($extension . '.sys', $source, null, false, false)
+			|| $lang->load($extension . '.sys', JPATH_SITE, $lang->getDefault(), false, false)
+			|| $lang->load($extension . '.sys', $source, $lang->getDefault(), false, false);
 			$types[$i]->text = JText::_($type->text);
 		}
 		JArrayHelper::sortObjects($types, 'text', 1, true, $lang->getLocale());

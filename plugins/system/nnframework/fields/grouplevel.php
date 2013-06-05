@@ -4,7 +4,7 @@
  * Displays a select box of backend group levels
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -66,10 +66,10 @@ class JFormFieldNN_GroupLevel extends JFormField
 		// Get the user groups from the database.
 		$db->setQuery(
 			'SELECT a.id, a.title, a.parent_id AS parent, COUNT(DISTINCT b.id) AS level' .
-				' FROM #__usergroups AS a' .
-				' LEFT JOIN `#__usergroups` AS b ON a.lft > b.lft AND a.rgt < b.rgt' .
-				' GROUP BY a.id' .
-				' ORDER BY a.lft ASC'
+			' FROM #__usergroups AS a' .
+			' LEFT JOIN `#__usergroups` AS b ON a.lft > b.lft AND a.rgt < b.rgt' .
+			' GROUP BY a.id' .
+			' ORDER BY a.lft ASC'
 		);
 		$options = $db->loadObjectList();
 

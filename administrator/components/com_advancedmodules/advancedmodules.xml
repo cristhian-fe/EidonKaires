@@ -2,7 +2,7 @@
 <extension version="2.5" type="component" method="upgrade">
 	<name>com_advancedmodules</name>
 	<description>COM_ADVANCEDMODULES_DESC</description>
-	<version>4.4.6FREE</version>
+	<version>4.4.7FREE</version>
 	<creationDate>May 2013</creationDate>
 	<author>NoNumber (Peter van Westen)</author>
 	<authorEmail>peter@nonumber.nl</authorEmail>

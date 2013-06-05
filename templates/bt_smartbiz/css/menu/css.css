@@ -19,8 +19,8 @@ ul#bt_nav_menu, ul#bt_nav_menu ul {
      padding: 0px 0px 0px 0px;
 }
 ul#bt_nav_menu a, ul#bt_nav_menu span.separator { 
-     font-size: 14px !important;
-     font-weight: 700;
+     font-size: 13px !important;
+     font-weight: 600;
      text-decoration: none !important;
      display: block;
 }
@@ -85,7 +85,7 @@ ul#bt_nav_menu li.yt_top_last { }
 
 /* -- no childs -- */
 ul#bt_nav_menu li a, ul#bt_nav_menu li span.separator { 
-     font-size: 14px;
+     font-size: 13px;
      cursor: pointer;
      padding: 10px 25px 10px 25px!important;
 }
@@ -106,7 +106,7 @@ ul#bt_nav_menu li:hover a, ul#bt_nav_menu li:hover span.separator {
 
 /* -- no childs & active -- */
 ul#bt_nav_menu li.active a, ul#bt_nav_menu li.active span.separator { 
-     font-weight: 700;
+     font-weight: 500;
      border-top-left-radius: 2px;
      -webkit-border-top-left-radius: 2px;
      -moz-border-radius-topleft: 2px;

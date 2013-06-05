@@ -4,7 +4,7 @@
  * Displays a list of components with check boxes
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -81,9 +81,9 @@ class JFormFieldNN_Components extends JFormField
 				// Load the core file then
 				// Load extension-local file.
 				$lang->load($component->element . '.sys', JPATH_BASE, null, false, false)
-					|| $lang->load($component->element . '.sys', JPATH_ADMINISTRATOR . '/components/' . $component->element, null, false, false)
-					|| $lang->load($component->element . '.sys', JPATH_BASE, $lang->getDefault(), false, false)
-					|| $lang->load($component->element . '.sys', JPATH_ADMINISTRATOR . '/components/' . $component->element, $lang->getDefault(), false, false);
+				|| $lang->load($component->element . '.sys', JPATH_ADMINISTRATOR . '/components/' . $component->element, null, false, false)
+				|| $lang->load($component->element . '.sys', JPATH_BASE, $lang->getDefault(), false, false)
+				|| $lang->load($component->element . '.sys', JPATH_ADMINISTRATOR . '/components/' . $component->element, $lang->getDefault(), false, false);
 			}
 			$component->name = JText::_(strtoupper($component->name));
 			$comps[preg_replace('#[^a-z0-9_]#i', '', $component->name . '_' . $component->element)] = $component;

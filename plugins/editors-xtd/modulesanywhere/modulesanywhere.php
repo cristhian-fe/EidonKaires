@@ -4,7 +4,7 @@
  * Does all the magic!
  *
  * @package         Modules Anywhere
- * @version         3.2.3
+ * @version         3.2.4
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl

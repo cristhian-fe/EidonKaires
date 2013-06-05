@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: Content
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -24,7 +24,7 @@ class NNFrameworkAssignmentsContent
 		if (!in_array($parent->params->option, $components)) {
 			return $parent->pass(0, $assignment);
 		}
-		if($parent->params->view == 'category' && $parent->params->layout == 'blog') {
+		if ($parent->params->view == 'category' && $parent->params->layout == 'blog') {
 			$view = 'categoryblog';
 		} else {
 			$view = $parent->params->view;
@@ -55,9 +55,9 @@ class NNFrameworkAssignmentsContent
 
 		$inc = (
 			$parent->params->option == 'com_contentsubmit'
-				|| ($params->inc_categories && $is_content && $is_category)
-				|| ($params->inc_articles && $is_content && $is_item)
-				|| ($params->inc_others && !($is_content && ($is_category || $is_item)))
+			|| ($params->inc_categories && $is_content && $is_category)
+			|| ($params->inc_articles && $is_content && $is_item)
+			|| ($params->inc_others && !($is_content && ($is_category || $is_item)))
 		);
 
 		if ($inc) {

@@ -1,19 +1,15 @@
 editAreaLoader.load_syntax["css"] = {
-	'COMMENT_SINGLE' : {1 : '@'}
-	,'COMMENT_MULTI' : {'/*' : '*/'}
-	,'QUOTEMARKS' : ['"', "'"]
-	,'KEYWORD_CASE_SENSITIVE' : false
-	,'KEYWORDS' : {
-		'attributes' : [
+	'COMMENT_SINGLE': {1: '@'}, 'COMMENT_MULTI': {'/*': '*/'}, 'QUOTEMARKS': ['"', "'"], 'KEYWORD_CASE_SENSITIVE': false, 'KEYWORDS': {
+		'attributes': [
 			'aqua', 'azimuth', 'background-attachment', 'background-color',
 			'background-image', 'background-position', 'background-repeat',
 			'background', 'border-bottom-color', 'border-bottom-style',
 			'border-bottom-width', 'border-left-color', 'border-left-style',
 			'border-left-width', 'border-right', 'border-right-color',
 			'border-right-style', 'border-right-width', 'border-top-color',
-			'border-top-style', 'border-top-width','border-bottom', 'border-collapse',
+			'border-top-style', 'border-top-width', 'border-bottom', 'border-collapse',
 			'border-left', 'border-width', 'border-color', 'border-spacing',
-			'border-style', 'border-top', 'border',  'caption-side',
+			'border-style', 'border-top', 'border', 'caption-side',
 			'clear', 'clip', 'color', 'content', 'counter-increment', 'counter-reset',
 			'cue-after', 'cue-before', 'cue', 'cursor', 'direction', 'display',
 			'elevation', 'empty-cells', 'float', 'font-family', 'font-size',
@@ -26,18 +22,17 @@ editAreaLoader.load_syntax["css"] = {
 			'outline-width', 'overflow', 'padding-bottom', 'padding-left',
 			'padding-right', 'padding-top', 'padding', 'page', 'page-break-after',
 			'page-break-before', 'page-break-inside', 'pause-after', 'pause-before',
-			'pause', 'pitch', 'pitch-range',  'play-during', 'position', 'quotes',
+			'pause', 'pitch', 'pitch-range', 'play-during', 'position', 'quotes',
 			'richness', 'right', 'size', 'speak-header', 'speak-numeral', 'speak-punctuation',
 			'speak', 'speech-rate', 'stress', 'table-layout', 'text-align', 'text-decoration',
 			'text-indent', 'text-shadow', 'text-transform', 'top', 'unicode-bidi',
 			'vertical-align', 'visibility', 'voice-family', 'volume', 'white-space', 'widows',
 			'width', 'word-spacing', 'z-index', 'bottom', 'left'
-		]
-		,'values' : [
+		], 'values': [
 			'above', 'absolute', 'always', 'armenian', 'aural', 'auto', 'avoid',
 			'baseline', 'behind', 'below', 'bidi-override', 'black', 'blue', 'blink', 'block', 'bold', 'bolder', 'both',
 			'capitalize', 'center-left', 'center-right', 'center', 'circle', 'cjk-ideographic',
-            'close-quote', 'collapse', 'condensed', 'continuous', 'crop', 'crosshair', 'cross', 'cursive',
+			'close-quote', 'collapse', 'condensed', 'continuous', 'crop', 'crosshair', 'cross', 'cursive',
 			'dashed', 'decimal-leading-zero', 'decimal', 'default', 'digits', 'disc', 'dotted', 'double',
 			'e-resize', 'embed', 'extra-condensed', 'extra-expanded', 'expanded',
 			'fantasy', 'far-left', 'far-right', 'faster', 'fast', 'fixed', 'fuchsia',
@@ -58,27 +53,17 @@ editAreaLoader.load_syntax["css"] = {
 			'w-resize', 'wait', 'white', 'wider',
 			'x-fast', 'x-high', 'x-large', 'x-loud', 'x-low', 'x-small', 'x-soft', 'xx-large', 'xx-small',
 			'yellow', 'yes'
-		]
-		,'specials' : [
+		], 'specials': [
 			'important'
 		]
-	}
-	,'OPERATORS' :[
+	}, 'OPERATORS': [
 		':', ';', '!', '.', '#'
-	]
-	,'DELIMITERS' :[
+	], 'DELIMITERS': [
 		'{', '}'
-	]
-	,'STYLES' : {
-		'COMMENTS': 'color: #AAAAAA;'
-		,'QUOTESMARKS': 'color: #6381F8;'
-		,'KEYWORDS' : {
-			'attributes' : 'color: #48BDDF;'
-			,'values' : 'color: #2B60FF;'
-			,'specials' : 'color: #FF0000;'
-			}
-		,'OPERATORS' : 'color: #FF00FF;'
-		,'DELIMITERS' : 'color: #60CA00;'
+	], 'STYLES': {
+		'COMMENTS': 'color: #AAAAAA;', 'QUOTESMARKS': 'color: #6381F8;', 'KEYWORDS': {
+			'attributes': 'color: #48BDDF;', 'values': 'color: #2B60FF;', 'specials': 'color: #FF0000;'
+		}, 'OPERATORS': 'color: #FF00FF;', 'DELIMITERS': 'color: #60CA00;'
 
 	}
 };

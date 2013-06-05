@@ -1,7 +1,7 @@
 <?php
 /**
  * @package         Advanced Module Manager
- * @version         4.4.6
+ * @version         4.4.7
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -49,14 +49,10 @@ class AdvancedModulesViewModule extends JViewLegacy
 			return false;
 		}
 
-		if (
-			!(strpos($this->item->module, '_gk3') === false)
-			|| !(strpos($this->item->module, '_gk4') === false)
-			|| !(strpos($this->item->module, '_gk5') === false)
-		)
+		if (preg_match('#_gk[1-9]#', $this->item->module))
 		{
 			// Set message for RocketTheme and Gavick modules
-			JFactory::getApplication()->enqueueMessage(JText::sprintf(JText::_('AMM_MODULE_INCOMPATIBLE'), 'index.php?option=com_modules&task=module.edit&id=' . (int) $this->item->id), 'warning');
+			JFactory::getApplication()->enqueueMessage(JText::sprintf(html_entity_decode(JText::_('AMM_MODULE_INCOMPATIBLE')), 'index.php?option=com_modules&task=module.edit&id=' . (int) $this->item->id), 'warning');
 		}
 
 		$this->addToolbar();

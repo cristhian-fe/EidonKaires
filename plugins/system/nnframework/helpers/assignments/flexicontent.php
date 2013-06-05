@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: FlexiContent
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -31,7 +31,7 @@ class NNFrameworkAssignmentsFlexiContent
 
 		$pass = (
 			($params->inc_tags && $parent->params->view == 'tags')
-				|| ($params->inc_items && in_array($parent->params->view, array('item', 'items')))
+			|| ($params->inc_items && in_array($parent->params->view, array('item', 'items')))
 		);
 
 		if (!$pass) {

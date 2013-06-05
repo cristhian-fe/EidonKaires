@@ -4,7 +4,7 @@
  * Displays a title with a bunch of extras, like: description, image, versioncheck
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -248,13 +248,13 @@ class JFormFieldNN_Title extends JFormField
 			$el = 'document.getElementById( \'' . $this->id . 'description\' )';
 			$onclick =
 				'if( this.innerHTML == \'' . JText::_(JText::_('Show') . ' ' . $title) . '\' ){'
-					. $el . '.style.display = \'block\';'
-					. 'this.innerHTML = \'' . JText::_(JText::_('Hide') . ' ' . $title) . '\';'
-					. '}else{'
-					. $el . '.style.display = \'none\';'
-					. 'this.innerHTML = \'' . JText::_(JText::_('Show') . ' ' . $title) . '\';'
-					. '}'
-					. 'this.blur();return false;';
+				. $el . '.style.display = \'block\';'
+				. 'this.innerHTML = \'' . JText::_(JText::_('Hide') . ' ' . $title) . '\';'
+				. '}else{'
+				. $el . '.style.display = \'none\';'
+				. 'this.innerHTML = \'' . JText::_(JText::_('Show') . ' ' . $title) . '\';'
+				. '}'
+				. 'this.blur();return false;';
 			$html .= '<div class="button2-left" style="margin:0px 0px 5px 0px;"><div class="blank"><a href="javascript://;" onclick="' . $onclick . '">' . JText::_(JText::_('Show') . ' ' . $title) . '</a></div></div>' . "\n";
 			$html .= '<br clear="all" />';
 			$html .= '<div id="' . $this->id . 'description" style="display:none;">';

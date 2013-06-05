@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: HikaShop
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -45,7 +45,7 @@ class NNFrameworkAssignmentsHikaShop
 			($params->inc_categories
 				&& ($parent->params->view == 'category')
 			)
-				|| ($params->inc_items && $parent->params->view == 'product')
+			|| ($params->inc_items && $parent->params->view == 'product')
 		);
 
 		if (!$pass) {

@@ -1,8 +1,8 @@
 <?php
 class JConfig {
 	public $offline = '0';
-	public $offline_message = 'Sito fuori servizio per manutenzione.<br /> Riprovare più tardi.';
-	public $display_offline_message = '1';
+	public $offline_message = '';
+	public $display_offline_message = '2';
 	public $offline_image = '';
 	public $sitename = 'Eidon-Kaires S.r.l.';
 	public $editor = 'tinymce';
@@ -12,10 +12,10 @@ class JConfig {
 	public $debug = '0';
 	public $debug_lang = '0';
 	public $dbtype = 'mysqli';
-	public $host = 'localhost';
-	public $user = 'admin';
-	public $password = 'Admin196559418';
-	public $db = 'eidon';
+	public $host = '62.149.150.186';
+	public $user = 'Sql650621';
+	public $password = '0135b05c';
+	public $db = 'Sql650621_1';
 	public $dbprefix = 'jos_';
 	public $live_site = '';
 	public $secret = 'mOSm6S676YqYSkaR';
@@ -24,7 +24,7 @@ class JConfig {
 	public $helpurl = 'http://help.joomla.org/proxy/index.php?option=com_help&keyref=Help{major}{minor}:{keyref}';
 	public $ftp_host = '127.0.0.1';
 	public $ftp_port = '21';
-	public $ftp_user = '';
+	public $ftp_user = 'admin';
 	public $ftp_pass = '';
 	public $ftp_root = '';
 	public $ftp_enable = '0';
@@ -53,8 +53,8 @@ class JConfig {
 	public $sef_suffix = '0';
 	public $unicodeslugs = '0';
 	public $feed_limit = '10';
-	public $log_path = 'C:\\xampp\\htdocs\\eidon/logs';
-	public $tmp_path = 'C:\\xampp\\htdocs\\eidon/tmp';
+	public $log_path = 'eidonkaires.com/logs';
+	public $tmp_path = 'eidonkaires.com/tmp';
 	public $lifetime = '90';
 	public $session_handler = 'database';
 	public $MetaRights = '';

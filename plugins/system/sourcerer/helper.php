@@ -3,7 +3,7 @@
  * Plugin Helper File
  *
  * @package         Sourcerer
- * @version         4.1.6
+ * @version         4.1.7
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -61,6 +61,8 @@ class plgSystemSourcererHelper
 	 */
 	function onContentPrepare(&$article, $params = '')
 	{
+		$area = isset($article->created_by) ? 'articles' : 'other';
+
 		if (isset($article->created_by)) {
 			$user = JFactory::getUser($article->created_by);
 			$groups = $user->getAuthorisedGroups();
@@ -69,19 +71,19 @@ class plgSystemSourcererHelper
 		}
 
 		if (isset($article->text)) {
-			$this->replace($article->text, 'articles', $article);
+			$this->replace($article->text, $area, $article);
 		}
 		if (isset($article->description)) {
-			$this->replace($article->description, 'articles', $article);
+			$this->replace($article->description, $area, $article);
 		}
 		if (isset($article->title)) {
-			$this->replace($article->title, 'articles', $article);
+			$this->replace($article->title, $area, $article);
 		}
 		if (isset($article->author)) {
 			if (isset($article->author->name)) {
-				$this->replace($article->author->name, 'articles', $article);
+				$this->replace($article->author->name, $area, $article);
 			} else if (is_string($article->author)) {
-				$this->replace($article->author, 'articles', $article);
+				$this->replace($article->author, $area, $article);
 			}
 		}
 	}
@@ -501,8 +503,8 @@ class plgSystemSourcererHelper
 		// <script ...>...</script>
 		$tag_regex =
 			'(-start-' . '\s*script\s[^' . '-end-' . ']*?[^/]\s*' . '-end-'
-				. '(.*?)'
-				. '-start-' . '\s*\/\s*script\s*' . '-end-)';
+			. '(.*?)'
+			. '-start-' . '\s*\/\s*script\s*' . '-end-)';
 		$arr = $this->stringToSplitArray($str, $tag_regex, 1);
 		$arr_count = count($arr);
 
@@ -543,8 +545,8 @@ class plgSystemSourcererHelper
 		// <script ...>...</script>
 		$tag_regex =
 			'(-start-' . '\s*style\s[^' . '-end-' . ']*?[^/]\s*' . '-end-'
-				. '(.*?)'
-				. '-start-' . '\s*\/\s*style\s*' . '-end-)';
+			. '(.*?)'
+			. '-start-' . '\s*\/\s*style\s*' . '-end-)';
 		$arr = $this->stringToSplitArray($str, $tag_regex, 1);
 		$arr_count = count($arr);
 

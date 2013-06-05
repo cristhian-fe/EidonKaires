@@ -3,7 +3,7 @@
  * NoNumber Framework Helper File: Assignments: K2
  *
  * @package         NoNumber Framework
- * @version         13.5.3
+ * @version         13.5.5
  *
  * @author          Peter van Westen <peter@nonumber.nl>
  * @link            http://www.nonumber.nl
@@ -35,7 +35,7 @@ class NNFrameworkAssignmentsK2
 					|| $parent->params->view == 'latest'
 				)
 			)
-				|| ($params->inc_items && $parent->params->view == 'item')
+			|| ($params->inc_items && $parent->params->view == 'item')
 		);
 
 		if (!$pass) {
@@ -85,7 +85,7 @@ class NNFrameworkAssignmentsK2
 		$tag = trim(JFactory::getApplication()->input->getString('tag', ''));
 		$pass = (
 			($params->inc_tags && $tag != '')
-				|| ($params->inc_items && $parent->params->view == 'item')
+			|| ($params->inc_items && $parent->params->view == 'item')
 		);
 
 		if (!$pass) {

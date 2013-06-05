@@ -1,90 +1,90 @@
-/*---------------------------------------------------------
-# BT Smartbiz - Joomla! Template
-# ---------------------------------------------------------
-# For Joomla! 2.5
-# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
-# @license Copyrighted Commercial Software
-# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
-# Website: http://www.bonusthemes.com
-# Support: support@bonusthemes.com
------------------------------------------------------------ */
-
-/* --- OpenID icon style --- */
-input.system-openid, input.com-system-openid { 
-     padding-left: 18px;
-}
-
-/* --- Unpublished --- */
-.system-unpublished { 
-     border-top-width: 4px;
-     border-top-style: solid;
-     border-bottom-width: 4px;
-     border-bottom-style: solid;
-}
-
-/* --- System Messages --- */
-#system-message { 
-     margin: 0px 0px 10px 0px;
-     padding: 0px 0px 0px 0px;
-}
-#system-message dt { 
-     display: none;
-}
-#system-message dd { 
-     font-size: 13px;
-     font-weight: bold;
-     text-align: center;
-     margin: 0px 0px 0px 0px;
-}
-#system-message dd ul { 
-     list-style-type: none;
-     margin: 0px 0px 10px 0px;
-}
-#system-message ul li { }
-
-/* --- Default --- */
-#system-message dt.message { }
-#system-message dd.message { }
-#system-message dd.message ul { 
-     border-style: solid solid solid solid;
-     border-width: 1px 1px 1px 1px;
-}
-#system-message dd.message ul li { 
-     text-align: left;
-     text-shadow: 0 1px 0 rgba(18, 16, 11, 0.5);
-     background-position: left center;
-     background-repeat: no-repeat;
-     display: inline-block;
-     margin: 0px 0px 0px 0px;
-     padding: 14px 10px 14px 45px;
-}
-
-/* --- Notice --- */
-#system-message dt.notice { }
-#system-message dd.notice ul { 
-     border-style: solid solid solid solid;
-     border-width: 1px 1px 1px 1px;
-}
-#system-message dd.notice ul li { 
-     text-shadow: 0 1px 0 rgba(18, 16, 11, 0.5);
-     background-position: left center;
-     background-repeat: no-repeat;
-     display: inline-block;
-     margin: 0px 0px 0px 0px;
-     padding: 14px 10px 14px 45px;
-}
-
-/* --- Error --- */
-#system-message dt.error { }
-#system-message dd.error ul { 
-     border-style: solid solid solid solid;
-     border-width: 1px 1px 1px 1px;
-}
-#system-message dd.error ul li { 
-     text-shadow: 0 1px 0 rgba(18, 16, 11, 0.5);
-     background-position: left center;
-     background-repeat: no-repeat;
-     display: inline-block;
-     margin: 0px 0px 0px 0px;
-     padding: 14px 10px 14px 45px;
-}
+/*---------------------------------------------------------
+# BT Smartbiz - Joomla! Template
+# ---------------------------------------------------------
+# For Joomla! 2.5
+# Copyright (C) 2013 Bonusthemes.com. All rights reserved.
+# @license Copyrighted Commercial Software
+# Demo: http://www.bonusthemes.com/demo/?template=smartbiz
+# Website: http://www.bonusthemes.com
+# Support: support@bonusthemes.com
+----------------------------------------------------------- */
+
+/* --- OpenID icon style --- */
+input.system-openid, input.com-system-openid { 
+     padding-left: 18px;
+}
+
+/* --- Unpublished --- */
+.system-unpublished { 
+     border-top-width: 4px;
+     border-top-style: solid;
+     border-bottom-width: 4px;
+     border-bottom-style: solid;
+}
+
+/* --- System Messages --- */
+#system-message { 
+     margin: 0px 0px 10px 0px;
+     padding: 0px 0px 0px 0px;
+}
+#system-message dt { 
+     display: none;
+}
+#system-message dd { 
+     font-size: 13px;
+     font-weight: bold;
+     text-align: center;
+     margin: 0px 0px 0px 0px;
+}
+#system-message dd ul { 
+     list-style-type: none;
+     margin: 0px 0px 10px 0px;
+}
+#system-message ul li { }
+
+/* --- Default --- */
+#system-message dt.message { }
+#system-message dd.message { }
+#system-message dd.message ul { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+#system-message dd.message ul li { 
+     text-align: left;
+     text-shadow: 0 1px 0 rgba(18, 16, 11, 0.5);
+     background-position: left center;
+     background-repeat: no-repeat;
+     display: inline-block;
+     margin: 0px 0px 0px 0px;
+     padding: 14px 10px 14px 45px;
+}
+
+/* --- Notice --- */
+#system-message dt.notice { }
+#system-message dd.notice ul { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+#system-message dd.notice ul li { 
+     text-shadow: 0 1px 0 rgba(18, 16, 11, 0.5);
+     background-position: left center;
+     background-repeat: no-repeat;
+     display: inline-block;
+     margin: 0px 0px 0px 0px;
+     padding: 14px 10px 14px 45px;
+}
+
+/* --- Error --- */
+#system-message dt.error { }
+#system-message dd.error ul { 
+     border-style: solid solid solid solid;
+     border-width: 1px 1px 1px 1px;
+}
+#system-message dd.error ul li { 
+     text-shadow: 0 1px 0 rgba(18, 16, 11, 0.5);
+     background-position: left center;
+     background-repeat: no-repeat;
+     display: inline-block;
+     margin: 0px 0px 0px 0px;
+     padding: 14px 10px 14px 45px;
+}
